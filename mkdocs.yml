@@ -1,0 +1,46 @@
+site_name: ResearchIT User Documentation
+site_url: https://tbd.readthedocs.io
+site_description: Project documentation with Markdown.
+site_author: ResearchIT
+
+repo_url: https://github.com/researchit/pronto-user-docs
+edit_uri: ""
+
+theme:
+    name: readthedocs
+    locale: en
+    analytics: {gtag: ''}
+    highlightjs: true
+    hljs_languages:
+        - yaml
+        - python
+        - bash
+        - r
+        - django
+nav:
+    - Home: index.md
+    - Pronto:
+        - General Guide: pronto/index.md
+        - Slurm Basics: pronto/slurm_basics.md
+        - Software Modules: pronto/spack_modules.md
+        - Picking the Best Resource: pronto/picking_the_best_resource.md
+        - Machine Learning / GPU: pronto/machine_learning.md
+        - Python: pronto/python.md
+        - R: pronto/r.md
+        - Conda: pronto/conda.md
+    - File Transfers:
+        - Overview: file_transfers/index.md
+        - Move Your Files Faster: file_transfers/move_your_files_faster.md
+        - Globus: file_transfers/globus.md
+        - Box: file_transfers/rclone.md
+        - scp: file_transfers/scp.md
+        - rsync: file_transfers/rsync.md
+        - robocopy: file_transfers/robocopy.md
+    - Open OnDemand:
+        - Overview: ondemand/index.md
+        - Interactive Desktop: ondemand/interactive_desktop.md
+        - JupyterLab: ondemand/jupyterlab.md
+        - Job Composer: ondemand/job_composer.md
+    - Troubleshooting:
+        - Common Issues: troubleshooting/common_issues.md
+        - Reporting Issues: troubleshooting/reporting_issues.md
