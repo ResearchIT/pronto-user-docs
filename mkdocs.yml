@@ -10,13 +10,7 @@ theme:
     name: readthedocs
     locale: en
     analytics: {gtag: ''}
-    highlightjs: true
-    hljs_languages:
-        - yaml
-        - python
-        - bash
-        - r
-        - django
+    highlightjs: false
 nav:
     - Home: index.md
     - Pronto:
