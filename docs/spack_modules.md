@@ -6,9 +6,9 @@ Quick start
 **We have started building software modules using a new process, and you need to know about a few key changes that will affect you:**
 
 *   Most modules will work just like before, with some exceptions for things like python, R, and perl that each have their own libraries or packages
-    *   R, python, and perl packages have their own module files now, and need explicitly loaded (e.g. \`module load r-rmpi\` or \`module load py-numpy\`)
+    *   R, python, and perl packages have their own module files now, and need explicitly loaded (e.g. `module load r-rmpi` or `module load py-numpy`)
 *   Module naming or capitalization may be different
-*   Some modules are now organized in a hierarchy to present a cleaner list, and prevent conflicts.  You may need to use \`module spider\` to find the right module, and get instructions on how to load it (other modules may need to be loaded first)
+*   Some modules are now organized in a hierarchy to present a cleaner list, and prevent conflicts.  You may need to use `module spider` to find the right module, and get instructions on how to load it (other modules may need to be loaded first)
 
 You can find a full list of Spack packages here: [http://spack.readthedocs.io/en/latest/package_list.html](http://spack.readthedocs.io/en/latest/package_list.html)
 
@@ -112,7 +112,7 @@ For more information on the topic of module hierarchies, Lmod has a good explana
 
 For software that provides its own packages or libraries (such as perl, python, and R), under the [RISA](https://researchit.las.iastate.edu/research-it-software-archive) model, we installed those sub-packages or libraries into the application tree for the parent package, and those sub-packages or libraries were obscured to the users. As a user, you just had to try loading the python module, and then check to see what was provided.  This also didn't leave any flexibility for having multiple versions of a sub-package installed under the same parent program (we couldn't have two versions of numpy under the python module for example).
 
-Going forward, each of these sub-packages will be their own module.  This will mean more \`module load\` statements for you, but less ambiguity about which sub-packages you're using, and more control and a more reproducible environment.
+Going forward, each of these sub-packages will be their own module.  This will mean more `module load` statements for you, but less ambiguity about which sub-packages you're using, and more control and a more reproducible environment.
 
 If your program depends on several independent sub-packages or libraries, each of these will need to be loaded independently.  If you have a sub-package that depends on another however, those dependencies will automatically be loaded.  Take py-pandas for example:
 
@@ -182,7 +182,7 @@ If you absolutely must use conda, please see our guide on [properly setting up a
 
 Beyond providing a more stable and easier to administer software environment, [Spack](https://spack.io) can also help ensure the software environment used for your research is documented and reproducible.
 
-When you issue a \`module avail\` command, you'll notice an extra 7 characters at the end of each of the module names:
+When you issue a `module avail` command, you'll notice an extra 7 characters at the end of each of the module names:
 
 ```
 ------------------------- /opt/rit/spack-modules/lmod/linux-rhel7-x86_64/Core --------------------------
