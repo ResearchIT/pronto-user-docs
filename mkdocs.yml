@@ -1,6 +1,6 @@
 site_name: Pronto User Documentation
-site_url: https://tbd.readthedocs.io
-site_description: Project documentation with Markdown.
+site_url: https://researchit.las.iastate.edu/guides/pronto/
+site_description: Documentation for the pronto cluster.
 site_author: ResearchIT
 
 repo_url: https://github.com/researchit/pronto-user-docs
