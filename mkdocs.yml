@@ -17,10 +17,11 @@ nav:
     - Slurm Basics: slurm_basics.md
     - Software Modules: spack_modules.md
     - Picking the Best Resource: picking_the_best_resource.md
-    - Machine Learning / GPU: machine_learning.md
-    - Python: python.md
-    - R: r.md
-    - Conda: conda.md
+    - Popular Uses:
+        - Machine Learning / GPU: machine_learning.md
+        - Python: python.md
+        - R: r.md
+        - Conda: conda.md
     - File Transfers:
         - Overview: file_transfers/index.md
         - Move Your Files Faster: file_transfers/move_your_files_faster.md
