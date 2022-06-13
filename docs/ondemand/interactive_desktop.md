@@ -40,7 +40,7 @@ When you are finished, please return to the Open OnDemand job list. Click the 'D
 RStudio
 -------
 
-The RStudio installed in the Interactive Desktop uses the same R modules that are available to batch jobs running on pronto. If you launch RStudio using the icons, a recent version of R will be selected for you. RStudio is configured to use separate R\_LIBS\_USER for each user, and for each R module. The libraries are stored in the /work directory of the lab group you ran the interactive job with. This is to avoid issues caused by mixing R libraries built with different compilers.
+The RStudio installed in the Interactive Desktop uses the same R modules that are available to batch jobs running on pronto. If you launch RStudio using the icons, a recent version of R will be selected for you. RStudio is configured to use separate `R_LIBS_USER` for each user, and for each R module. The libraries are stored in the /work directory of the lab group you ran the interactive job with. This is to avoid issues caused by mixing R libraries built with different compilers.
 
 ### Using a specific R module
 
