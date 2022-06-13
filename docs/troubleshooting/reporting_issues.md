@@ -23,6 +23,5 @@ The table below outlines who to contact regarding issues:
 Other useful links
 ------------------
 
-HPC guides for Nova/Condo:  [https://www.hpc.iastate.edu/guides](https://www.hpc.iastate.edu/guides)
-
-[Troubleshooting Common issues on Pronto](troubleshooting-common-issues)
+* HPC guides for Nova/Condo:  [https://www.hpc.iastate.edu/guides](https://www.hpc.iastate.edu/guides)
+* [Troubleshooting Common issues on Pronto](common_issues.md)
