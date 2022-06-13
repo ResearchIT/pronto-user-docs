@@ -6,7 +6,7 @@ site_author: ResearchIT
 repo_url: https://github.com/researchit/pronto-user-docs
 edit_uri: ""
 extra_css:
-    - css/test.css
+    - css/isu.css
 theme:
     name: readthedocs
     locale: en
