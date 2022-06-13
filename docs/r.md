@@ -15,7 +15,7 @@ Copying your R scripts to pronto
 
 You will need to be comfortable with using the scp command (Mac/Linux) or WinSCP (Windows) for transferring your R files.  
 
-Please refer to [this documentation](../file_transfers/scp.md) for examples on how to transfer files
+Please refer to [this documentation](file_transfers/scp.md) for examples on how to transfer files
 
 Windows users can download WinSCP via Windows Software Center: [https://researchit.las.iastate.edu/how-use-software-center-windows](https://researchit.las.iastate.edu/how-use-software-center-windows)
 

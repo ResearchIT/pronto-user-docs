@@ -112,7 +112,7 @@ This will list all available versions of gcc. 
 Transferring Files
 ------------------
 
-File transfer to and from the cluster is availble via [Globus](../file_transfers/globus.md).
+File transfer to and from the cluster is availble via [Globus](file_transfers/globus.md).
 
 If you want to use scp or SMB, you will need to use the data transfer node. This node is specifically designed for transferring files across different nodes/clusters quickly and reliably. 
 
@@ -142,7 +142,7 @@ Troubleshooting
 
 Here is a link to a guide that helps you troubleshoot common issues you might encounter:
 
-[Troubleshooting common issues](../troubleshooting/common_issues.md)
+[Troubleshooting common issues](troubleshooting/common_issues.md)
 
 Useful Links
 ------------

@@ -13,7 +13,7 @@ Click the JupyterLab tile on the main OnDemand dashboard.
 
 Fill out the job submission form to specify what resources you want JupyterLab to have available.
 
-**Note:** If you select the GPU partition, your job will run within the [ml-gpu](../pronto/machine_learning.md) container. The only version of Python available will be the one installed in that container.
+**Note:** If you select the GPU partition, your job will run within the [ml-gpu](../machine_learning.md) container. The only version of Python available will be the one installed in that container.
 
 When you are finished click the 'Launch' button.
 

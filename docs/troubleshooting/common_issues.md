@@ -14,9 +14,9 @@ First, make sure you are not on the **head** node. You are on the head node if y
 [YourNetID@pronto ~]$
 ```
 
-or if the output of the 'hostname' command is 'pronto.las.iastate.edu'. If you are on the **head** node, you'll want to allocate a **compute** node. Please refer to the [slurm basics guide](../pronto/slurm_basics.md). 
+or if the output of the 'hostname' command is 'pronto.las.iastate.edu'. If you are on the **head** node, you'll want to allocate a **compute** node. Please refer to the [slurm basics guide](../slurm_basics.md). 
 
-Second, if you are on a **compute** node and getting the error, make sure you've [loaded the module](../pronto/spack_modules.md) you need.
+Second, if you are on a **compute** node and getting the error, make sure you've [loaded the module](../spack_modules.md) you need.
 
 Third, try using bash's tab-based auto-completion. Type part of the command, then press tab to complete the rest. (Press tab twice to see a list if there are multiple matches.)
 

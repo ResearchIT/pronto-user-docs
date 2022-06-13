@@ -48,7 +48,7 @@ Please note however that interactive jobs like this can fail and be terminated i
 
 We are working on some shortcuts to make this more user-friendly.  Look for more info on this topic in the next few months.
 
-Batch jobs follow the traditional slurm process similar to what you may already be familiar with from Condo, Nova, or Legion.  More info about how to use slurm can be found on the [Slurm Basics](pronto/slurm_basics.md) page.
+Batch jobs follow the traditional slurm process similar to what you may already be familiar with from Condo, Nova, or Legion.  More info about how to use slurm can be found on the [Slurm Basics](slurm_basics.md) page.
 
 ### How do I copy files to and from /work?
 
