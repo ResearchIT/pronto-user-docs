@@ -12,7 +12,7 @@ theme:
     analytics: {gtag: ''}
     highlightjs: false
 nav:
-    - Home: index.md
+    - Pronto Job Manager: index.md
     - Getting Started: getting_started.md
     - Slurm Basics: slurm_basics.md
     - Software Modules: spack_modules.md

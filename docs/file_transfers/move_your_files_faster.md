@@ -1,6 +1,8 @@
+# Move your Files Faster
+
 When working with large datasets, you often need to move files around between servers, storage systems, or between institutions.  Below, we describe common problems people run into when moving data around and we give some recommendations on how to move your data faster.
 
-### I'm in a hurry:
+### I'm in a hurry
 
 *   Use a server that already has both source & destination mounted
     *   /work and /lss are mounted on all ResearchIT servers, as well as the cluster data transfer nodes (prontodtn, condodtn, cyencedtn, etc.)
@@ -12,9 +14,9 @@ When working with large datasets, you often need to move files around between se
 *   If you have to move data across the network, use the fastest network available
 *   If you're in doubt at all, email [researchit@iastate.edu](mailto:researchit@iastate.edu) before starting your transfer
 
-### In depth explanation:
+### In depth explanation
 
-**Transfers from one system to another within the University:**
+#### Transfers from one system to another within the University
 
 A brief networking explanation:
 
@@ -24,7 +26,7 @@ A brief networking explanation:
 
 The most common mistake we see is when people unnecessarily put their own computer in the loop during the transfer, which slows it down dramatically (10-100 times slower).
 
-Example:
+**Example:**
 
 You open up CyberDuck on your Mac, and connect to Speedy, and you have LSS connected directly on your Mac and you start a copy of your 1TB file from /work/LAS/jones-lab/myproject to lss/jones-lab on your Mac.
 
@@ -46,7 +48,7 @@ Speedy===10Gbps===>LSS
 
 Your lab member's transfer will be done in closer to 15 minutes
 
-**Transfers to/from another institution:**
+#### Transfers to/from another institution
 
 If you have data you need to get to/from another institution, keep the same principles in mind and try to route the transfer over the best path using the fastest network available. 
 
