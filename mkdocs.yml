@@ -5,12 +5,14 @@ site_author: ResearchIT
 
 repo_url: https://github.com/researchit/pronto-user-docs
 edit_uri: ""
-
+extra_css:
+    - css/test.css
 theme:
     name: readthedocs
     locale: en
     analytics: {gtag: ''}
     highlightjs: false
+    custom_dir: custom_theme
 nav:
     - Pronto Job Manager: index.md
     - Getting Started: getting_started.md
