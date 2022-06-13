@@ -114,7 +114,7 @@ install.packages("devtools")
 To install the package, run the following.
 
 ```
-devtools::install\_github("githubusername/githubreponame")
+devtools::install_github("githubusername/githubreponame")
 ```
 
 ### Install packages in a script
@@ -155,7 +155,7 @@ Rscript <ScriptName>
 
 (If you copy and paste this script, be aware that this may add hidden characters and may cause your script to error out)
 
-You can read more information about job scripts under the"Single Node Script" section [here](/slurm_basics.md). 
+You can read more information about job scripts under the"Single Node Script" section [here](slurm_basics.md). 
 
 Here, we specify all the modules we want to load (the existing packages) along with our working directory prior to executing our script. You can add additional commands and tailor the script to however you wish.
 
@@ -235,7 +235,7 @@ $ module avail
 
 This will list all the available packages. You can navigate through the list to see which R packages are available. (You can go down the list by pressing the spacebar or 'D' key)
 
-Alternatively, you can run "module spider <package\_name>" to search for a specific package.
+Alternatively, you can run `module spider <package_name>` to search for a specific package.
 
 Please read the next section for some issues with this solution.
 

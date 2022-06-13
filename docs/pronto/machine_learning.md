@@ -1,6 +1,6 @@
 # Machine Learning Singularity Image
 
-In this guide, we will talk about a [Singularity container](/singularity) for machine learning workflows and how to submit a batch job that uses it. The machine learning container (ml-gpu) is maintained by ResearchIT and has many machine learning frameworks available.
+In this guide, we will talk about a [Singularity container](https://researchit.las.iastate.edu/singularity) for machine learning workflows and how to submit a batch job that uses it. The machine learning container (ml-gpu) is maintained by ResearchIT and has many machine learning frameworks available.
 
 The singularity recipe that builds this container can be found here: [https://github.com/researchit/singularity-ml](https://github.com/researchit/singularity-ml)
 

@@ -10,7 +10,7 @@ Quick start
 *   Module naming or capitalization may be different
 *   Some modules are now organized in a hierarchy to present a cleaner list, and prevent conflicts.  You may need to use \`module spider\` to find the right module, and get instructions on how to load it (other modules may need to be loaded first)
 
-You can find a full list of Spack packages here: [http://spack.readthedocs.io/en/latest/package\_list.html](http://spack.readthedocs.io/en/latest/package_list.html)
+You can find a full list of Spack packages here: [http://spack.readthedocs.io/en/latest/package_list.html](http://spack.readthedocs.io/en/latest/package_list.html)
 
 To see what we have installed, just run the following command on any of our servers:
 
@@ -105,12 +105,12 @@ Currently Loaded Modules:
 
 Now we can run satsuma as usual.
 
-For more information on the topic of module hierarchies, Lmod has a good explanation here: [http://lmod.readthedocs.io/en/latest/080\_hierarchy.html](http://lmod.readthedocs.io/en/latest/080_hierarchy.html)
+For more information on the topic of module hierarchies, Lmod has a good explanation here: [http://lmod.readthedocs.io/en/latest/080_hierarchy.html](http://lmod.readthedocs.io/en/latest/080_hierarchy.html)
 
 
 ## Packages of packages
 
-For software that provides its own packages or libraries (such as perl, python, and R), under the [RISA](/research-it-software-archive) model, we installed those sub-packages or libraries into the application tree for the parent package, and those sub-packages or libraries were obscured to the users. As a user, you just had to try loading the python module, and then check to see what was provided.  This also didn't leave any flexibility for having multiple versions of a sub-package installed under the same parent program (we couldn't have two versions of numpy under the python module for example).
+For software that provides its own packages or libraries (such as perl, python, and R), under the [RISA](https://researchit.las.iastate.edu/research-it-software-archive) model, we installed those sub-packages or libraries into the application tree for the parent package, and those sub-packages or libraries were obscured to the users. As a user, you just had to try loading the python module, and then check to see what was provided.  This also didn't leave any flexibility for having multiple versions of a sub-package installed under the same parent program (we couldn't have two versions of numpy under the python module for example).
 
 Going forward, each of these sub-packages will be their own module.  This will mean more \`module load\` statements for you, but less ambiguity about which sub-packages you're using, and more control and a more reproducible environment.
 
@@ -141,7 +141,7 @@ Maybe you're working with R, and need some R packages that you don't see modules
 
 Requesting an install from ResearchIT is always fine, but especially appropriate if there are a lot of dependencies for the package you need, or if you think it will be widely used by other users. 
 
-If you're in a hurry, or just want to quickly experiment with a package - you can try to install it on your own. Python, Perl, and R all have methods to allow you to define your own install directory that doesn't require administrative rights to write to. For installing R packages, please refer to this [link](/how-run-r-pronto).
+If you're in a hurry, or just want to quickly experiment with a package - you can try to install it on your own. Python, Perl, and R all have methods to allow you to define your own install directory that doesn't require administrative rights to write to. For installing R packages, please refer to this [link](r.md).
 
 ### Install python packages using pip
 

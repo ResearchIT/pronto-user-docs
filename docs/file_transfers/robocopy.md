@@ -1,6 +1,6 @@
 
 # How to Robocopy to Large Scale Storage
-We will discuss how to robocopy (known as "Robust File Copy") files to [Large Scale Storage](/large-scale-storage-lss) (LSS).  This allows us to copy all the files from destination to another. Robocopy is only available to Windows users and will not work on Mac OS X or Linux. Please refer to [this guide](rsync.md) if you are not a Windows user.
+We will discuss how to robocopy (known as "Robust File Copy") files to [Large Scale Storage](https://researchit.las.iastate.edu/large-scale-storage-lss) (LSS).  This allows us to copy all the files from destination to another. Robocopy is only available to Windows users and will not work on Mac OS X or Linux. Please refer to [this guide](rsync.md) if you are not a Windows user.
 
 Getting Started
 ---------------
@@ -17,18 +17,18 @@ If you aren't sure of the exact location where your folder is, you can simply 
 
 ![finding_file_location](img/robocopy_finding_file_location_1.png)
 
-Note that you will need to add "\\<name of folder>" after the location (box in red). The name of the folder is boxed in blue.
+Note that you will need to add "\<name of folder>" after the location (box in red). The name of the folder is boxed in blue.
 
 In my case, the directory of my Test folder is:
 
 ```
-C:\\Users\\MyUsername\\Desktop\\Test
+C:\Users\MyUsername\Desktop\Test
 ```
 
 Once you have found the source and destination locations, you can run the command as shown earlier. I am going to upload the folder shown above to LSS (which is our destination location). In my case, I mapped it to the Z: drive, and I want to put my files in a folder called "Demo". The location of this folder would be in: 
 
 ```
-Z:\\Demo
+Z:\Demo
 ```
 
 As you can see, it is initially empty. 
@@ -38,7 +38,7 @@ As you can see, it is initially empty. 
 So now that I know the source and destination locations, the command I would run is: 
 
 ```
-robocopy C:\\Users\\MyUsername\\Desktop\\Test /copy:DT /e
+robocopy C:\Users\MyUsername\Desktop\Test /copy:DT /e
 ```
 
 Please do **not** attempt to use permission flags if you are adding additional ones. 

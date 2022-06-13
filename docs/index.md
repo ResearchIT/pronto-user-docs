@@ -48,7 +48,7 @@ Please note however that interactive jobs like this can fail and be terminated i
 
 We are working on some shortcuts to make this more user-friendly.  Look for more info on this topic in the next few months.
 
-Batch jobs follow the traditional slurm process similar to what you may already be familiar with from Condo, Nova, or Legion.  More info about how to use slurm can be found here: [https://researchit.las.iastate.edu/slurm-basics](/slurm-basics)
+Batch jobs follow the traditional slurm process similar to what you may already be familiar with from Condo, Nova, or Legion.  More info about how to use slurm can be found on the [Slurm Basics](pronto/slurm_basics.md) page.
 
 ### How do I copy files to and from /work?
 
@@ -68,9 +68,9 @@ kinit
 
 After entering your password, you can disconnect from ssh. scp should then work.
 
-You can also access your files via SMB share. Enter \\\\prontodtn.las.iastate.edu into your explorer window if you're on Windows, or smb://prontodtn.las.iastate.edu in the finder connect dialog if you're on MacOS. You will need to be on campus or connected to the VPN.
+You can also access your files via SMB share. Enter `\\prontodtn.las.iastate.edu` into your explorer window if you're on Windows, or `smb://prontodtn.las.iastate.edu` in the finder connect dialog if you're on MacOS. You will need to be on campus or connected to the VPN.
 
-Note: The ISU VPN has limited bandwidth. If you have a large amount of data to transfer, or you want to transfer files without using the VPN, we recommend that you use [Globus](https://researchit.las.iastate.edu/how-transfer-files-pronto-globus).
+Note: The ISU VPN has limited bandwidth. If you have a large amount of data to transfer, or you want to transfer files without using the VPN, we recommend that you use [Globus](file_transfers/globus.md).
 
 This diagram shows the larger capacity network connections on prontodtn, which explains why we require files to be transferred through prontodtn & not pronto:
 

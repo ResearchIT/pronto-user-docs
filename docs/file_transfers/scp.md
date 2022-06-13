@@ -95,4 +95,4 @@ For more examples, please refer to this [guide](data-transfer-node-condo) (Note
 SMB share
 ---------
 
-If you wish to access your files via SMB share, please contact ResearchIT ([researchit@iastate.edu](mailto:researchit@iastate.edu)) to request access. Once provided, simply enter \\\\prontodtn.las.iastate.edu into your explorer window if you're on Windows, or smb://prontodtn.las.iastate.edu in the finder connect dialog if you're on MacOS.
+If you wish to access your files via SMB share, please contact ResearchIT ([researchit@iastate.edu](mailto:researchit@iastate.edu)) to request access. Once provided, simply enter `\\prontodtn.las.iastate.edu` into your explorer window if you're on Windows, or `smb://prontodtn.las.iastate.edu` in the finder connect dialog if you're on MacOS.

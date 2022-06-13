@@ -75,7 +75,7 @@ cd /work/LAS/whatever-lab/user/thing-im-working-on
 
 # the commands we're running are below
 
-bamtools sort -in input.bam -out input\_sorted.bam -byname
+bamtools sort -in input.bam -out input_sorted.bam -byname
 
 ```
 
@@ -109,7 +109,7 @@ module load gromacs/2018.1-openmpi3-5ds3yf7
 
 # here we use the srun command in place of mpirun, since it has much better integration with the scheduler.
 
-srun --ntasks=544 gmx\_mpi mdrun -s science.tpr -maxh 0.80
+srun --ntasks=544 gmx_mpi mdrun -s science.tpr -maxh 0.80
 
 ```
 
@@ -145,7 +145,7 @@ sinfo --partition=gpu -o %G
 To request a specific type of GPU from that list, you use something like this in your sbatch script:
 
 ```
-#SBATCH --gres=gpu:rtx\_2080\_Ti:1
+#SBATCH --gres=gpu:rtx_2080_Ti:1
 #SBATCH --partition=gpu #specify the gpu partition
 ```
 

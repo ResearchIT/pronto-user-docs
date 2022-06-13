@@ -63,7 +63,7 @@ $ source <name-of-environment>/bin/activate
 Your terminal will now look like this:
 
 ```
-(<name-of-environment>) \[user@bigram2 jones-lab\]$ 
+(<name-of-environment>) [user@bigram2 jones-lab]$ 
 ```
 
 ### Install packages

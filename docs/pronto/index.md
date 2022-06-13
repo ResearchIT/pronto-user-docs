@@ -64,7 +64,7 @@ Note that you can run an sbatch job in the background without being present in f
 
 Some **compute** nodes also have local scratch space you can utilize for intensive I/O jobs, you can read more about it [here](using-local-scratch-space-io-intensive-jobs).
 
-The srun command will allocate a **compute** node and be placed on it. This will start an interactive session which is useful for debugging or for programs that require user input. Note that these jobs could potentially be lost if you lose internet connection or if the VPN reconnects. It is recommended you use the [screen command](using-screen-protect-your-process) or tmux (type in "man tmux" in the terminal for more info).
+The srun command will allocate a **compute** node and be placed on it. This will start an interactive session which is useful for debugging or for programs that require user input. Note that these jobs could potentially be lost if you lose internet connection or if the VPN reconnects. It is recommended you use the [screen command](https://researchit.las.iastate.edu/using-screen-protect-your-process) or tmux (type in "man tmux" in the terminal for more info).
 
 ```bash
 $ srun --time=01:00:00 --cpus-per-task=1 --partition=interactive --pty /usr/bin/bash
@@ -134,8 +134,8 @@ After entering your password, you can disconnect from ssh. scp should then work.
 
 ### Guides
 
-*   [How to transfer files using the Linux/Mac terminal.](data-transfer-node-condo)
-*   If you are on Windows, you can use WinSCP to transfer files. WinSCP is available on [the software center](how-use-software-center-windows).
+*   [How to transfer files using the Linux/Mac terminal.](https://researchit.las.iastate.edu/data-transfer-node-condo)
+*   If you are on Windows, you can use WinSCP to transfer files. WinSCP is available on [the software center](https://researchit.las.iastate.edu/how-use-software-center-windows).
 
 Troubleshooting
 ---------------
@@ -147,7 +147,7 @@ Here is a link to a guide that helps you troubleshoot common issues you might en
 Useful Links
 ------------
 
-If you wish to run a job using R, please refer to [this documentation](/how-run-r-pronto).
+If you wish to run a job using R, please refer to [this documentation](r.md).
 
 Other issues
 ------------
