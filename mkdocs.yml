@@ -18,7 +18,7 @@ nav:
     - Getting Started: getting_started.md
     - Slurm Basics: slurm_basics.md
     - Software Modules: spack_modules.md
-    - Picking the Best Resource: picking_the_best_resource.md
+    - Picking the Best Resource For Your Job: picking_the_best_resource.md
     - Popular Uses:
         - Machine Learning / GPU: machine_learning.md
         - Python: python.md
