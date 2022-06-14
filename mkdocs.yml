@@ -9,6 +9,8 @@ extra_css:
     - css/isu.css
     - css/codehilite.css
 markdown_extensions:
+    - toc:
+        permalink: true
     - codehilite:
         guess_lang: false
 theme:
@@ -31,11 +33,15 @@ nav:
     - File Transfers:
         - Overview: file_transfers/index.md
         - Move Your Files Faster: file_transfers/move_your_files_faster.md
-        - Globus: file_transfers/globus.md
-        - Box: file_transfers/rclone.md
-        - scp: file_transfers/scp.md
-        - rsync: file_transfers/rsync.md
-        - robocopy: file_transfers/robocopy.md
+        - Transfer Methods:
+            # first menu item is used as the link for the 'Transfer Methods' heading
+            # implemented in custom_theme/nav.html
+            - file_transfers/transfer_methods.md
+            - Globus: file_transfers/globus.md
+            - Box: file_transfers/rclone.md
+            - scp: file_transfers/scp.md
+            - rsync: file_transfers/rsync.md
+            - robocopy: file_transfers/robocopy.md
     - Open OnDemand:
         - Overview: ondemand/index.md
         - Interactive Desktop: ondemand/interactive_desktop.md
