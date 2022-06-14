@@ -5,7 +5,7 @@ To build the documentation for local testing:
 ```
 python3 -mvenv env
 . env/bin/activate
-pip install mkdocs
+pip install -r requirements.txt
 mkdocs build
 python3 -m http.server --directory site
 ```
