@@ -7,6 +7,10 @@ repo_url: https://github.com/researchit/pronto-user-docs
 edit_uri: ""
 extra_css:
     - css/isu.css
+    - css/codehilite.css
+markdown_extensions:
+    - codehilite:
+        guess_lang: false
 theme:
     name: readthedocs
     locale: en

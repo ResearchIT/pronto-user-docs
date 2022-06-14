@@ -41,7 +41,7 @@ To submit a batch file and/or run code, you will need to use the slurm job manag
 
 Below is a simple example that compiles python code that simply says hello world and saves the output in a .out file: (Part of this was taken from the single node script section linked above)
 
-```
+```bash
 #!/bin/bash
 #SBATCH --nodes=1 # request one node
 #SBATCH --cpus-per-task=1 # ask for 1 cpu
@@ -215,6 +215,6 @@ The virtual environment functionality might not work. You can achieve similar re
 export PYTHONUSERBASE=/work/LAS/your-lab/mlgpupackages
 ```
 
-Then, instead of 'ml-gpu /work/LAS/your-lab/mlgpuvenv/bin/pip3', try 'ml-gpu python -m pip', 'ml-gpu pip2', or 'ml-gpu pip3'
+Then, instead of `ml-gpu /work/LAS/your-lab/mlgpuvenv/bin/pip3`, try `ml-gpu python -m pip`, `ml-gpu pip2`, or `ml-gpu pip3`
 
-Then, instead of 'ml-gpu /work/LAS/your-lab/mlgpuvenv/bin/python', try 'ml-gpu python', 'ml-gpu python2', or 'ml-gpu python3'
+Then, instead of `ml-gpu /work/LAS/your-lab/mlgpuvenv/bin/python`, try `ml-gpu python`, `ml-gpu python2`, or `ml-gpu python3`

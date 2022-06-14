@@ -5,19 +5,19 @@ We will discuss how to robocopy (known as "Robust File Copy") files to [Large Sc
 Getting Started
 ---------------
 
-Begin by clicking start and typing in "cmd". Press enter, and it should open up the command prompt. Below is the syntax you need to type in for Robocopy: 
+Begin by clicking start and typing in `cmd`. Press enter, and it should open up the command prompt. Below is the syntax you need to type in for Robocopy: 
 
 ```
 robocopy <Source folder location> <Destination folder location>  /copy:DT /e
 ```
 
-(The "/copy:DT" specifies that we want to copy our data with a timestamp to our destination location. The "/e" means that we want to copy the subdirectories, even if it is empty)
+(The `/copy:DT` specifies that we want to copy our data with a timestamp to our destination location. The `/e` means that we want to copy the subdirectories, even if it is empty)
 
 If you aren't sure of the exact location where your folder is, you can simply navigate to it using the file explorer, right click on the folder and select properties. You should see something like this below: 
 
 ![finding_file_location](img/robocopy_finding_file_location_1.png)
 
-Note that you will need to add "\<name of folder>" after the location (box in red). The name of the folder is boxed in blue.
+Note that you will need to add `\<name of folder>` after the location (box in red). The name of the folder is boxed in blue.
 
 In my case, the directory of my Test folder is:
 

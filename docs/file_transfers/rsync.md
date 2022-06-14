@@ -46,14 +46,14 @@ cd Desktop/Research
 
 (Note that the D in desktop is capitalized)
 
-Everything after "cd" is the location of where your files are. If I saved a folder under "Downloads", I would type in for example:
+Everything after `cd` is the location of where your files are. If I saved a folder under "Downloads", I would type in for example:
 
 ```
 cd Downloads/<Folder name goes here> 
 ```
 
 
-Let's verify that the files we want to sync are in the folder. Type in the command "ls" in the terminal. We should be able to see a list of all the files that are in that folder. In my example, I have created two files called Data1 and Data2. Your terminal should look something like this:
+Let's verify that the files we want to sync are in the folder. Type in the command `ls` in the terminal. We should be able to see a list of all the files that are in that folder. In my example, I have created two files called Data1 and Data2. Your terminal should look something like this:
 
 ![verify_files](img/rsync_1_0.png)
 
@@ -63,7 +63,7 @@ To find the files on your mounted LSS, you need to navigate to the **root** d
 cd /
 ```
 
-To begin, type in "ls /" to get an overview of all the files in our file tree. Again, I am using Mac OS X in my example, so your locations may be different. In my case, I would type in "cd /Volumes". You should see the name of your mounted LSS.
+To begin, type in `ls /` to get an overview of all the files in our file tree. Again, I am using Mac OS X in my example, so your locations may be different. In my case, I would type in "cd /Volumes". You should see the name of your mounted LSS.
 
 ![navigate_to_volumes](img/rsync_2_0.png)
 
