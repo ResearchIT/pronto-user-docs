@@ -33,7 +33,7 @@ Loading R
 To see what versions of R are available, run:
 
 ```
-$ module spider r
+module spider r
 ```
 
 ### Load an R module
@@ -47,7 +47,7 @@ r/3.6.3-py3-sxv6dw3
 I would run:
 
 ```
-$ module load r/3.6.3-py3-sxv6dw3
+module load r/3.6.3-py3-sxv6dw3
 ```
 
 Some versions may result in an error like the following:
@@ -60,7 +60,7 @@ If we follow the suggestion, we find we need to load another module before we lo
 
 ```
 $ module load gcc/7.3.0-xegsmw4
-$ module load r/4.0.2-py3-icvulwq
+module load r/4.0.2-py3-icvulwq
 ```
 
 Please note that packages installed using one R module may not work with other R modules.  Please be sure to use the same R module every time you install packages.
@@ -84,7 +84,7 @@ Replace /work/LAS/your-lab/yournetid/Rlibs with the location you want to instal
 Next, run the R intepreter by running:
 
 ```
-$ R
+R
 ```
 
 Please note that packages installed using one R module may not work with other R modules.  Please be sure to use the same R module every time you install packages.
@@ -92,7 +92,7 @@ Please note that packages installed using one R module may not work with other R
 Once the interpreter is running, the command to install packages is:
 
 ```
-$ install.packages('<somepackage>')
+install.packages('<somepackage>')
 ```
 
 For more detailed and extensive documentation, please visit the following link: [https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages)
@@ -162,7 +162,7 @@ Here, we specify all the modules we want to load (the existing packages) along 
 Now run:
 
 ```
-$ sbatch <FileName>.sh
+sbatch <FileName>.sh
 ```
 
 You will get a .out and .err file, the .out contains the output of your scripts and the .err file contains an error log.
@@ -211,13 +211,13 @@ quit() 
 Now try searching for a module with a name similar to the error message.
 
 ```
-$ module spider libexample
+module spider libexample
 ```
 
 If this returns a result, load that module with
 
 ```
-$ module load libexample
+module load libexample
 ```
 
 Then restart R and try installing your package again.
@@ -230,7 +230,7 @@ To see if an R package you need already exists on Pronto you can run: 
 
 ```
 $ module purge
-$ module avail
+module avail
 ```
 
 This will list all the available packages. You can navigate through the list to see which R packages are available. (You can go down the list by pressing the spacebar or 'D' key)

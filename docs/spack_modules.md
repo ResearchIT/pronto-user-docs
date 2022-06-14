@@ -90,7 +90,7 @@ Let's load those modules, and try again:
 ```
 $ module load gcc/7.3.0-xegsmw4
 
-$ module load satsuma2
+module load satsuma2
 ```
 
 That seemed to work. Let's check the list of currently loaded modules:

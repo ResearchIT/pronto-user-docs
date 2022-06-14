@@ -27,13 +27,13 @@ Finally, try looking in the $PATH folders for the command under a slightly diffe
 If you are authorized for a file/folder and got a 'Permission denied' message, there is a good chance your kerberos ticket has expired. Check the kerberos expiration by running:
 
 ```
-$ klist
+klist
 ```
 
 This should list all the credentials that you have. If you kerberos ticket has expired, you will need to run:
 
 ```
-$ kinit
+kinit
 ```
 
 After supplying your password, klist should show a new ticket that won't expire for several hours.

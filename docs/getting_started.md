@@ -33,7 +33,7 @@ Logging in and using Pronto
 Open up the terminal that you are using and connect to pronto using:
 
 ```bash
-$ ssh <YourNetIDHere>@pronto.las.iastate.edu
+ssh <YourNetIDHere>@pronto.las.iastate.edu
 ```
 
 If you are using PuTTY, omit the ssh and NetID portion and type in "pronto.las.iastate.edu" in the hostname field. You will be prompted to login and/or enter your password. Please note that when typing your password, no asterisks, letters or spaces will appear. Just type in your password and press enter. This is done to protect your password from people looking over your shoulder.
@@ -57,7 +57,7 @@ Allocating a compute node
 The best way to run your job would be writing a simple bash script and submitting it via sbatch. You can find a sample script template in the slurm basics guide linked above. You can either upload your own local bash script (see the _Transferring Files_ section below) or create a bash script on the **compute** node with vim, nano, etc. To execute it, run: 
 
 ```bash
-$ sbatch myscript.sh
+sbatch myscript.sh
 ```
 
 Note that you can run an sbatch job in the background without being present in front of your computer.
@@ -67,13 +67,13 @@ Some **compute** nodes also have local scratch space you can utilize for inten
 The srun command will allocate a **compute** node and be placed on it. This will start an interactive session which is useful for debugging or for programs that require user input. Note that these jobs could potentially be lost if you lose internet connection or if the VPN reconnects. It is recommended you use the [screen command](https://researchit.las.iastate.edu/using-screen-protect-your-process) or tmux (type in "man tmux" in the terminal for more info).
 
 ```bash
-$ srun --time=01:00:00 --cpus-per-task=1 --partition=interactive --pty /usr/bin/bash
+srun --time=01:00:00 --cpus-per-task=1 --partition=interactive --pty /usr/bin/bash
 ```
 
 If you want to allocate a **compute** node without being placed on it, run:
 
 ```bash
-$ salloc --time 00:10:00 --nodelist=<NodeNameHere>
+salloc --time 00:10:00 --nodelist=<NodeNameHere>
 ```
 
 Note that you will still be on the **head** node. To be placed on the allocated **compute** node, run the srun command mentioned earlier. 
@@ -90,7 +90,7 @@ Some software we have available for you require dependencies or packages. You ma
 For a complete list of all available modules, run the command:
 
 ```bash
-$ module spider
+module spider
 ```
 
 This will list all the available dependencies. 
@@ -98,13 +98,13 @@ This will list all the available dependencies. 
 If you want to see all available versions of a specific dependency, you can run:
 
 ```bash
-$ module spider <dependency name>
+module spider <dependency name>
 ```
 
 Example:
 
 ```bash
-$ module spider gcc
+module spider gcc
 ```
 
 This will list all available versions of gcc. 

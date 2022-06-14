@@ -59,13 +59,13 @@ After entering your password, you can disconnect from ssh. scp should then work.
 If you wish to transfer an entire folder with its contents (including its subfolders), use this command: 
 
 ```
-$ scp -r <FolderName> <YourNetID>@prontodtn.las.iastate.edu:/<YourWorkingDirectory>
+scp -r <FolderName> <YourNetID>@prontodtn.las.iastate.edu:/<YourWorkingDirectory>
 ```
 
 For a single file only, you can use:
 
 ```
-$ scp <FileName> <YourNetID>@prontodtn.las.iastate.edu:/<YourWorkingDirectory>
+scp <FileName> <YourNetID>@prontodtn.las.iastate.edu:/<YourWorkingDirectory>
 ```
 
 If this command doesn't seem to do anything, or just hangs, please see the previous section about getting a Kerberos ticket.
@@ -77,13 +77,13 @@ When finished, ssh to pronto/prontodtn and navigate to your working directory t
 If you wish to transfer an entire folder with its contents (including its subfolders), use this command: 
 
 ```
-$ scp -r <YourNetID>@prontodtn.las.iastate.edu:/<YourWorkingDirectory>/<FolderName> <FolderName>
+scp -r <YourNetID>@prontodtn.las.iastate.edu:/<YourWorkingDirectory>/<FolderName> <FolderName>
 ```
 
 For a single file only, you can use:
 
 ```
-$ scp <YourNetID>@prontodtn.las.iastate.edu:/<YourWorkingDirectory>/<FileName> <FileName> 
+scp <YourNetID>@prontodtn.las.iastate.edu:/<YourWorkingDirectory>/<FileName> <FileName> 
 ```
 
 When finished, navigate on your computer to <FolderName> or <FileName> on your computer to verify that your files have successfully transfered.

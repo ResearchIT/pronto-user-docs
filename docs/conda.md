@@ -9,7 +9,7 @@ Use of conda is discouraged. The recommended way to install additional Python pa
 To setup a conda environment, you will first need to connect to Pronto. Next, allocate a **compute** node and be sure you are placed on it (via salloc/srun). If you are not familiar with salloc or srun, please refer to [this guide](slurm_basics.md) first. Below is a sample command you could run:
 
 ```
-$ srun --time=01:00:00 --nodes=1 --cpus-per-task=1 --pty /usr/bin/bash
+srun --time=01:00:00 --nodes=1 --cpus-per-task=1 --pty /usr/bin/bash
 ```
 
 Wait until you have been placed on a **compute** node.
@@ -17,7 +17,7 @@ Wait until you have been placed on a **compute** node.
  Now, you will need will need to pick a version of conda that suits your needs. To get a list of available packages, run the command:
 
 ```
-$ module spider conda
+module spider conda
 ```
 
 This will list the available modules for conda. (The available modules may be subject to change)
@@ -31,13 +31,13 @@ Once you have looked through the list of modules, take note of the package name 
 Press enter and type in:
 
 ```
-$ module load <BoxedText>
+module load <BoxedText>
 ```
 
 If I wanted to run miniconda3 for example, I would type in
 
 ```
-$ module load miniconda3/4.3.30-qdauveb
+module load miniconda3/4.3.30-qdauveb
 ```
 
 The first time you use conda, you need to tell it where to save your environments. Conda defaults to saving environments in your home folder. Home folders on pronto have a quota of 10GB and are not meant for storing software.
@@ -59,7 +59,7 @@ conda config --prepend pkgs_dirs /work/LAS/your-lab/your-directory/.conda/pkgs
 Now, create your conda environment by running:
 
 ```
-$ conda create --name <DesiredName> 
+conda create --name <DesiredName> 
 ```
 
 You will be prompted with a list of additional packages (if you specified any) that will be installed. Type y and hit enter. Wait a few minutes for the package to install. Once they are done installing, run:

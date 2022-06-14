@@ -10,13 +10,13 @@ Configuring rclone on prontodtn
 Open up a terminal session and connect to prontodtn.
 
 ```
-$ ssh yournetid@prontodtn.las.iastate.edu
+ssh yournetid@prontodtn.las.iastate.edu
 ```
 
 You will need to first create a config file to link your box account. Navigate to your working directory (i.e. /work or /lss), and use the command:
 
 ```
-$ rclone config
+rclone config
 ```
 
 You should see the following, follow along with the prompt given:
@@ -205,13 +205,13 @@ Rclone has many different commands available for use. You can find a complete li
 For the purposes of this guide, we will only be discussing how to copy the files from /work or /lss to your Box. Here is the syntax for copying files from the working directory to the cluster
 
 ```
-$ rclone sync <Source> <RemoteName>:<RemoteDirectoryInBox>
+rclone sync <Source> <RemoteName>:<RemoteDirectoryInBox>
 ```
 
 Note that the remote name is the name of the remote you specified after running rclone config. In the example above, I have a remote called remote. If I wanted to copy a folder called "test-project" from my lab's work directory to a folder called ""pronto-backup, I would use this command:
 
 ```
-$ rclone sync /work/LAS/jones-lab/test-project remote:/pronto-backup/
+rclone sync /work/LAS/jones-lab/test-project remote:/pronto-backup/
 ```
 
 You can navigate to the Cybox or Google Drive website and verify that your files are where you want them to be.
