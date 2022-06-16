@@ -44,6 +44,12 @@ Assuming your network connection is stable, the most likely cause of this error 
 
 You can work around this issue by either [disabling IPv6 Privacy](how-disable-ipv6-privacy-mode) (recommended) or [forcing IPv4 connections](how-force-ipv4-connections).
 
+## I get an error 'No space left on device' while trying to copy files.
+
+If you are trying to copy files to LSS, this likely means your LSS share is full. Please see [this guide](https://researchit.las.iastate.edu/guides/lss/usage/) to check your usage or [this guide](https://researchit.las.iastate.edu/guides/lss/usage/) to purchase more space.
+
+If you are running some software, this likely means it is trying to write to your home directory, your home directory is full. Home directories on pronto are limited to 10GB. Files used for jobs should be stored in your /work directory.
+
 ## Other issues
 
 For other issues, please email [researchit@iastate.edu](mailto:researchit@iastate.edu)
