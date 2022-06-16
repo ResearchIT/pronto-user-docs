@@ -168,7 +168,7 @@ if you want to get even more advanced, and for some reason you need a specific n
 
 ### I want to use X Forwarding to run a GUI program
 
-Follow the directions in [X Forwarding for Mac and Windows](https://researchit.las.iastate.edu/x-forwarding-mac-and-windows). Be sure to add the -X flag to your ssh command when connecting to pronto.
+Follow the directions in [X Forwarding for Mac and Windows](interactive_computing/x_forwarding.md). Be sure to add the `-X` flag to your ssh command when connecting to pronto.
 
 Then request an interactive session as described above, but add the --x11 flag to the srun command. Example:
 

@@ -27,6 +27,12 @@ nav:
     - Picking the Best Resource For Your Job: picking_the_best_resource.md
     - Popular Uses:
         - Machine Learning / GPU: machine_learning.md
+        - Interactive Computing:
+            - interactive_computing/index.md
+            - tmux: interactive_computing/tmux.md
+            - screen: interactive_computing/screen.md
+            - X Forwarding for Mac and Windows: interactive_computing/x_forwarding.md
+            - SSH port forwarding: interactive_computing/ssh_port_forwarding.md
         - Python: python.md
         - R: r.md
         - Conda: conda.md
