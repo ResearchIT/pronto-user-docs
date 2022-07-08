@@ -29,7 +29,7 @@ When the job is ready, it will say 'Running'. The Compression and Image Quality 
 
 ![interactive desktop job ready](img/interactive_desktop_ready_2.png)
 
-The desktop looks like this. To launch any of the preconfigured apps, click the icon for it on the dock a the bottom of the screen. 
+The desktop looks like this. To launch any of the preconfigured apps, click the icon for it on the dock at the bottom of the screen. 
 
 ![interactive desktop screen](img/interactive_desktop_screen_1.png)
 
@@ -58,7 +58,7 @@ rstudio
 ```
 ###  Using your own R library
 
-Open the Terminal app using the icon in the dock. In this terminal, load the R module your R librariy was created with. For example:
+Open the Terminal app using the icon in the dock. In this terminal, load the R module your R library was created with. For example:
 
 ```bash
 module load gcc/10.2.0-zuvaafu
