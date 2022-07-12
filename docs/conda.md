@@ -1,4 +1,6 @@
-# Use of Conda is Discouraged
+# Conda
+
+## Use of Conda is Discouraged
 
 For pytorch or other machine learning / GPU uses, you should use the [Machine Learning container](machine_learning).
 
@@ -6,7 +8,7 @@ For other Python uses, the recommended way to install additional Python packages
 
 For other software, we have many [Spack based software modules](spack_modules.md) installed. If you need software that we don't available as a module, but that is already [available as a Spack package](https://spack.readthedocs.io/en/latest/package_list.html), see the [Self Managed Spack Installs](spack_modules.md) section of our guide.
 
-# Setting up a 'conda' environment
+## Setting up a 'conda' environment
 
 ### Before you use conda
 
