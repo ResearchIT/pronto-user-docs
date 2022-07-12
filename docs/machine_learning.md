@@ -4,35 +4,160 @@ In this guide, we will talk about a [Singularity container](https://researchit.l
 
 The singularity recipe that builds this container can be found here: [https://github.com/researchit/singularity-ml](https://github.com/researchit/singularity-ml)
 
-List of Learning Utilities/Frameworks
--------------------------------------
+## Primary Utilities and Their Versions
 
-The ResearchIT machine learning container (ml-gpu) includes the following:
+The column on the left is the name of the module to load to get these versions of the software.
 
-*   Python
-    *   **ml-gpu/20200210 is the last version to include python 2. Newer versions include python 3.**
-    *   TensorFlow
-        *   **ml-gpu/20190715 is the last version to include tensorflow 1. Newer versions include tensorflow 2.**
-    *   NumPy
-    *   Keras
-    *   Pillow
-    *   Scikit-learn
-    *   Pandas
-    *   Pandas_ml
-    *   Matplotlib
-    *   Mxnet
-    *   Mlxtend
-    *   Tensorboard
-    *   Jupyter/JupyterLab
-    *   DGL
-*   Pytorch
-    *   TorchVision
-    *   Kineto
-    *   Torchaudio
-    *   Pytorch_geometric
-*   R
-    *   TensorFlow
-    *   Keras
+<div class="wy-table-responsive">
+    <table class="docutils">
+        <thead>
+            <tr>
+                <td></td>
+                <th>Python</th>
+                <th>R</th>
+                <th>PyTorch</th>
+                <th>TensorFlow</th>
+                <th>Keras</th>
+            </tr>
+        </thead>
+        <tbody>
+            <tr>
+                <th scope="row">
+                   ml-gpu/20220603
+                </th>
+                <td>3.9.13</td>
+                <td>4.1.3</td>
+                <td>1.11.0a0+gitbc2c6ed</td>
+                <td>2.9.1</td>
+                <td>2.9.0</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                   ml-gpu/20210901
+                </th>
+                <td>3.8.11</td>
+                <td>4.1.0</td>
+                <td>1.9.0a0+gitd69c22d</td>
+                <td>2.5.0</td>
+                <td>(broken)</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                   ml-gpu/20210730
+                </th>
+                <td>3.6.8</td>
+                <td>4.0.5</td>
+                <td>1.10.0a0+gitdc1bd6a</td>
+                <td>2.5.0</td>
+                <td>(broken)</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                   ml-gpu/20210616
+                </th>
+                <td>3.6.8</td>
+                <td>4.0.5</td>
+                <td>1.9.0+cu111</td>
+                <td>2.5.0</td>
+                <td>(broken)</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                   ml-gpu/20210428
+                </th>
+                <td>3.6.8</td>
+                <td>4.0.4</td>
+                <td>1.8.0+cu111</td>
+                <td>2.4.1</td>
+                <td>2.4.3</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                   ml-gpu/20210319
+                </th>
+                <td>3.6.8</td>
+                <td>4.0.4</td>
+                <td>1.8.0+cu111</td>
+                <td>2.4.1</td>
+                <td>2.4.3</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                   ml-gpu/20210222
+                </th>
+                <td>3.6.8</td>
+                <td>4.0.3</td>
+                <td>1.7.1</td>
+                <td>2.4.1</td>
+                <td>2.4.3</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                   ml-gpu/20210202
+                </th>
+                <td>3.6.8</td>
+                <td>4.0.3</td>
+                <td>1.7.1</td>
+                <td>2.4.1</td>
+                <td>2.4.3</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                   ml-gpu/20200915
+                </th>
+                <td>3.6.8</td>
+                <td>4.0.2</td>
+                <td>1.6.0</td>
+                <td>2.3.0</td>
+                <td>2.4.3</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                   ml-gpu/20200902
+                </th>
+                <td>3.6.8</td>
+                <td>4.0.2</td>
+                <td>1.6.0</td>
+                <td>2.3.0</td>
+                <td>2.4.3</td>
+            </tr>
+            <tr>
+                <th scope="row">
+                   ml-gpu/20200210
+                </th>
+                <td>2.7.5, 3.6.8</td>
+                <td>3.6.0</td>
+                <td>1.4.0</td>
+                <td>2.1.0</td>
+                <td>2.3.1</td>
+            </tr>
+        </tbody>
+    </table>
+</div>
+
+## Additional installed utilities
+
+### Python
+
+* NumPy
+* Pillow
+* Scikit-learn
+* Pandas
+* Pandas\_ml
+* Matplotlib
+* Mxnet
+* Mlxtend
+* Tensorboard
+* Jupyter/JupyterLab
+* DGL
+
+### Pytorch
+
+* TorchVision
+* Kineto
+* Torchaudio
+* Pytorch\_geometric
+
 
 How to submit a batch file and compile code in the container via GPU node
 -------------------------------------------------------------------------
