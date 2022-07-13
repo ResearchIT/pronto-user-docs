@@ -1,6 +1,6 @@
 # Python Virtual Environments
 
-Python has a built-in virtual environment, which contains a particular version of python with additional packages/modules that can be activated/deactivated at will. This guide will cover the basics on how to create an environment and install packages on it.
+Python has built-in virtual environments, which contains a particular version of python with additional packages/modules that can be activated/deactivated at will. This guide will cover the basics on how to create an environment and install packages on it.
 
 Create a New Virtual Environment
 --------------------------------
