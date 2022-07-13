@@ -50,7 +50,7 @@ Add this to your batch submission file:
 Massively Parallel Jobs
 -----------------------
 
-Consider the legion nodes, as they have many threads (272) per node, but each thread is rather slow. If your jobs parallelizes extremly well legion may be a good choice.
+Consider the legion nodes, as they have many threads (272) per node, but each thread is rather slow. If your jobs parallelizes extremely well legion may be a good choice.
 
 Add this to your batch submission file:
 

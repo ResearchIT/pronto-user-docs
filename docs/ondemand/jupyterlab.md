@@ -31,7 +31,7 @@ When the job is ready, it will say 'Running'. Click the 'Connect to Jupyter' but
 
 ![jupyterlab job progress ready](img/jupyterlab_ready_0.png)
 
-After you click the button, you will probably see a white screen. Eventually, an animated Jupyer icon should show up. This may take several seconds, so please be patient. You may also see an error screen like this.
+After you click the button, you will probably see a white screen. Eventually, an animated Jupyter icon should show up. This may take several seconds, so please be patient. You may also see an error screen like this.
 
 ![jupyterlab slow to load error](img/jupyterlab_error_0.png)
 

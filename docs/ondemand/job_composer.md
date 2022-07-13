@@ -25,7 +25,7 @@ On the next screen you can see that a new job has been created from the template
 
 ![job composer job created screen](img/job_composer_job_created.png)
 
-In this new tab, edit the job submission file to request the proper resources and add your commands. Then click the blue 'Save' button at the top left. Then close the tab to reutrn to the previous screen.
+In this new tab, edit the job submission file to request the proper resources and add your commands. Then click the blue 'Save' button at the top left. Then close the tab to return to the previous screen.
 
 ![job composer edit job screen](img/job_composer_edit_job.png)
 

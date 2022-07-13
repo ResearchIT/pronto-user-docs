@@ -57,7 +57,7 @@ Here we have a submission script for a single node job. If you've previously use
 # everything below this line is optional, but are nice to have quality of life things
 
 #SBATCH --output=job.%J.out # tell it to store the output console text to a file called job.<assigned job number>.out
-#SBATCH --error=job.%J.err # tell it to store the error messages from the program (if it doesn't write them to normal console output) to a file called job.<assigned job muber>.err
+#SBATCH --error=job.%J.err # tell it to store the error messages from the program (if it doesn't write them to normal console output) to a file called job.<assigned job number>.err
 #SBATCH --job-name="example job" # a nice readable name to give your job so you know what it is when you see it in the queue, instead of just numbers
 
 

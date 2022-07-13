@@ -15,7 +15,7 @@ Below is a simple example that compiles python code that simply says hello world
 
 # everything below this line is optional, but are nice to have quality of life things
 #SBATCH --output=job.%J.out # tell it to store the output console text to a file called job.<assigned job number>.out
-#SBATCH --error=job.%J.err # tell it to store the error messages from the program (if it doesn't write them to normal console output) to a file called job.<assigned job muber>.err
+#SBATCH --error=job.%J.err # tell it to store the error messages from the program (if it doesn't write them to normal console output) to a file called job.<assigned job number>.err
 #SBATCH --job-name="example job" # a nice readable name to give your job so you know what it is when you see it in the queue, instead of just numbers
 
 # under this we just do what we would normally do to run the program, everything above this line is used by slurm to tell it what your job needs for resources

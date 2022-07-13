@@ -19,7 +19,7 @@ When you open up the application, you should be prompted with login credentials.
 prontodtn.las.iastate.edu
 ```
 
-Kepe the port number the same and login with your NetID and password. 
+Keep the port number the same and login with your NetID and password. 
 
 ![login_pronto](img/screen_shot_2020-05-19_at_9.13.54_am.png)
 
@@ -70,7 +70,7 @@ scp <FileName> <YourNetID>@prontodtn.las.iastate.edu:/<YourWorkingDirectory>
 
 If this command doesn't seem to do anything, or just hangs, please see the previous section about getting a Kerberos ticket.
 
-When finished, ssh to pronto/prontodtn and navigate to your working directory to verify that your files have successfully transfered.
+When finished, ssh to pronto/prontodtn and navigate to your working directory to verify that your files have successfully transferred.
 
 ### Transfer files from the cluster to your computer
 
@@ -86,7 +86,7 @@ For a single file only, you can use:
 scp <YourNetID>@prontodtn.las.iastate.edu:/<YourWorkingDirectory>/<FileName> <FileName> 
 ```
 
-When finished, navigate on your computer to <FolderName> or <FileName> on your computer to verify that your files have successfully transfered.
+When finished, navigate on your computer to <FolderName> or <FileName> on your computer to verify that your files have successfully transferred.
 
 ### More examples
 

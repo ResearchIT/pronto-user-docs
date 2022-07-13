@@ -148,7 +148,7 @@ You can use this as a sample template:
 
 # everything below this line is optional, but are nice to have quality of life things
 #SBATCH --output=job.%J.out # tell it to store the output console text to a file called job.<assigned job number>.out
-#SBATCH --error=job.%J.err # tell it to store the error messages from the program (if it doesn't write them to normal console output) to a file called job.<assigned job muber>.err
+#SBATCH --error=job.%J.err # tell it to store the error messages from the program (if it doesn't write them to normal console output) to a file called job.<assigned job number>.err
 
 module load <VersionOfR>
 cd /work/LAS/<YourLabDirectory>
@@ -253,7 +253,7 @@ The best way to combat this is by keeping the amount of modules used in your job
 
 ### Avoid using different R modules
 
-Using 'module spider' as discussed above, you may notice there are multiple modules vailable for some R versions. For example, for R 3.6.3, the follow modules exist:
+Using 'module spider' as discussed above, you may notice there are multiple modules available for some R versions. For example, for R 3.6.3, the follow modules exist:
 
 ```
         r/3.6.3-py3-jvakygf
@@ -261,4 +261,4 @@ Using 'module spider' as discussed above, you may notice there are multiple modu
         r/3.6.3-py3-sxv6dw3
 ```
 
-If you use one install.packages to install modules in your home directory using any of these, those packages will be installed into the same folder in yoru home directory, and will work under that R module. However, if you later load a different R module, those packages you installed might not work when you try to use this with this R module. This happens frequently for packages with compield C extensions. We recommend you use the load same R module each time you install packages and in all of your scripts.
+If you use one install.packages to install modules in your home directory using any of these, those packages will be installed into the same folder in your home directory, and will work under that R module. However, if you later load a different R module, those packages you installed might not work when you try to use this with this R module. This happens frequently for packages with compiled C extensions. We recommend you use the load same R module each time you install packages and in all of your scripts.

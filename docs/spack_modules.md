@@ -79,10 +79,10 @@ $ module spider satsuma
       gcc/7.3.0-xegsmw4
  
     Help:
-      Satsuma2 is an optimsed version of Satsuma, a tool to reliably align
+      Satsuma2 is an optimized version of Satsuma, a tool to reliably align
       large and complex DNA sequences providing maximum sensitivity (to find
       all there is to find), specificity (to only find real homology) and
-      speed (to accomodate the billions of base pairs in vertebrate genomes).
+      speed (to accommodate the billions of base pairs in vertebrate genomes).
 ```
 
 Let's load those modules, and try again:
@@ -171,10 +171,7 @@ Successfully installed File-Slurp-9999.32
 
 ### Setting up a 'conda' environment
 
-Use of conda is discouraged. The recommended way to install additional Python packages is with a [Python virtual environment](python.md). If you need software that we don't available as a module, but that is already [available as a Spack package](https://spack.readthedocs.io/en/latest/package_list.html), see the Self Managed Spack Installs section of this guide.
-
-If you absolutely must use conda, please see our guide on [properly setting up a conda environment](conda.md).
-
+Please see our guide on [properly setting up a conda environment](conda.md).
 
 ## Reproducibility & self-managed installs
 
