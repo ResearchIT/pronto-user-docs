@@ -1,6 +1,6 @@
 # How to upgrade Python packages that are already in the container
 
-To use upgraded packages in the container, you will need to get an interactive session on a GPU node.
+To upgrade packages in the container, you will need to get an interactive session on a GPU node.
 
 ```
 srun --time=01:00:00 --nodes=1 --cpus-per-task=4 --partition=gpu --gres=gpu:1 --pty /usr/bin/bash
@@ -24,7 +24,7 @@ Now you can upgrade the packages with pip.
 ml-gpu /work/LAS/your-lab/mlgpuvenv/bin/pip3 install --upgrade somepackage
 ```
 
-To confirm the packages the packages are upgraded:
+To confirm the packages are upgraded:
 
 ```
 ml-gpu /work/LAS/your-lab/mlgpuvenv/bin/pip3 freeze | grep somepackage
