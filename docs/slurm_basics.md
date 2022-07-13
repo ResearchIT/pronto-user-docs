@@ -179,13 +179,15 @@ srun --x11 --time=01:00:00 --nodes=1 --cpus-per-task=8 --pty /usr/bin/bash
 
 ### I want to know more
 
-Cool. You should use the man command then.
+Please see the [sbatch documentation](https://slurm.schedmd.com/sbatch.html) for more information.
+
+You can also find this documentation on the cluster by using the man command.
 
 ```
 man sbatch
 ```
 
-That'll tell you more than you ever wanted to know about the arguments that sbatch takes. You can also use man for any other command that you have questions about.
+You can also use man for any other command that you have questions about.
 
 Example Commands
 ----------------
