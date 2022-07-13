@@ -2,7 +2,7 @@
 
 ## Use of Conda is Discouraged
 
-For pytorch or other machine learning / GPU uses, you should use the [Machine Learning container](machine_learning).
+For pytorch or other machine learning / GPU uses, you should use the [Machine Learning container](machine_learning/index.md).
 
 For other Python uses, the recommended way to install additional Python packages is with a [Python Virtual Environment](python.md). 
 
