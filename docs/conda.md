@@ -8,7 +8,7 @@ For other Python uses, the recommended way to install additional Python packages
 
 For other software, we have many [Spack based software modules](spack_modules.md) installed. If you need software that we don't available as a module, but that is already [available as a Spack package](https://spack.readthedocs.io/en/latest/package_list.html), see the [Self Managed Spack Installs](spack
 
-## Before you use conda
+## But if you're going to do it anyway, start here
 
 Conda defaults to saving environments in your home folder. Home folders on pronto have a quota of 10GB and are not meant for storing software.
 
