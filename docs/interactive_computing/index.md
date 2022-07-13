@@ -14,7 +14,7 @@ When you do this you should consider protecting your session with [tmux](tmux.md
 
 ## I want a command line session with a GPU
 
-To get an interactive session for an hour on one node with 8 cpus:
+To get an interactive session for an hour on one node with 8 cpus and 1 GPU:
 
 ```
 srun --time=01:00:00 --nodes=1 --cpus-per-task=8 --partition=gpu --gres=gpu:1 --pty /usr/bin/bash

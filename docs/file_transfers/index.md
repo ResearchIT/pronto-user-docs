@@ -1,8 +1,6 @@
 # File Transfers
 
-## How do I copy files to and from /work?
-
-All file transfers to/from work to/from other sources like your laptop or LSS must be done through the machine:
+All file transfers to/from `/work` to/from other sources like your laptop or LSS must be done through the machine:
 
 ```
 prontodtn.las.iastate.edu
