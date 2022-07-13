@@ -127,13 +127,14 @@ To get an interactive session for an hour on one node with 8 cpus. Any of the ar
 srun --time=01:00:00 --nodes=1 --cpus-per-task=8 --partition=interactive --pty /usr/bin/bash
 ```
 
-### I want a GPU!
+### I want a GPU
 
-Alright calm down, that's pretty easy to do. Just add the following line to your existing sbatch script
+Add the following line to your existing sbatch script
 ```
 #SBATCH --gres=gpu:1 #If you just need one gpu, you're done, if you need more you can change the number
 #SBATCH --partition=gpu #specify the gpu partition
 ```
+
 ### I want a specific type of GPU
 
 To see the available types of GPUs, you can run this:
@@ -151,9 +152,9 @@ To request a specific type of GPU from that list, you use something like this in
 
 If the amount of RAM the GPU has is not listed in the name, it might be found on the [Pronto hardware page](https://researchit.las.iastate.edu/pronto_hardware).
 
-### I want to run on a specific machine!
+### I want to run on a specific machine
 
-Alright, this is done by selecting a specific partition if you're looking to for example use the 'biocrunch' machines.
+This is done by selecting a specific partition if you're looking to for example use the 'biocrunch' machines.
 
 ```
 #SBATCH --partition=biocrunch # specify which partition your job should be submitted to
