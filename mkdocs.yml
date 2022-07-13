@@ -26,8 +26,18 @@ nav:
     - Software Modules: spack_modules.md
     - Picking the Best Resource For Your Job: picking_the_best_resource.md
     - Popular Uses:
-        - Machine Learning / GPU: machine_learning.md
+        - Machine Learning / GPU: 
+            # first menu item is used as the link for the 'Interactive Computing' heading
+            # implemented in custom_theme/nav.html
+            - machine_learning/index.md
+            - Submit Job: machine_learning/submit_job.md
+            - Install Python Packages: machine_learning/install_python_packages.md
+            - Upgrade Python Packages: machine_learning/upgrade_python_packages.md
+            - Create Empty Virtual Environment: machine_learning/create_empty_virtualenv.md
+            - Old Container Software Versions: machine_learning/old_versions.md
         - Interactive Computing:
+            # first menu item is used as the link for the 'Interactive Computing' heading
+            # implemented in custom_theme/nav.html
             - interactive_computing/index.md
             - tmux: interactive_computing/tmux.md
             - screen: interactive_computing/screen.md
