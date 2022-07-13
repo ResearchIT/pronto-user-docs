@@ -6,11 +6,9 @@ For pytorch or other machine learning / GPU uses, you should use the [Machine Le
 
 For other Python uses, the recommended way to install additional Python packages is with a [Python Virtual Environment](python.md). 
 
-For other software, we have many [Spack based software modules](spack_modules.md) installed. If you need software that we don't available as a module, but that is already [available as a Spack package](https://spack.readthedocs.io/en/latest/package_list.html), see the [Self Managed Spack Installs](spack_modules.md) section of our guide.
+For other software, we have many [Spack based software modules](spack_modules.md) installed. If you need software that we don't available as a module, but that is already [available as a Spack package](https://spack.readthedocs.io/en/latest/package_list.html), see the [Self Managed Spack Installs](spack
 
-## Setting up a 'conda' environment
-
-### Before you use conda
+## Before you use conda
 
 Conda defaults to saving environments in your home folder. Home folders on pronto have a quota of 10GB and are not meant for storing software.
 
@@ -32,7 +30,7 @@ pkgs_dirs:
   - /work/LAS/your-lab/your-directory/.conda/pkgs
 ```
 
-### How to set up a conda environment
+## How to set up a conda environment
 
 To setup a conda environment, you will first need to connect to Pronto. Next, allocate a **compute** node and be sure you are placed on it (via salloc/srun). If you are not familiar with salloc or srun, please refer to [this guide](slurm_basics.md) first. Below is a sample command you could run:
 
@@ -88,7 +86,7 @@ To verify that you have successfully activated the environment, your terminal sh
 
 A useful cheatsheet for conda can be found here: [https://docs.conda.io/projects/conda/en/4.6.0/\_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
 
-### Moving your .conda directory
+## Moving your .conda directory
 
 If you receive errors about 'Disk Quota exceeded' while using Conda, it probably means your home directory is full. Home folders on pronto have a quota of 10GB and are not meant for storing software.
 
