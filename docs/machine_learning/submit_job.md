@@ -1,5 +1,6 @@
 # How to submit a batch file and compile code in the container via GPU node
 
+## Overview 
 To submit a batch file and/or run code, you will need to use the slurm job manager. If you are unfamiliar with it, you can find the complete documentation [here](../slurm_basics.md). Specifically, you will need to know how to run a job and submit the batch file to the node(s) you are using.
 
 Below is a simple example that compiles python code that simply says hello world and saves the output in a .out file: (Part of this was taken from the single node script section linked above)
@@ -33,3 +34,20 @@ ml-gpu python3 hello.py
 After submitting this sample script to the slurm job manager, I would end up with a .err and .out file in my directory. If I check my .out file, we can see below that my python code works as intended:
 
 ![ml_container_result](img/ml_container_result.png)
+
+## Requesting a specific type of GPU
+
+To see the available types of GPUs, you can run this:
+
+```
+sinfo --partition=gpu -o %G
+```
+
+To request a specific type of GPU from that list, you use something like this in your sbatch script:
+
+```
+#SBATCH --gres=gpu:rtx_2080_Ti:1
+#SBATCH --partition=gpu #specify the gpu partition
+```
+
+If the amount of RAM the GPU has is not listed in the name, it might be found on the [Pronto hardware page](https://researchit.las.iastate.edu/pronto_hardware).
