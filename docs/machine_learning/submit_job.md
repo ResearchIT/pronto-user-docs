@@ -35,12 +35,27 @@ After submitting this sample script to the slurm job manager, I would end up wit
 
 ![ml_container_result](img/ml_container_result.png)
 
-## Requesting a specific type of GPU
+## Requesting a Specific Type of GPU
 
 To see the available types of GPUs, you can run this:
 
 ```
 sinfo --partition=gpu -o %G
+```
+
+The list looks like this:
+
+```
+a100_1g.5gb
+a100_2g.10gb
+a100_3g.20gb
+a100-pcie
+gtx_1080_ti
+rtx_2080_Ti
+rtx_6000
+v100-pcie-16G
+v100-pcie-32G
+v100-sxm2-32G
 ```
 
 To request a specific type of GPU from that list, you use something like this in your sbatch script:
