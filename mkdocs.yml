@@ -36,6 +36,7 @@ nav:
             - Install Additional Python Packages: machine_learning/install_python_packages.md
             - Upgrade Existing Python Packages: machine_learning/upgrade_python_packages.md
             - Create an Empty Virtual Environment: machine_learning/create_empty_virtualenv.md
+            - Common Issues: machine_learning/common_issues.md
         - Interactive Computing:
             # first menu item is used as the link for the 'Interactive Computing' heading
             # implemented in custom_theme/nav.html

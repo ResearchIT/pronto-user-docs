@@ -20,7 +20,7 @@ This list may not always be up to date. To get the most recent list, you can run
 sinfo --partition=gpu -o %n,%G
 ```
 
-## Use a Specific Type of GPU in a Batch Job
+## Use a Specific Type in a Batch Job
 
 Change this line of your batch script:
 
