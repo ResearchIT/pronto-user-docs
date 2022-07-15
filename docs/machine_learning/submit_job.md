@@ -1,9 +1,8 @@
-# How to submit a batch file and compile code in the container via GPU node
+# How To Submit a Job to a GPU node
 
-## Overview 
-To submit a batch file and/or run code, you will need to use the slurm job manager. If you are unfamiliar with it, you can find the complete documentation [here](../slurm_basics.md). Specifically, you will need to know how to run a job and submit the batch file to the node(s) you are using.
+## Example Script 
 
-Below is a simple example that compiles python code that simply says hello world and saves the output in a .out file: (Part of this was taken from the single node script section linked above)
+Below is an example script that compiles python code that simply says hello world and saves the output in a .out file:
 
 ```bash
 #!/bin/bash
@@ -31,11 +30,17 @@ cd /work/LAS/jones-lab/ml
 ml-gpu python3 hello.py
 ```
 
-After submitting this sample script to the slurm job manager, I would end up with a .err and .out file in my directory. If I check my .out file, we can see below that my python code works as intended:
+After saving this somewhere in my /work directory, I could submit it to the [Slurm job manager](../slurm_basics.md) with:
+
+```
+sbatch /path/to/job/script
+```
+
+After the script runs, I would end up with a .err and .out file in my directory. If I check my .out file, we can see below that my python code works as intended:
 
 ![ml_container_result](img/ml_container_result.png)
 
-## Requesting a Specific Type of GPU
+## Request a Specific Type of GPU
 
 To see the available types of GPUs, you can run this:
 
