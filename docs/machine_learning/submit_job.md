@@ -1,7 +1,5 @@
 # How To Submit a Job to a GPU node
 
-## Example Script 
-
 Below is an example script that compiles python code that simply says hello world and saves the output in a .out file:
 
 ```bash
@@ -39,35 +37,3 @@ sbatch /path/to/job/script
 After the script runs, I would end up with a .err and .out file in my directory. If I check my .out file, we can see below that my python code works as intended:
 
 ![ml_container_result](img/ml_container_result.png)
-
-## Request a Specific Type of GPU
-
-To see the available types of GPUs, you can run this:
-
-```
-sinfo --partition=gpu -o %G
-```
-
-The list looks like this:
-
-```
-a100_1g.5gb
-a100_2g.10gb
-a100_3g.20gb
-a100-pcie
-gtx_1080_ti
-rtx_2080_Ti
-rtx_6000
-v100-pcie-16G
-v100-pcie-32G
-v100-sxm2-32G
-```
-
-To request a specific type of GPU from that list, you use something like this in your sbatch script:
-
-```
-#SBATCH --gres=gpu:rtx_2080_Ti:1
-#SBATCH --partition=gpu #specify the gpu partition
-```
-
-If the amount of RAM the GPU has is not listed in the name, it might be found on the [Pronto hardware page](https://researchit.las.iastate.edu/pronto_hardware).

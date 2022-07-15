@@ -133,22 +133,7 @@ Add the following line to your existing sbatch script
 #SBATCH --partition=gpu #specify the gpu partition
 ```
 
-### I want a specific type of GPU
-
-To see the available types of GPUs, you can run this:
-
-```
-sinfo --partition=gpu -o %G
-```
-
-To request a specific type of GPU from that list, you use something like this in your sbatch script:
-
-```
-#SBATCH --gres=gpu:rtx_2080_Ti:1
-#SBATCH --partition=gpu #specify the gpu partition
-```
-
-If the amount of RAM the GPU has is not listed in the name, it might be found on the [Pronto hardware page](https://researchit.las.iastate.edu/pronto_hardware).
+If you want a specific type of GPU, see our article about [GPU types](machine_learning/gpu_types.md).
 
 ### I want to run on a specific machine
 

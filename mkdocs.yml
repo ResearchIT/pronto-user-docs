@@ -32,6 +32,7 @@ nav:
             - machine_learning/index.md
             - Pre-installed Software: machine_learning/preinstalled_software.md
             - Submit Job: machine_learning/submit_job.md
+            - Available GPU Types: machine_learning/gpu_types.md
             - Install Additional Python Packages: machine_learning/install_python_packages.md
             - Upgrade Existing Python Packages: machine_learning/upgrade_python_packages.md
             - Create an Empty Virtual Environment: machine_learning/create_empty_virtualenv.md
