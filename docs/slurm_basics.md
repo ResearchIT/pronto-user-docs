@@ -1,7 +1,6 @@
 # Slurm Basics
 
-Main Slurm Commands
--------------------
+## Main Slurm Commands
 
 *   **sbatch** - submit a job script.
 *   **srun** - run a command on allocated compute node(s).
@@ -39,8 +38,7 @@ The **smap** command is similar to the _sinfo_ command, except it displays all o
 
 The **scontrol** command is used to tweak a number of slurm things. You'll most likely use it to modify your jobs while they're in the queue, either number of nodes or number of tasks/cpus. Can also be used to display information about jobs, partition structures, and nodes.
 
-Example Scripts
----------------
+## Example Scripts
 
 ### Single node script
 
@@ -189,8 +187,7 @@ man sbatch
 
 You can also use man for any other command that you have questions about.
 
-Example Commands
-----------------
+## Example Commands
 
 ### Job Info
 
