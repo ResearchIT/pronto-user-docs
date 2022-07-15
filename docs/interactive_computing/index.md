@@ -1,6 +1,6 @@
 # Interactive Computing
 
-## I want a command line session
+## Get a command line session
 
 To get an interactive session for an hour on one node with 8 cpus:
 
@@ -12,7 +12,7 @@ Any of the [arguments you can use with sbatch](../slurm_basics.md) can be provid
 
 When you do this you should consider protecting your session with [tmux](tmux.md) or [screen](screen.md).
 
-## I want a command line session with a GPU
+## Get a command line session with a GPU
 
 To get an interactive session for an hour on one node with 8 cpus and 1 GPU:
 
@@ -24,10 +24,10 @@ Any of the [arguments you can use with sbatch](../slurm_basics.md) can be provid
 
 When you do this you should consider protecting your session with [tmux](tmux.md) or [screen](screen.md).
 
-## I want a complete Desktop Environment
+## Get a complete Desktop Environment
 
 Please see the article for [Interactive Desktop on Open OnDemand](../ondemand/interactive_desktop.md).
 
-## I want to use X Forwarding to run a GUI program
+## Use X Forwarding to run a GUI program
 
 Please see the article [X Forwarding for Mac and Windows](x_forwarding.md)
