@@ -1,4 +1,4 @@
-# How to install additional Python packages for use in the container
+# How to install additional Python packages
 
 To install additional packages for use in the container, you will need to get an interactive session on a GPU node.
 
@@ -6,28 +6,28 @@ To install additional packages for use in the container, you will need to get an
 srun --time=01:00:00 --nodes=1 --cpus-per-task=4 --partition=gpu --gres=gpu:1 --pty /usr/bin/bash
 ```
 
-Load the ml-gpu module
+Load the version of the ml-gpu module you want to use. For example:
 
 ```
-module load ml-gpu
+module load ml-gpu/20220603
 ```
 
-Next, create a directory to install the packages to. This should be within your group's /work directory. Replace the path in the following command and run:
+Next, create a directory to install the packages to. This should be within your group's /work directory, and specific to the version of the ml-gpu container that you're using.
 
 ```
-ml-gpu python -m venv --system-site-packages /work/LAS/your-lab/mlgpuvenv
+ml-gpu python -m venv --system-site-packages /work/LAS/your-lab/mlgpuvenv-20220603
 ```
 
 Now you can install the additional packages with pip.
 
 ```
-ml-gpu /work/LAS/your-lab/mlgpuvenv/bin/pip3 install somepackage
+ml-gpu /work/LAS/your-lab/mlgpuvenv-20220603/bin/pip3 install somepackage
 ```
 
 To confirm the packages are installed:
 
 ```
-ml-gpu /work/LAS/your-lab/mlgpuvenv/bin/pip3 freeze | grep somepackage
+ml-gpu /work/LAS/your-lab/mlgpuvenv-20220603/bin/pip3 freeze | grep somepackage
 ```
 
 Your package is now installed.
@@ -35,7 +35,7 @@ Your package is now installed.
 To use these additional packages in your batch scripts, load the ml-gpu module, then invoke python like this:
 
 ```
-ml-gpu /work/LAS/your-lab/mlgpuvenv/bin/python your_script.py
+ml-gpu /work/LAS/your-lab/mlgpuvenv-20220603/bin/python your_script.py
 ```
 
 Be sure to replace the path with the actual location you installed the packages.
