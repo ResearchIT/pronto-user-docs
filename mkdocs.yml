@@ -30,9 +30,10 @@ nav:
             # first menu item is used as the link for the 'Interactive Computing' heading
             # implemented in custom_theme/nav.html
             - machine_learning/index.md
+            - Pre-installed Software: machine_learning/preinstalled_software.md
             - Submit Job: machine_learning/submit_job.md
-            - Install Python Packages: machine_learning/install_python_packages.md
-            - Upgrade Python Packages: machine_learning/upgrade_python_packages.md
+            - Install Additional Python Packages: machine_learning/install_python_packages.md
+            - Upgrade Existing Python Packages: machine_learning/upgrade_python_packages.md
             - Create an Empty Virtual Environment: machine_learning/create_empty_virtualenv.md
             - Older Software Versions : machine_learning/old_versions.md
         - Interactive Computing:
