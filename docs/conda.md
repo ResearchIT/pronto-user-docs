@@ -115,4 +115,6 @@ pkgs_dirs:
 
 Replace **your-lab** and **your-directory** with appropriate values.
 
+If there's already a `~/.condarc` file in your home directory, append those lines to the end.
+
 Now you can load the Conda module again and should still see all your existing environments.
