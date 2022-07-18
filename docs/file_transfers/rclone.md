@@ -4,8 +4,7 @@ Rclone is similar to the rsync command, except it is used for syncing files/d
 
 Note that rclone also has many other utilities and you can find a complete list of commands/documentation here: [https://rclone.org/docs/](https://rclone.org/docs/)
 
-Configuring rclone on prontodtn
--------------------------------
+## Configuring rclone on prontodtn
 
 Open up a terminal session and connect to prontodtn.
 
@@ -133,8 +132,7 @@ result>
 
 To continue past this point, you will need to install rclone on your computer as well.
 
-Authorizing rclone on your local machine
-----------------------------------------
+## Authorizing rclone on your local machine
 
 Please follow the instructions on the rclone website to install rclone on your personal machine
 
@@ -181,8 +179,7 @@ Paste the following into your remote machine --->
 
 Copy the text between the arrows to your clipboard.
 
-Back on prontdtn
-----------------
+## Back on prontdtn
 
 Paste the code you received in the previous step into your terminal
 
@@ -197,7 +194,7 @@ You can now choose to create, edit or delete the remote if you wish. Next, you c
 
 You now have everything configured! If you wish to add another remote, you will have to follow the same procedures as above.
 
-Usage
+## Using RClone to Copy Files
 -----
 
 Rclone has many different commands available for use. You can find a complete list of all of rclone's available commands here: [https://rclone.org/commands/](https://rclone.org/commands/)
@@ -208,10 +205,24 @@ For the purposes of this guide, we will only be discussing how to copy the files
 rclone sync <Source> <RemoteName>:<RemoteDirectoryInBox>
 ```
 
-Note that the remote name is the name of the remote you specified after running rclone config. In the example above, I have a remote called remote. If I wanted to copy a folder called "test-project" from my lab's work directory to a folder called ""pronto-backup, I would use this command:
+Note that the remote name is the name of the remote you specified after running rclone config. In the example above, I have a remote called remote.
+
+### From Pronto to Box
+
+If I wanted to copy a folder called "test-project" from my lab's work directory to a folder called "pronto-backup", I would use this command:
 
 ```
 rclone sync /work/LAS/jones-lab/test-project remote:/pronto-backup/
 ```
 
-You can navigate to the Cybox or Google Drive website and verify that your files are where you want them to be.
+You can navigate to the CyBox or Google Drive website and verify that your files are where you want them to be.
+
+### From Box to Pronto
+
+If I wanted to copy a folder called "pronto-backup" from Box directory to a folder called "test-project" on Pronto, I would use this command:
+
+```
+rclone sync remote:/pronto-backup/ /work/LAS/jones-lab/test-project 
+```
+
+You should now be able to access that directory at `/work/LAS/jones-lab/test-project` on Pronto.
