@@ -195,7 +195,6 @@ You can now choose to create, edit or delete the remote if you wish. Next, you c
 You now have everything configured! If you wish to add another remote, you will have to follow the same procedures as above.
 
 ## Using RClone to Copy Files
------
 
 Rclone has many different commands available for use. You can find a complete list of all of rclone's available commands here: [https://rclone.org/commands/](https://rclone.org/commands/)
 
