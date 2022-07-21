@@ -39,3 +39,14 @@ ml-gpu /work/LAS/your-lab/mlgpuvenv-20220603/bin/python your_script.py
 ```
 
 Be sure to replace the path with the actual location you installed the packages.
+
+## PyTorch
+
+PyTorch is already included in the container. If you decide to install a different version, it likely will not work with newer GPU cards unless you follow the instructions on the [PyTorch website](https://pytorch.org/get-started/locally/), and adapt them to install it to your virtual environment. Also be sure to use the CUDA version that's listed on the [pre-installed software](preinstalled_software.md) page. E.g.
+
+![torch installation options](img/torch_options.png)
+
+To install this to your virtual environment, you would do the following:
+```
+ml-gpu /work/LAS/your-lab/mlgpuvenv-20220603/bin/pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+```

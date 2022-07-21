@@ -2,6 +2,10 @@
 
 The listed versions are for the `ml-gpu/20220603` version of the container. [Older versions](#older-container-software-versions) of the container are available but may not contain all of the listed packages.
 
+## CUDA Version
+
+11.6
+
 ## Primary Utilities
 
 * Python: 3.9.13
