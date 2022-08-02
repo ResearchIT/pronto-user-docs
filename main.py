@@ -214,6 +214,10 @@ def define_env(env):
 
         for hostname in server_info:
             hinfo = server_info[hostname]
+
+            if "gpu" not in hinfo["partitions"]:
+                continue
+
             for gpu_type, gpu_quantity in hinfo["gpus"].items():
                 if gpu_type not in gpu_info:
                     gpu_info[gpu_type] = {
@@ -224,6 +228,10 @@ def define_env(env):
                 gpu_info[gpu_type]["quantity"] += gpu_quantity
 
         for gpu_type, gpu_stats in gpu_info.items():
+
+            if gpu_stats["quantity"] == 0:
+                continue
+
             table += f"""
             <tr>
             <td>{gpu_type}</td>
