@@ -130,8 +130,6 @@ srun --time=01:00:00 --nodes=1 --cpus-per-task=8 --partition=interactive --pty /
 I'm Not Sure
 ------------
 
-For a complete list of all the available hardware, please refer to this link:
-
-[https://researchit.las.iastate.edu/hardware](https://researchit.las.iastate.edu/hardware)
+For a complete list of all the available hardware, please refer to this [link](hardware.md).
 
 If you are still not sure the best place to run your job, please contact researchit@iastate.edu and we would be happy to assist you.

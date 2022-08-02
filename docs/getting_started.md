@@ -21,7 +21,7 @@ Overview
 
 Pronto has plenty of different compute nodes available for your needs. 
 
-[Here's a list of nodes (with hardware specifications) that are available to you](https://researchit.las.iastate.edu/pronto_hardware).
+[Here's a list of nodes (with hardware specifications) that are available to you](hardware.md).
 
 Each compute node has different specifications and is suitable for different workloads.
 
