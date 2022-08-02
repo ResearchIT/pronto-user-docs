@@ -1,8 +1,7 @@
 from mkdocs.utils.meta import get_data
 from os.path import exists
-import yaml
 import re
-import glob
+import os
 
 # this file is run by the mkdocs macros plugin
 
@@ -70,7 +69,7 @@ def define_env(env):
     # the output of sinfo --noheader -o '%n|%P|%X|%Y|%m|%f|%G'
     server_info = {}
 
-    with open('data/sinfo.txt', 'r') as input_file:
+    with open(os.path.dirname(os.path.realpath(__file__)) + '/data/sinfo.txt', 'r') as input_file:
         for line in input_file:
             parse_sinfo_line(server_info, line)
 
