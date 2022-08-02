@@ -8,6 +8,9 @@ edit_uri: ""
 extra_css:
     - css/isu.css
     - css/codehilite.css
+plugins:
+    - search
+    - macros
 markdown_extensions:
     - toc:
         permalink: true
@@ -24,9 +27,10 @@ nav:
     - Getting Started: getting_started.md
     - Slurm Basics: slurm_basics.md
     - Software Modules: spack_modules.md
+    - Hardware: hardware.md
     - Picking the Best Resource For Your Job: picking_the_best_resource.md
     - Popular Uses:
-        - Machine Learning / GPU: 
+        - Machine Learning / GPU:
             # first menu item is used as the link for the 'Interactive Computing' heading
             # implemented in custom_theme/nav.html
             - machine_learning/index.md

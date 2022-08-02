@@ -1,3 +1,4 @@
 # File: docs/requirements.txt
 mkdocs
 Pygments
+mkdocs-macros-plugin~=0.7.0
