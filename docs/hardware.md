@@ -32,6 +32,8 @@ gpu is intended for jobs that need a gpu.
 
 {{ gpu_partition_hardware_table() }}
 
+{{ gpu_types_table() }}
+
 ## legion
 
 The Legion servers are best for problems which can be highly parallelized (particularly where each thread is doing something slightly different from the others).
