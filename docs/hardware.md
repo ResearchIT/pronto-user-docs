@@ -22,7 +22,7 @@ speedy is intended for jobs that cannot be parallelized and require the fastest 
 
 ## bigram
 
-bigram is intended for jobs that cannot be parallelized and require a large amount of RAM memory, such as de novo genome assembly.
+bigram is intended for jobs that cannot be parallelized and require a large amount of RAM, such as de novo genome assembly.
 
 {{ partition_hardware_table('bigram') }}
 
