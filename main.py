@@ -65,8 +65,6 @@ def define_env(env):
 
     "Hook function"
 
-    # parsed from data/sinfo.txt
-    # the output of sinfo --noheader -o '%n|%P|%X|%Y|%Z|%m|%f|%G'
     server_info = {}
 
     with open(os.path.dirname(os.path.realpath(__file__)) + '/data/sinfo.txt', 'r') as input_file:
@@ -74,7 +72,6 @@ def define_env(env):
             parse_sinfo_line(server_info, line)
 
 
-  # <thead><tr><th>GPU Type</th><th>RAM</th><th><a href="https://developer.nvidia.com/cuda-gpus">Compute Capability</a></th><th>Quantity</th></tr></thead>
     @env.macro
     def partition_hardware_table(partition):
 
@@ -120,7 +117,6 @@ def define_env(env):
 
         return table
 
-  #
     @env.macro
     def gpu_partition_hardware_table():
 
