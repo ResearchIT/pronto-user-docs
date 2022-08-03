@@ -1,6 +1,16 @@
 # Hardware
 
-On Pronto, servers are divided into partitions based on intended use case. Choosing the correct partition when you submit your job will maximize its performance. If you do not specify a partition when you submit your job, it will run on whatever server happens to be available. 
+On Pronto, servers are divided into partitions based on intended use case. 
+
+To specify a partition when you submit your job, add this to your batch submission script:
+
+```
+#SBATCH --partition=PARTITIONNAME
+```
+
+Replace PARTITIONNAME with the name of the partition you want.
+
+Choosing the [correct partition](picking_the_best_resource.md) when you submit your job will maximize its performance. If you do not specify a partition, your job will run on whatever server happens to be available. 
 
 ## interactive
 
@@ -30,7 +40,27 @@ bigram is intended for jobs that cannot be parallelized and require a large amou
 
 gpu is intended for jobs that need a gpu.
 
+When submitting jobs to the gpu partition, you also need to add this to your batch script:
+
+```
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:1
+```
+
+If you want a specific type of GPU, see the instructions under [GPU types](#gpu-types) instead.
+
+### Servers
 {{ gpu_partition_hardware_table() }}
+
+### GPU Types
+
+To use a specific type of GPU, add this to your batch file:
+```
+#SBATCH --partition=gpu
+#SBATCH --gres=gpu:GPUTYPE:1
+```
+
+Replace GPUTYPE with one of these types:
 
 {{ gpu_types_table() }}
 

@@ -1,6 +1,6 @@
 # How To Submit a Job to a GPU node
 
-Below is an example script that compiles python code that simply says hello world and saves the output in a .out file:
+Below is an example script that runs python code that simply says hello world and saves the output in a .out file:
 
 ```bash
 #!/bin/bash

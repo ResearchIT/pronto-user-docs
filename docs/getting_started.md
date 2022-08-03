@@ -54,7 +54,7 @@ We provide 10GB of home storage for every user on pronto, home should generally 
 Allocating a compute node
 -------------------------
 
-The best way to run your job would be writing a simple bash script and submitting it via sbatch. You can find a sample script template in the slurm basics guide linked above. You can either upload your own local bash script (see the _Transferring Files_ section below) or create a bash script on the **compute** node with vim, nano, etc. To execute it, run: 
+The best way to run your job would be writing a simple bash script and submitting it via sbatch. You can find a sample script template in the slurm basics guide linked above. You can either upload your own local bash script (see the [Transferring Files](#transferring-files) section below) or create a bash script on the **compute** node with vim, nano, etc. To execute it, run: 
 
 ```bash
 sbatch myscript.sh

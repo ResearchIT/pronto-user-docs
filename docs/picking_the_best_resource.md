@@ -1,6 +1,6 @@
 # Picking the Best Resource For Your Job
 
-On Pronto, servers are divided into partitions based on intended use case. Choosing the correct partition when you submit your job will maximize its performance. If you do not specify a partition when you submit your job, it will run on whatever server happens to be available. This can result in the job taking **5x longer or more**, and result in **missed paper submission deadlines**.
+On Pronto, servers are divided into partitions based on intended use case. Choosing the correct partition when you submit your job will maximize its performance. If you do not specify a partition when you submit your job, it will run on whatever server happens to be available. This can result in the job taking **5x longer or more**.
 
 The best way to choose a partition is to do a test run of your job on each partition with a **small** subset of your data.
 
