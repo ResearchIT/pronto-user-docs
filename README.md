@@ -20,7 +20,7 @@ Openshift will automatically build this when pushed for production.
 
 Use this to generate a new sinfo dump and save to data/sinfo.txt
 ```
-sinfo --noheader -o '%n|%P|%X|%Y|%Z|%m|%f|%G'
+sinfo --noheader -o '%n|%P|%X|%Y|%Z|%m|%f|%G' | sort
 ```
 
 GPU RAM and compute capability is defined in main.py (search for gpu_info)
