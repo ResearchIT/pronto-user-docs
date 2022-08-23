@@ -55,17 +55,33 @@ module load r/3.6.3-py3-sxv6dw3
 Some versions may result in an error like the following:
 
 ```
-Lmod has detected the following error:  These module(s) or extension(s) exist but cannot be loaded as requested: "r/4.0.2-py3-icvulwq"
-   Try: "module spider r/4.0.2-py3-icvulwq" to see how to load the module(s).
+Lmod has detected the following error:  These module(s) or extension(s) exist but cannot be loaded as requested: "r/4.0.4-py3-4khjixy"
+   Try: "module spider r/4.0.4-py3-4khjixy" to see how to load the module(s).
 ```
 If we follow the suggestion, we find we need to load another module before we load this R module.
 
 ```
-$ module load gcc/7.3.0-xegsmw4
-module load r/4.0.2-py3-icvulwq
+module load gcc/10.2.0-zuvaafu
+module load r/4.0.4-py3-4khjixy
 ```
 
 Please note that packages installed using one R module may not work with other R modules.  Please be sure to use the same R module every time you install packages.
+
+
+## Recommended modules
+
+These R modules generally work well:
+
+```
+module load r/3.6.3-py3-sxv6dw3
+```
+
+or
+
+```
+module load gcc/10.2.0-zuvaafu
+module load r/4.0.4-py3-4khjixy
+```
 
 Installing packages 
 --------------------
