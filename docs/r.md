@@ -3,8 +3,7 @@ R is a programming language that is tailored towards Statistical computing. This
 
 If you are looking for ISU's mirror link for browsing packages, you can find it here: [https://mirror.las.iastate.edu/CRAN/](https://mirror.las.iastate.edu/CRAN/)
 
-Start Here
-----------
+## Start Here
 
 The following sections will not work if run from the head node (pronto).
 
@@ -12,8 +11,7 @@ After you connect to pronto, follow the instructions in the [slurm basics](slurm
 
 Alternatively, you can run RStudio on Pronto using the [Interactive Desktop on Open OnDemand](ondemand/interactive_desktop.md).
 
-Copying your R scripts to pronto
---------------------------------
+## Copying your R scripts to pronto
 
 You will need to be comfortable with using the scp command (Mac/Linux) or WinSCP (Windows) for transferring your R files.  
 
@@ -27,8 +25,26 @@ SCP should be available via terminal on Mac/Linux.
 
 You will need your R script(s) available and ready prior to transferring. (A simple "hello world" script will suffice)
 
-Loading R
----------
+## Loading R
+
+### Recommended modules
+
+These R modules generally work well:
+
+```
+module purge
+module load gcc/10.2.0-zuvaafu
+module load r/4.0.4-py3-4khjixy
+```
+
+or
+
+```
+module purge
+module load r/3.6.3-py3-sxv6dw3
+```
+
+If these don't meet your needs, you could try the one of the others.
 
 ### See available versions
 
@@ -68,23 +84,7 @@ module load r/4.0.4-py3-4khjixy
 Please note that packages installed using one R module may not work with other R modules.  Please be sure to use the same R module every time you install packages.
 
 
-## Recommended modules
-
-These R modules generally work well:
-
-```
-module load r/3.6.3-py3-sxv6dw3
-```
-
-or
-
-```
-module load gcc/10.2.0-zuvaafu
-module load r/4.0.4-py3-4khjixy
-```
-
-Installing packages 
---------------------
+## Installing packages 
 
 If your R task requires a package, you will need to install them first. 
 
@@ -143,8 +143,7 @@ To install packages in a script, you will need to specify both the location to s
 install.packages("RColorBrewer", lib="/work/LAS/your-lab/yournetid/Rlibs", repos="https://mirror.las.iastate.edu/CRAN")
 ```
 
-Executing your R job
---------------------
+## Executing your R job
 
 Now that we have our packages installed, we need to create a slurm job script (i.e. bash script). 
 
@@ -154,7 +153,7 @@ Name it "<FileName>.sh" when finished. 
 
 You can use this as a sample template:
 
-```
+```bash 
 #!/bin/bash
 
 #SBATCH --nodes=1 # request one node
@@ -179,14 +178,13 @@ Here, we specify all the modules we want to load (the existing packages) along 
 
 Now run:
 
-```
+```bash
 sbatch <FileName>.sh
 ```
 
 You will get a .out and .err file, the .out contains the output of your scripts and the .err file contains an error log.
 
-Using the parallel library
---------------------------
+## Using the parallel library
 
 If you are using the parallel library, you need to make some changes to your batch script and R script.
 
@@ -207,8 +205,7 @@ doParallel::registerDoParallel(myCluster)
 ```
 This tells the parallel library to use the number of cores you requested in your batch job.
 
-Common Issues
--------------
+## Common Issues
 
 ### Errors when installing a package
 
