@@ -29,22 +29,14 @@ You will need your R script(s) available and ready prior to transferring. (A si
 
 ### Recommended modules
 
-These R modules generally work well:
+This R module generally works well:
 
 ```
-module purge
 module load gcc/10.2.0-zuvaafu
 module load r/4.0.4-py3-4khjixy
 ```
 
-or
-
-```
-module purge
-module load r/3.6.3-py3-sxv6dw3
-```
-
-If these don't meet your needs, you could try the one of the others.
+If this doesn't meet your needs, you could try the one of the others.
 
 ### See available versions
 
@@ -99,7 +91,7 @@ mkdir -p $R_LIBS_USER
 
 Replace /work/LAS/your-lab/yournetid/Rlibs with the location you want to install the libraries.
 
-Next, run the R intepreter by running:
+Next, run the R interpreter by running:
 
 ```
 R
@@ -126,7 +118,7 @@ If you wish to browse a complete list of available R packages, please visit: [h
 To install packages from GitHub, you will need to install the devtools library
 
 ```
-install.packages("devtools")
+install.packages("https://github.com/r-lib/devtools/archive/refs/tags/v2.4.3.tar.gz", repos=NULL, type="source")
 ```
 
 To install the package, run the following.
@@ -215,7 +207,9 @@ You may get an error while trying to install some R packages. This happens espec
 /usr/bin/ld: cannot find -llibexample
 ```
 
-**Potential fix:** Load dependencies and try install again
+#### Potential fixes
+
+##### Load dependencies and try install again
 
 Exit your R session by typing
 
@@ -237,7 +231,7 @@ module load libexample
 
 Then restart R and try installing your package again.
 
-**Potential fix:** Pre-packaged R modules
+##### Pre-packaged R modules
 
 Some R libraries with complicated requirements are pre-packaged on pronto. These packages are tied to specific R versions.
 
