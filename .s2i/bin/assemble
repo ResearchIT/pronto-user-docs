@@ -1,0 +1,35 @@
+#!/bin/bash
+
+set -e
+
+source ${HTTPD_CONTAINER_SCRIPTS_PATH}/common.sh
+
+echo "---> Enabling s2i support in httpd24 image"
+
+config_s2i
+
+
+echo "---> Listing application source"
+echo "Current dir:"
+pwd
+
+echo "---> Installing mkdocs requirements"
+pip3 install --user -r /tmp/src/requirements.txt
+
+
+echo "---> Build the docs"
+mkdocs build -f /tmp/src/mkdocs.yml
+
+
+echo "---> Installing application source"
+mkdir -p ./guides/pronto
+cp -af /tmp/src/site/* ./guides/pronto/
+
+
+# Fix source directory permissions
+fix-permissions ./
+
+process_extending_files ${HTTPD_APP_ROOT}/src/httpd-post-assemble/ ${HTTPD_CONTAINER_SCRIPTS_PATH}/post-assemble/
+
+# Fix source directory permissions
+fix-permissions ./
