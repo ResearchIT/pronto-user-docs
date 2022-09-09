@@ -62,7 +62,7 @@ sbatch myscript.sh
 
 Note that you can run an sbatch job in the background without being present in front of your computer.
 
-Some **compute** nodes also have local scratch space you can utilize for intensive I/O jobs, you can read more about it [here](using-local-scratch-space-io-intensive-jobs).
+Some **compute** nodes also have local scratch space you can utilize for intensive I/O jobs, you can read more about it [here](https://researchit.las.iastate.edu/using-local-scratch-space-io-intensive-jobs).
 
 The srun command will allocate a **compute** node and be placed on it. This will start an interactive session which is useful for debugging or for programs that require user input. Note that these jobs could potentially be lost if you lose internet connection or if the VPN reconnects. It is recommended you use the [screen command](https://researchit.las.iastate.edu/using-screen-protect-your-process) or tmux (type in "man tmux" in the terminal for more info).
 
