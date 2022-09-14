@@ -1,16 +1,12 @@
-# Spack based software modules
+# Software Modules
 
-Quick start
-------------
+## Overview
 
-**We have started building software modules using a new process, and you need to know about a few key changes that will affect you:**
+We use a tool called [Spack](https://spack.io/) to build loadable modules for many popular software titles.
 
-*   Most modules will work just like before, with some exceptions for things like python, R, and perl that each have their own libraries or packages
-    *   R, python, and perl packages have their own module files now, and need explicitly loaded (e.g. `module load r-rmpi` or `module load py-numpy`)
-*   Module naming or capitalization may be different
-*   Some modules are now organized in a hierarchy to present a cleaner list, and prevent conflicts.  You may need to use `module spider` to find the right module, and get instructions on how to load it (other modules may need to be loaded first)
+A full list of software available to build with Spack is available [here](https://spack.readthedocs.io/en/latest/package_list.html#package-list).
 
-You can find a full list of Spack packages here: [http://spack.readthedocs.io/en/latest/package_list.html](http://spack.readthedocs.io/en/latest/package_list.html)
+## Available Modules
 
 To see what we have installed, just run the following command on any of our servers:
 
@@ -26,44 +22,19 @@ To search for a package:
 module spider python
 ```
 
-For more detailed information, keep reading.
+## Load a Module
 
-* * *
+You will need to ensure that you are on a [compute node](getting_started.md#allocating-a-compute-node) node and **not** the login node. The software will not work on the login node.
 
-Why we changed from RISA to Spack
-----------------------------------
 
-As our RISA library grew to hundreds of software titles, continuing to build packages by hand and keep up with new software versions, new OS versions, etc. was becoming cumbersome, and changing underlying dependencies introduced fragility. Our new process utilizes a tool called [Spack](https://spack.io/), that uses python scripts to create a flexible and reproducible process for installing software.
-
-Using the 'module' command
---------------------------
-
-To use the module command, simply type **module** in your shell prompt, followed by the command you want to use. To display the help menu, you can type 'module help'. This command will display everything that you can do with the module system. 
-
-Some of the more useful commands (and their use) include:
-
-*   **module help**: Displays a help menu. The Research IT group has written our own. 
-*   **module avail**: Short for 'available'. This command shows you a list of every module that can be loaded into your environment, and their modulefile (a set of instructions telling your environment how to access the program).
-*   **module spider <module name>:** Spider does a wildcard search for a module by name, and tells you what other modules might needed loaded first
-*   **module load <modulefile>**: Loads the specified modulefile into your environment.
-*   **module unload <modulefile>**​: Remove the specified modulefile from your working environment.
-*   **module keyword <string>**: Searches through all of the modulefiles, looking for the specified keyword. When finished, it will print the matching modulefiles to the terminal.
-*   **module list**: Shows a list of the modulefiles currently loaded into the environment
-*   **module use <path>:** add a path on the system to search for module files
-*   **module unuse <path>:** remove a path from the system to search for module files
-
-Please note that you can use these commands on the **head** node. You should **not** be running applications on the **head** node, but you should instead run them on a **compute** node (via salloc/srun). If you are unfamiliar with these commands, please refer to the [slurm basics](slurm_basics.md) guide. 
-
-## Module hierarchy
-
-For most software, you will continue to use the modules just as you have been:
+For most software, loading and using a module is as simple as:
 
 ```
 module load beast2
 beast
 ```
 
-That's all! No compiling! No finding obscure dependencies! We've already done all that. All you have to do is load a module and start issuing commands. You will need to ensure that you are on a **compute** node and **not** the login node. The software will not work on the login node.
+That's all! No compiling! No finding obscure dependencies! We've already done all that. All you have to do is load a module and start issuing commands. 
 
 For some programs with special dependencies (e.g. non-default compilers), you'll need to load one of those modules first to 'unlock' that part of the module tree.
 
@@ -108,31 +79,26 @@ Now we can run satsuma as usual.
 For more information on the topic of module hierarchies, Lmod has a good explanation here: [http://lmod.readthedocs.io/en/latest/080_hierarchy.html](http://lmod.readthedocs.io/en/latest/080_hierarchy.html)
 
 
-## Packages of packages
+## Using the 'module' command
 
-For software that provides its own packages or libraries (such as perl, python, and R), under the [RISA](https://researchit.las.iastate.edu/research-it-software-archive) model, we installed those sub-packages or libraries into the application tree for the parent package, and those sub-packages or libraries were obscured to the users. As a user, you just had to try loading the python module, and then check to see what was provided.  This also didn't leave any flexibility for having multiple versions of a sub-package installed under the same parent program (we couldn't have two versions of numpy under the python module for example).
+To use the module command, simply type **module** in your shell prompt, followed by the command you want to use. To display the help menu, you can type 'module help'. This command will display everything that you can do with the module system. 
 
-Going forward, each of these sub-packages will be their own module.  This will mean more `module load` statements for you, but less ambiguity about which sub-packages you're using, and more control and a more reproducible environment.
+Some of the more useful commands (and their use) include:
 
-If your program depends on several independent sub-packages or libraries, each of these will need to be loaded independently.  If you have a sub-package that depends on another however, those dependencies will automatically be loaded.  Take py-pandas for example:
+*   **module help**: Displays a help menu. The Research IT group has written our own. 
+*   **module avail**: Short for 'available'. This command shows you a list of every module that can be loaded into your environment, and their modulefile (a set of instructions telling your environment how to access the program).
+*   **module spider <module name>:** Spider does a wildcard search for a module by name, and tells you what other modules might needed loaded first
+*   **module load <modulefile>**: Loads the specified modulefile into your environment.
+*   **module unload <modulefile>**​: Remove the specified modulefile from your working environment.
+*   **module keyword <string>**: Searches through all of the modulefiles, looking for the specified keyword. When finished, it will print the matching modulefiles to the terminal.
+*   **module list**: Shows a list of the modulefiles currently loaded into the environment
+*   **module use <path>:** add a path on the system to search for module files
+*   **module unuse <path>:** remove a path from the system to search for module files
 
-```
-$ module load py-pandas
-$ module list
+Please note that you can use these commands on the **head** node. You should **not** be running applications on the **head** node, but you should instead run them on a **compute** node (via salloc/srun). If you are unfamiliar with these commands, please refer to the [slurm basics](slurm_basics.md) guide. 
 
-Currently Loaded Modules:
-  1) bzip2/1.0.6-v5xhjvn      5) readline/7.0-pf63r2a
-  2) ncurses/6.0-4v63qrr      6) sqlite/3.21.0-ude2ads
-  3) zlib/1.2.11-lafowlw      7) python/2.7.14-i3qxhgc
-  4) openssl/1.0.2n-mplvsup   8) openblas/0.2.20-lyrpuwt
 
-...
-
-```
-
-Loading the py-pandas module has loaded all of the dependencies for pandas.  If my python program also needs py-pillow, I would need to load that as well.
-
-### Installing your own sub-packages and libraries
+## Installing your own sub-packages and libraries
 
 Maybe you're working with R, and need some R packages that you don't see modules for.  You have a couple options:
 
@@ -143,7 +109,7 @@ Requesting an install from ResearchIT is always fine, but especially appropriate
 
 If you're in a hurry, or just want to quickly experiment with a package - you can try to install it on your own. Python, Perl, and R all have methods to allow you to define your own install directory that doesn't require administrative rights to write to. For installing R packages, please refer to this [link](r.md).
 
-### Install python packages using pip
+### Install Python packages using pip
 
 The recommended way to install additional Python packages is with a [Python virtual environment](python.md).
 
