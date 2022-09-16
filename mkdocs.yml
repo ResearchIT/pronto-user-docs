@@ -35,6 +35,7 @@ nav:
             # implemented in custom_theme/nav.html
             - machine_learning/index.md
             - Pre-installed Software: machine_learning/preinstalled_software.md
+            - Interactive Session: machine_learning/interactive_session.md
             - Submit Job: machine_learning/submit_job.md
             - Available GPU Types: machine_learning/gpu_types.md
             - Install Additional Python Packages: machine_learning/install_python_packages.md
