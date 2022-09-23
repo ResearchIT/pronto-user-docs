@@ -25,7 +25,7 @@ theme:
 nav:
     - Pronto Job Manager: index.md
     - Getting Started: getting_started.md
-    - Slurm Basics: slurm_basics.md
+    - Job Scheduler Basics: slurm_basics.md
     - Software Modules: spack_modules.md
     - Hardware: hardware.md
     - Picking the Best Resource For Your Job: picking_the_best_resource.md
