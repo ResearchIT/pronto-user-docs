@@ -1,4 +1,4 @@
-# Pronto
+# Pronto Cluster
 
 Pronto is a compute cluster that uses Slurm workload manager. It is available through SSH or from your web browser using [Open OnDemand](ondemand/index.md).
 
