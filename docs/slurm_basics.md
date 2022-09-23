@@ -16,9 +16,7 @@ srun --nodes 1 --tasks 4 --partition interactive --time 01:00:00 --pty bash
 
 Please note however that interactive jobs like this can fail and be terminated if the headnode goes down for whatever reason. Once you've got your program running in an interactive session please switch to an sbatch script if possible.
 
-We are working on some shortcuts to make this more user-friendly.  Look for more info on this topic in the next few months.
-
-Batch jobs follow the traditional slurm process similar to what you may already be familiar with from Condo, Nova, or Legion.
+Batch jobs follow the traditional Slurm process similar to what you may already be familiar with from Condo, Nova, or Legion.
 
 ## Main Slurm Commands
 
