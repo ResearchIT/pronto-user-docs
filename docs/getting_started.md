@@ -45,7 +45,9 @@ You are on the **head** node now. You cannot run any software on the **head** no
 
 ## Storage space
 
-We provide 10GB of home storage for every user on pronto, home should generally not be used for storing data that you'll be working on. For working data you'll want to use the space available in your work directory. When you were granted access to pronto you should have been told where your work directory is, if you are unsure, contact your PI or research IT. **Data on /work is not backed up! It is for temporary use only!**
+We provide 10GB of home storage for every user on pronto, home should generally not be used for storing data that you'll be working on. 
+
+For working data you'll want to use the space available in your /work directory. This directory is named after your PI's netid. If your PI's netid is jones, then your work directory is at /work/LAS/jones-lab. If you are unsure, contact your PI or research IT. **Data on /work is not backed up! It is for temporary use only!**
 
 ## Allocating a compute node
 
