@@ -2,8 +2,7 @@
 
 This guide provides a brief overview of understanding how to utilize Pronto. 
 
-Prerequisites
--------------
+## Prerequisites
 
 *   You should be familiar with the command line and have a basic understanding of how it works. 
     *   Learning how to write a bash script would be extremely helpful. This can save you valuable time without having to retype a sequence of commands multiple times.
@@ -16,8 +15,7 @@ Prerequisites
 *   Understanding of software modules
     *   [Spack Modules](spack_modules.md)
 
-Overview
---------
+## Overview
 
 Pronto has plenty of different compute nodes available for your needs. 
 
@@ -27,8 +25,7 @@ Each compute node has different specifications and is suitable for different wor
 
 Please see this guide for [how to pick the best compute node to run your job on](picking_the_best_resource.md). **This is important. Please read it.** 
 
-Logging in and using Pronto
----------------------------
+## Logging in and using Pronto
 
 Open up the terminal that you are using and connect to pronto using:
 
@@ -46,13 +43,11 @@ You are on the **head** node now. You cannot run any software on the **head** no
 
 **[Please refer to this guide and use it as a reference when you want to allocate compute nodes and run future jobs on the clusters](slurm_basics.md).**
 
-Storage space
--------------
+## Storage space
 
 We provide 10GB of home storage for every user on pronto, home should generally not be used for storing data that you'll be working on. For working data you'll want to use the space available in your work directory. When you were granted access to pronto you should have been told where your work directory is, if you are unsure, contact your PI or research IT. **Data on /work is not backed up! It is for temporary use only!**
 
-Allocating a compute node
--------------------------
+## Allocating a compute node
 
 The best way to run your job would be writing a simple bash script and submitting it via sbatch. You can find a sample script template in the slurm basics guide linked above. You can either upload your own local bash script (see the [Transferring Files](#transferring-files) section below) or create a bash script on the **compute** node with vim, nano, etc. To execute it, run: 
 
@@ -82,8 +77,7 @@ Again, please see the [slurm basics reference](slurm_basics.md) if you want to a
 
 Now you are able to run whatever job you wish!
 
-Job Dependencies
-----------------
+## Job Dependencies
 
 Some software we have available for you require dependencies or packages. You may encounter a "command not found" or an error along those lines. This means you need to load a few modules before running your software. 
 
@@ -109,10 +103,9 @@ module spider gcc
 
 This will list all available versions of gcc. 
 
-Transferring Files
-------------------
+## Transferring Files
 
-File transfer to and from the cluster is availble via [Globus](file_transfers/globus.md).
+File transfer to and from the cluster is available via [Globus](file_transfers/globus.md).
 
 If you want to use scp or SMB, you will need to use the data transfer node. This node is specifically designed for transferring files across different nodes/clusters quickly and reliably. 
 
@@ -137,19 +130,17 @@ After entering your password, you can disconnect from ssh. scp should then work.
 *   [How to transfer files using the Linux/Mac terminal.](https://researchit.las.iastate.edu/data-transfer-node-condo)
 *   If you are on Windows, you can use WinSCP to transfer files. WinSCP is available on [the software center](https://researchit.las.iastate.edu/how-use-software-center-windows).
 
-Troubleshooting
----------------
+## Troubleshooting
 
 Here is a link to a guide that helps you troubleshoot common issues you might encounter:
 
 [Troubleshooting common issues](troubleshooting/common_issues.md)
 
-Useful Links
-------------
+## Useful Links
 
 If you wish to run a job using R, please refer to [this documentation](r.md).
 
-Other issues
+## Other issues
 ------------
 
 Please email [researchit@iastate.edu](mailto:researchit@iastate.edu) if you still require assistance.
