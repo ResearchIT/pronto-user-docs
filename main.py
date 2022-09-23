@@ -1,7 +1,6 @@
-from mkdocs.utils.meta import get_data
-from os.path import exists
 import re
 import os
+import datetime
 
 # this file is run by the mkdocs macros plugin
 
@@ -33,34 +32,14 @@ def parse_sinfo_line(server_info, line):
     if partition != "whatever*":
         server_info[hostname]["partitions"].append(partition)
 
-# keep this around in case we ever want to make individual hardware pages
-
-# def main():
-
-#     with open('data/sinfo.txt', 'r') as input_file:
-#         for line in input_file:
-#             parse_sinfo_line(server_info, line)
-
-#     # update frontmatter on hardware pages
-
-#     for hostname in server_info:
-#         host_filename = "docs/hardware/" + hostname.split('.')[0] + ".md"
-#         if exists(host_filename):
-#             with open(host_filename, "r") as page:
-#                 doc, metadata = get_data(page.read())
-#                 metadata.update(server_info[hostname])
-#         else:
-#             doc = f"# {hostname}"
-#             metadata = server_info[hostname]
-
-#         doc = "---\n" + yaml.dump(metadata) + "\n---\n" + doc
-
-#         with open(host_filename, "w") as page:
-#             page.write(doc)
-
-
-# main()
-
+def parse_slurm_conf_line(partition_info, line):
+    info = {}
+    line = line.strip()
+    for item in line.split(' '):
+        key, value = item.split('=')
+        info[key] = value
+    partition_info[info['PartitionName']] = info
+    
 def define_env(env):
 
     "Hook function"
@@ -71,6 +50,10 @@ def define_env(env):
         for line in input_file:
             parse_sinfo_line(server_info, line)
 
+    partition_info = {}
+    with open(os.path.dirname(os.path.realpath(__file__)) + '/data/slurm.conf', 'r') as input_file:
+        for line in input_file:
+            parse_slurm_conf_line(partition_info, line)
 
     @env.macro
     def partition_hardware_table(partition):
@@ -116,6 +99,27 @@ def define_env(env):
         table += "</table>".strip()
 
         return table
+        
+    @env.macro
+    def partition_info_section(partition):
+        pinfo = partition_info[partition]
+        
+        max_time_list = pinfo['MaxTime'].split('-')
+        if len(max_time_list) > 1:
+            max_time = max_time_list[0] + " days"
+        else:
+            t = datetime.datetime.strptime(max_time_list[0],"%H:%M:%S")
+            max_time = f"{t.hour} hours"
+        
+        timeslicing = "enabled" if "FORCE" in pinfo['OverSubscribe'] else "disabled"
+        
+        
+        info_section = f"""
+        Jobs on this partition have a max runtime of {max_time}, and time slicing is {timeslicing}.
+        """.strip()
+
+        return info_section
+
 
     @env.macro
     def gpu_partition_hardware_table():
