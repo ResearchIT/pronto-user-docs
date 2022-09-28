@@ -1,6 +1,6 @@
 # Transfer files to pronto with SMB
 
-You can also access your files via SMB share.  You will need to be on campus or connected to the VPN.
+You will need to be on campus or connected to the VPN.
 
 On Windows, open File Explorer and enter this folder path:
 ```
