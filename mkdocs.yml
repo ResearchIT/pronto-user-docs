@@ -23,12 +23,17 @@ theme:
     highlightjs: false
     custom_dir: custom_theme
 nav:
-    - Pronto Cluster: index.md
-    - Getting Started: getting_started.md
-    - Job Scheduler Basics: slurm_basics.md
-    - Software Modules: spack_modules.md
-    - Hardware: hardware.md
-    - Picking the Best Resource For Your Job: picking_the_best_resource.md
+    - Pronto Cluster:
+        - Overview: index.md
+        - Getting Started: getting_started.md
+        - Job Scheduler:
+            - job_scheduler/index.md
+            - Main Slurm Commands: job_scheduler/slurm_commands.md
+            - Example Scripts: job_scheduler/example_scripts.md
+            - Frequently Asked Questions: job_scheduler/faq.md
+        - Software Modules: spack_modules.md
+        - Hardware: hardware.md
+        - Picking the Best Resource For Your Job: picking_the_best_resource.md
     - Popular Uses:
         - Machine Learning / GPU:
             # first menu item is used as the link for the 'Interactive Computing' heading
