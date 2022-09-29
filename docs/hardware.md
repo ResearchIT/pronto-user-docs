@@ -12,7 +12,7 @@ Replace PARTITIONNAME with the name of the partition you want.
 
 Choosing the [correct partition](picking_the_best_resource.md) when you submit your job will maximize its performance. If you do not specify a partition, your job will run on whatever server happens to be available. 
 
-Jobs on most partitions have a time limit of 31 days, and [time slicing](time_slicing.md) is enabled.
+Jobs on most partitions have a time limit of 31 days, and [time slicing](job_scheduler/time_slicing.md) is enabled.
 
 ## interactive
 
