@@ -30,8 +30,8 @@ nav:
             - job_scheduler/index.md
             - Main Slurm Commands: job_scheduler/slurm_commands.md
             - Example Scripts: job_scheduler/example_scripts.md
-            - Frequently Asked Questions: job_scheduler/faq.md
             - Time Slicing: job_scheduler/time_slicing.md
+            - Frequently Asked Questions: job_scheduler/faq.md
         - Software Modules: spack_modules.md
         - Hardware: hardware.md
         - Picking the Best Resource For Your Job: picking_the_best_resource.md
