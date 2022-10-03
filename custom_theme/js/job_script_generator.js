@@ -275,7 +275,7 @@ BYUScriptGen.prototype.createForm = function(doc) {
 					"" + partition_status.max_cores,
 					br(),
 					"Max RAM: ",
-					"" + partition_status.max_ram
+					partition_status.max_ram + " GB"
 				)
 			);
 		}
