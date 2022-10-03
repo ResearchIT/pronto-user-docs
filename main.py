@@ -1,9 +1,26 @@
 import re
 import os
 import datetime
+import json
+import copy
 
 # this file is run by the mkdocs macros plugin
 
+base_gpu_info = {
+    'a40':{'ram':'48GB','cc':'sm_86'},
+    'a100_1g.5gb':{'ram':'5GB','cc':'sm_80'},
+    'a100_2g.10gb':{'ram':'10GB','cc':'sm_80'},
+    'a100_3g.20gb':{'ram':'20GB','cc':'sm_80'},
+    'a100-pcie':{'ram':'40GB','cc':'sm_80'},
+    'a100-sxm4-80gb':{'ram':'80GB','cc':'sm_80'},
+    'v100-pcie-16G':{'ram':'16GB','cc':'sm_70'},
+    'v100-pcie-32G':{'ram':'32GB','cc':'sm_70'},
+    'v100-sxm2-32G':{'ram':'32GB','cc':'sm_70'},
+    'rtx_2080_Ti':{'ram':'11GB','cc':'sm_75'},
+    'rtx_6000':{'ram':'24GB','cc':'sm_75'},
+    'gtx_1080_ti':{'ram':'11GB','cc':'sm_61'},
+}
+        
 def parse_features(input):
     return [feature for feature in input.split(",")]
 
@@ -39,6 +56,26 @@ def parse_slurm_conf_line(partition_info, line):
         key, value = item.split('=')
         info[key] = value
     partition_info[info['PartitionName']] = info
+
+def get_gpu_info(server_info):
+    
+    gpu_info = copy.deepcopy(base_gpu_info)
+    
+    for gpu_type in gpu_info:
+        gpu_info[gpu_type]["quantity"] = 0
+        gpu_info[gpu_type]["nodelist"] = []
+
+    for hostname in server_info:
+        hinfo = server_info[hostname]
+
+        if "gpu" not in hinfo["partitions"]:
+            continue
+
+        for gpu_type, gpu_quantity in hinfo["gpus"].items():
+            gpu_info[gpu_type]["quantity"] += gpu_quantity
+            gpu_info[gpu_type]["nodelist"].append(hostname.split(".")[0])
+            
+    return gpu_info
     
 def define_env(env):
 
@@ -178,21 +215,8 @@ def define_env(env):
     @env.macro
     def gpu_types_table():
 
-        gpu_info = {
-            'a40':{'ram':'48GB','cc':'sm_86'},
-            'a100_1g.5gb':{'ram':'5GB','cc':'sm_80'},
-            'a100_2g.10gb':{'ram':'10GB','cc':'sm_80'},
-            'a100_3g.20gb':{'ram':'20GB','cc':'sm_80'},
-            'a100-pcie':{'ram':'40GB','cc':'sm_80'},
-            'a100-sxm4-80gb':{'ram':'80GB','cc':'sm_80'},
-            'v100-pcie-16G':{'ram':'16GB','cc':'sm_70'},
-            'v100-pcie-32G':{'ram':'32GB','cc':'sm_70'},
-            'v100-sxm2-32G':{'ram':'32GB','cc':'sm_70'},
-            'rtx_2080_Ti':{'ram':'11GB','cc':'sm_75'},
-            'rtx_6000':{'ram':'24GB','cc':'sm_75'},
-            'gtx_1080_ti':{'ram':'11GB','cc':'sm_61'},
-        }
-
+        gpu_info = get_gpu_info(server_info)
+        
         table = """
         <table class="docutils">
         """.strip()
@@ -208,24 +232,6 @@ def define_env(env):
         </tr>
         </thead>
         """.strip()
-
-        for gpu_type in gpu_info:
-            gpu_info[gpu_type]["quantity"] = 0
-
-        for hostname in server_info:
-            hinfo = server_info[hostname]
-
-            if "gpu" not in hinfo["partitions"]:
-                continue
-
-            for gpu_type, gpu_quantity in hinfo["gpus"].items():
-                if gpu_type not in gpu_info:
-                    gpu_info[gpu_type] = {
-                        "ram":"?",
-                        "cc":"?",
-                        "quantity": 0,
-                    }
-                gpu_info[gpu_type]["quantity"] += gpu_quantity
 
         for gpu_type, gpu_stats in gpu_info.items():
 
@@ -244,3 +250,36 @@ def define_env(env):
         table += "</table>".strip()
 
         return table
+
+    @env.macro
+    def job_script_generator_acceptable_gpus_names():
+        
+        gpu_info = get_gpu_info(server_info)
+        
+        acceptable_names = [x for x in gpu_info if gpu_info[x]["quantity"] > 0]
+        
+        return json.dumps(acceptable_names)
+        
+    @env.macro
+    def job_script_generator_acceptable_gpus_info():
+        
+        gpu_info = get_gpu_info(server_info)
+        
+        return json.dumps(gpu_info)
+
+    @env.macro
+    def job_script_generator_partition_info():
+        pinfo = {}
+        for hostname in server_info:
+            hinfo = server_info[hostname]
+            for partition in hinfo["partitions"]:
+                if partition not in pinfo:
+                    pinfo[partition] = {
+                        "max_ram": hinfo["memory"],
+                        "max_cores": hinfo["cores"]
+                    }
+                else:
+                    pinfo[partition]["max_ram"] = max(pinfo[partition]["max_ram"], hinfo["memory"])
+                    pinfo[partition]["max_cores"] = max(pinfo[partition]["max_cores"], hinfo["cores"])
+        return json.dumps(pinfo)
+                

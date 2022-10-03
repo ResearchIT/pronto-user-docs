@@ -30,6 +30,7 @@ nav:
             - job_scheduler/index.md
             - Main Slurm Commands: job_scheduler/slurm_commands.md
             - Example Scripts: job_scheduler/example_scripts.md
+            - Job Script Generator: job_scheduler/job_script_generator.md
             - Time Slicing: job_scheduler/time_slicing.md
             - Frequently Asked Questions: job_scheduler/faq.md
         - Software Modules: spack_modules.md
