@@ -212,9 +212,9 @@ BYUScriptGen.prototype.createForm = function(doc) {
 	this.inputs.email_abort = this.newCheckbox({checked:0});
 	this.inputs.email_address = this.newInput({value:this.settings.defaults.email_address});
 
-	
+
 	table.appendChild(this.returnNewRow("byu_sg_row_gpu_job", "Is this a GPU job?", this.inputs.is_gpu_job));
-	
+
 	this.inputs.acceptable_gpus = [];
 	var acceptable_gpus_span = this.newSpan("byu_sg_input_acceptable_gpus");
 	for(var i in this.settings.acceptable_gpus.names) {
@@ -245,16 +245,16 @@ BYUScriptGen.prototype.createForm = function(doc) {
 		acceptable_gpus_span.appendChild(acceptable_gpu_container);
 	}
 	var acceptable_gpus = this.returnNewRow("byu_sg_input_acceptable_gpus", "Acceptable GPU Types", acceptable_gpus_span);
-	
+
 	var numgpus = this.returnNewRow("byu_sg_row_numgpus", "Number of GPUs", this.inputs.num_gpus);
 	table.appendChild(this.formrows["gpu_stuff"] = this.newDiv(
 		"byu_sg_gpu_stuff",
 		numgpus,
 		acceptable_gpus,
 	));
-	
+
 	this.formrows["gpu_stuff"].style.display = "none";
-	
+
 	this.inputs.partitions = [];
 	var partitions_span = this.newSpan("byu_sg_input_partitions");
 	for(var i in this.settings.partitions.names) {
@@ -283,17 +283,17 @@ BYUScriptGen.prototype.createForm = function(doc) {
 	}
 	this.formrows["choose_partition"] = this.returnNewRow("byu_sg_input_partitions", "Partitions", partitions_span)
 	table.appendChild(this.formrows["choose_partition"]);
-	
+
 	//table.appendChild(this.returnNewRow("byu_sg_row_onenode", "Limit this job to one node", this.inputs.single_node));
 	table.appendChild(this.returnNewRow("byu_sg_row_numcores", "Number of CPU cores", this.inputs.num_cores));
-	
 
-	
 
-	
+
+
+
 	table.appendChild(this.returnNewRow("byu_sg_row_maxmem", "Max Memory", this.newSpan(null, this.inputs.max_mem, this.inputs.mem_units)));
 	table.appendChild(this.returnNewRow("byu_sg_row_jobruntime", "Max Job Runtime", this.newSpan(null, this.inputs.runtimedays, " days ", this.inputs.runtimehours, " hours ", this.inputs.runtimemins, " mins ", this.inputs.runtimesecs, " secs")));
- 	
+
 	/*
 	table.appendChild(this.formrows["is_requeueable"] = this.returnNewRow("byu_sg_row_requeueable", "Job is requeueable", this.inputs.is_requeueable));
 	this.formrows["is_requeueable"].style.display = "none";
@@ -335,12 +335,13 @@ BYUScriptGen.prototype.retrieveValues = function() {
 	var jobnotes = [];
 	this.values.MB_per_core = Math.round(this.inputs.max_mem.value * (this.inputs.mem_units.value =="GB" ? 1024 : 1));
 
-	
 	this.values.acceptable_gpus = [];
+	this.values.unacceptable_gpus = [];
 	for(var i in this.inputs.acceptable_gpus) {
 		if(this.inputs.acceptable_gpus[i].checked){
 			this.values.acceptable_gpus.push(this.inputs.acceptable_gpus[i].gpu_name);
 		} else {
+			this.values.unacceptable_gpus.push(this.inputs.acceptable_gpus[i].gpu_name);
 		}
 	}
 
@@ -397,16 +398,16 @@ BYUScriptGen.prototype.generateScriptSLURM = function () {
 	sbatch("--cpus-per-task=" + this.values.num_cores + "   # number of processor cores");
 	sbatch("--nodes=1   # number of nodes");
 
-	
+
 	if (this.values.is_gpu_job) {
 		sbatch("--partition=gpu  # partition(s)");
-		
-		
+
+
 		if(this.inputs.num_gpus.value > 0) {
-			
+
 		}
-	
-		
+
+
 		if(this.values.acceptable_gpus.length > 0) {
 			if (this.values.acceptable_gpus.length == this.inputs.acceptable_gpus.length) {
 				sbatch("--gres=gpu:" + this.inputs.num_gpus.value);
@@ -416,14 +417,14 @@ BYUScriptGen.prototype.generateScriptSLURM = function () {
 				sbatch("--gres=gpu:" + gputype + ":" + this.inputs.num_gpus.value);
 			} else {
 				sbatch("--gres=gpu:" + this.inputs.num_gpus.value);
-				var nodelist = new Set();
-				for (const acceptable_gpu of this.values.acceptable_gpus) {
-					var acceptable_gpu_settings = this.settings.acceptable_gpus_status[acceptable_gpu];
-					for (const slurm_node_name of acceptable_gpu_settings.nodelist) {
-						nodelist.add(slurm_node_name);
+				var excludelist = new Set();
+				for (const unacceptable_gpu of this.values.unacceptable_gpus) {
+					var gpu_settings = this.settings.acceptable_gpus_status[unacceptable_gpu];
+					for (const slurm_node_name of gpu_settings.nodelist) {
+						excludelist.add(slurm_node_name);
 					}
 				}
-				sbatch("--nodelist=" + Array.from(nodelist).join(',') + "  # there's no real way to specify multiple gpus types");
+				sbatch("--exclude=" + Array.from(excludelist).join(',') + "  # there's no real way to specify multiple gpus types, so exclude the nodes that contain unacceptable gpus");
 
 			}
 		} else {
@@ -454,7 +455,7 @@ BYUScriptGen.prototype.generateScriptSLURM = function () {
 		if(this.inputs.email_abort.checked)
 			sbatch("--mail-type=FAIL");
 	}
-	
+
 /* 	if(this.inputs.is_preemptable.checked)
 		sbatch("--qos=" + this.settings.qos.preemptable);
 	else if(this.inputs.is_test.checked)
@@ -508,7 +509,7 @@ BYUScriptGen.prototype.init = function() {
 	scriptHeader.id = "byu_sg_script_header";
 	scriptHeader.appendChild(document.createTextNode("Job Script"));
 	this.containerDiv.appendChild(scriptHeader);
-	
+
 	this.jobNotesDiv = document.createElement("div");
 	this.jobNotesDiv.id = "byu_sg_jobnotes";
 	this.containerDiv.appendChild(this.jobNotesDiv);
