@@ -16,7 +16,7 @@ template: job_script_generator.html
 	};
 	byu_script_gen.settings.partitions = {
 		names : [
-			"biocrunch", "speedy", "bigram", "legion", "swift"
+			"interactive", "biocrunch", "speedy", "bigram", "legion", "swift"
 		],
 		info_base_url : "/guides/pronto/hardware/#",
 	};
