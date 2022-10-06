@@ -162,9 +162,7 @@ cd /work/LAS/<YourLabDirectory>
 Rscript <ScriptName>
 ```
 
-(If you copy and paste this script, be aware that this may add hidden characters and may cause your script to error out)
-
-You can read more information about job scripts under the"Single Node Script" section [here](slurm_basics.md). 
+You can read more information about job scripts under the"Single Node Script" section [here](job_scheduler/example_scripts.md). You can also use the [job script generator](job_scheduler/job_script_generator.md).
 
 Here, we specify all the modules we want to load (the existing packages) along with our working directory prior to executing our script. You can add additional commands and tailor the script to however you wish.
 

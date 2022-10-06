@@ -28,7 +28,9 @@ cd /work/LAS/jones-lab/ml
 ml-gpu python3 hello.py
 ```
 
-After saving this somewhere in my /work directory, I could submit it to the [Slurm job manager](../slurm_basics.md) with:
+You can also use the [job script generator](../job_scheduler/job_script_generator.md).
+
+After saving this somewhere in my /work directory, I could submit it to the [Slurm job manager](../job_scheduler/index.md) with:
 
 ```
 sbatch /path/to/job/script

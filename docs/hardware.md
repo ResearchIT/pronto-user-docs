@@ -68,6 +68,8 @@ Replace GPUTYPE with one of these types:
 
 {{ gpu_types_table() }}
 
+You can also use the [job script generator](job_scheduler/job_script_generator.md).
+
 ## legion
 
 The Legion servers are best for problems which can be highly parallelized (particularly where each thread is doing something slightly different from the others).
