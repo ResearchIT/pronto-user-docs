@@ -47,63 +47,77 @@ You are on the **head** node now. You cannot run any software on the **head** no
 
 We provide 10GB of home storage for every user on pronto, home should generally not be used for storing data that you'll be working on. 
 
-For working data you'll want to use the space available in your /work directory. This directory is named after your PI's netid. If your PI's netid is jones, then your work directory is at /work/LAS/jones-lab. If you are unsure, contact your PI or research IT. **Data on /work is not backed up! It is for temporary use only!**
+For working data you'll want to use the space available in your /work directory. This directory is named after your PI's netid. If your PI's netid is jones, then your work directory is at /work/LAS/jones-lab. If you are unsure, contact your PI or research IT. 
 
-## Allocating a compute node
+**Data on /work is not backed up! It is for temporary use only!**
 
-The best way to run your job would be writing a simple bash script and submitting it via sbatch. You can find a sample script template in the slurm basics guide linked above. You can either upload your own local bash script (see the [Transferring Files](#transferring-files) section below) or create a bash script on the **compute** node with vim, nano, etc. To execute it, run: 
+## Running a Job
+
+### In the background
+
+The best way to run your job would be writing a simple bash script and submitting it via sbatch. This will allow your job to run even while you're not at your computer.
+
+To write the script, you can tweak our [example scripts](job_scheduler/example_scripts.md), or use the [job script generator](job_scheduler/job_script_generator.md). Then you can either upload your script (see the [Transferring Files](#transferring-files) section below) or create the bash script on the **compute** node with an editor like vim, nano, etc. 
+
+To submit the job, run: 
 
 ```bash
 sbatch myscript.sh
 ```
 
-Note that you can run an sbatch job in the background without being present in front of your computer.
+The job will enter a queue and run in the background. 
 
-Some **compute** nodes also have local scratch space you can utilize for intensive I/O jobs, you can read more about it [here](https://researchit.las.iastate.edu/using-local-scratch-space-io-intensive-jobs).
+To check the status of the job, you can run
 
-The srun command will allocate a **compute** node and be placed on it. This will start an interactive session which is useful for debugging or for programs that require user input. Note that these jobs could potentially be lost if you lose internet connection or if the VPN reconnects. It is recommended you use the [screen command](https://researchit.las.iastate.edu/using-screen-protect-your-process) or tmux (type in "man tmux" in the terminal for more info).
+```bash
+squeue --me
+```
+
+### Interactively
+
+Alternatively, you can use the srun command to allocate a **compute** node and be placed on it. This will start an interactive session which is useful for debugging or for programs that require user input. Note that these jobs could potentially be lost if you lose internet connection or if the VPN reconnects. It is recommended you use the [screen](interactive_computing/screen.md) command or [tmux](interactive_computing/tmux.md).
 
 ```bash
 srun --time=01:00:00 --cpus-per-task=1 --partition=interactive --pty /usr/bin/bash
 ```
 
-If you want to allocate a **compute** node without being placed on it, run:
+### Advanced Options
 
-```bash
-salloc --time 00:10:00 --nodelist=<NodeNameHere>
+Please see the [job scheduler documentation](job_scheduler/index.md) if you want to add more configurations such as allocating a GPU, specific compute node, writing a job script etc. You can run jobs up to 31 days maximum.
+
+## Available Software
+
+We have a lot of software available as loadable modules. You may encounter a "command not found" or an error along those lines. This means you need to load a few modules before running your software. 
+
+To see the full list of available modules:
+
+```
+module avail
 ```
 
-Note that you will still be on the **head** node. To be placed on the allocated **compute** node, run the srun command mentioned earlier. 
+To search for a module, or see available versions of a specific module, you can run:
 
-Again, please see the [slurm basics reference](slurm_basics.md) if you want to add more configurations such as allocating a GPU, specific compute node, writing a job script etc. You can run jobs up to 31 days maximum.
-
-Now you are able to run whatever job you wish!
-
-## Job Dependencies
-
-Some software we have available for you require dependencies or packages. You may encounter a "command not found" or an error along those lines. This means you need to load a few modules before running your software. 
-
-For a complete list of all available modules, run the command:
-
-```bash
-module spider
+```
+module spider <software name>
 ```
 
-This will list all the available dependencies. 
+For example, to see available versions of python, run:
 
-If you want to see all available versions of a specific dependency, you can run:
-
-```bash
-module spider <dependency name>
+```
+module spider python
 ```
 
-Example:
+To load a module, run:
 
 ```bash
-module spider gcc
+module load <module name>
 ```
 
-This will list all available versions of gcc. 
+For example:
+
+```bash
+module load python/3.8.8-ucekvff
+```
 
 ## Transferring Files
 
