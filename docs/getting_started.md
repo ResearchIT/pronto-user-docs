@@ -143,7 +143,7 @@ After entering your password, you can disconnect from ssh. scp should then work.
 
 ### Guides
 
-*   [How to transfer files using the Linux/Mac terminal.](https://researchit.las.iastate.edu/data-transfer-node-condo)
+*   [How to transfer files using the Linux/Mac terminal.](file_transfers/scp.md#macos-linux)
 *   If you are on Windows, you can use WinSCP to transfer files. WinSCP is available on [the software center](https://researchit.las.iastate.edu/how-use-software-center-windows).
 
 ## Troubleshooting
