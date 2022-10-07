@@ -4,7 +4,7 @@ SCP is a useful command that copies files between hosts on a network. For exampl
 
 ## Windows
 
-You will need to use Filezilla or WinSCP to upload your local files to the data transfer node on campus. WinSCP is available in the [software](how-use-software-center-windows) center if you are you using a campus computer. If you are using a personal device, the download links are provided below:
+You will need to use Filezilla or WinSCP to upload your local files to the data transfer node on campus. WinSCP is available in the [software](https://researchit.las.iastate.edu/how-use-software-center-windows) center if you are you using a campus computer. If you are using a personal device, the download links are provided below:
 
 WinSCP: [https://winscp.net/eng/download.php](https://winscp.net/eng/download.php)
 
