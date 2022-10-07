@@ -2,7 +2,7 @@
 
 SCP is a useful command that copies files between hosts on a network. For example, if I wanted to store files on my **local** machine on the **remote** machine(s) (i.e. the clusters), scp would be the command to use on a Mac/Linux terminal. On Windows, you will have to install WinSCP/Filezilla to do it for you. The scp command will **not** work in powershell or command prompt. 
 
-## Transferring to/from the cluster on Windows using Filezilla or WinSCP 
+## Windows
 
 You will need to use Filezilla or WinSCP to upload your local files to the data transfer node on campus. WinSCP is available in the [software](how-use-software-center-windows) center if you are you using a campus computer. If you are using a personal device, the download links are provided below:
 
@@ -36,7 +36,7 @@ To move files, drag and drop your files from the **left** window pane to the **r
 
 To move files, drag and drop your files from the **right** window pane to the **left** window pane.
 
-## Transferring to the cluster on Mac OS X/Linux
+## MacOS / Linux
 
 You will need to use the terminal to navigate to transfer your file(s). On Mac, you can simply navigate to Finder < Applications < Utilities < Terminal. For Linux, you could simply right click on the desktop and select _Open Terminal Here_ (This may be different depending on your version installed).
 

@@ -16,7 +16,7 @@ When working with large datasets, you often need to move files around between se
 
 ## In depth explanation
 
-### Transfers from one system to another within the University
+### Transfers within the University
 
 A brief networking explanation:
 
