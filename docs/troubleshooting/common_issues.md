@@ -14,7 +14,7 @@ First, make sure you are not on the **head** node. You are on the head node if y
 [YourNetID@pronto ~]$
 ```
 
-or if the output of the 'hostname' command is 'pronto.las.iastate.edu'. If you are on the **head** node, you'll want to allocate a **compute** node. Please refer to the [slurm basics guide](../slurm_basics.md). 
+or if the output of the 'hostname' command is 'pronto.las.iastate.edu'. If you are on the **head** node, you'll want to allocate a **compute** node. Please refer to the [slurm basics guide](../job_scheduler/index.md). 
 
 Second, if you are on a **compute** node and getting the error, make sure you've [loaded the module](../spack_modules.md) you need.
 

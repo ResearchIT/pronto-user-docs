@@ -32,7 +32,7 @@ pkgs_dirs:
 
 ## How to set up a conda environment
 
-To setup a conda environment, you will first need to connect to Pronto. Next, allocate a **compute** node and be sure you are placed on it (via salloc/srun). If you are not familiar with salloc or srun, please refer to [this guide](slurm_basics.md) first. Below is a sample command you could run:
+To setup a conda environment, you will first need to connect to Pronto. Next, allocate a **compute** node and be sure you are placed on it (via salloc/srun). If you are not familiar with salloc or srun, please refer to [this guide](job_scheduler/index.md) first. Below is a sample command you could run:
 
 ```
 srun --time=01:00:00 --nodes=1 --cpus-per-task=1 --pty /usr/bin/bash

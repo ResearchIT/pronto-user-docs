@@ -95,8 +95,7 @@ Some of the more useful commands (and their use) include:
 *   **module use <path>:** add a path on the system to search for module files
 *   **module unuse <path>:** remove a path from the system to search for module files
 
-Please note that you can use these commands on the **head** node. You should **not** be running applications on the **head** node, but you should instead run them on a **compute** node (via salloc/srun). If you are unfamiliar with these commands, please refer to the [slurm basics](slurm_basics.md) guide. 
-
+Please note that you can use these commands on the **head** node. You should **not** be running applications on the **head** node, but you should instead run them on a **compute** node (via salloc/srun). If you are unfamiliar with these commands, please refer to the [slurm basics](job_scheduler/index.md) guide. 
 
 ## Installing your own sub-packages and libraries
 

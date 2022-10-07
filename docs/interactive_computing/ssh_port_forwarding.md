@@ -17,7 +17,7 @@ Allocate a node using salloc: 
 salloc --time=00:30:00 --nodes=1
 ```
 
-If you are not familiar with allocating nodes or wish to specify other configurations, please refer to [this guide](../slurm_basics.md).
+If you are not familiar with allocating nodes or wish to specify other configurations, please refer to [this guide](../job_scheduler/index.md).
 
 Connect to the node
 -------------------

@@ -7,7 +7,7 @@ If you are looking for ISU's mirror link for browsing packages, you can find it
 
 The following sections will not work if run from the head node (pronto).
 
-After you connect to pronto, follow the instructions in the [slurm basics](slurm_basics.md) guide to get an interactive session on a compute node.
+After you connect to pronto, follow the instructions in the [slurm basics](job_scheduler/index.md) guide to get an interactive session on a compute node.
 
 Alternatively, you can run RStudio on Pronto using the [Interactive Desktop on Open OnDemand](ondemand/interactive_desktop.md).
 

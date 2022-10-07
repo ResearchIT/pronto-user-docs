@@ -41,7 +41,7 @@ Your terminal should look similar to the image above after logging in.
 
 You are on the **head** node now. You cannot run any software on the **head** node, so you need to allocate a **compute** node. This is done through SLURM, a workload manager. You will need to utilize SLURM in order to run the jobs that you wish to run. 
 
-**[Please refer to this guide and use it as a reference when you want to allocate compute nodes and run future jobs on the clusters](slurm_basics.md).**
+**[Please refer to this guide and use it as a reference when you want to allocate compute nodes and run future jobs on the clusters](job_scheduler/index.md).**
 
 ## Storage space
 
