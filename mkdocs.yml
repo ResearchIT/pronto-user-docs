@@ -25,6 +25,10 @@ theme:
 nav:
     - Pronto Cluster:
         - Overview: index.md
+        - Access:
+            - access/index.md
+            - Connect to Pronto: access/connect.md
+            - How to Generate SSH Keys: access/ssh_keys.md
         - Getting Started: getting_started.md
         - Job Scheduler:
             - job_scheduler/index.md
@@ -84,6 +88,8 @@ nav:
         - R: r.md
         - Conda: conda.md
         - Bioinformatics:
+            # first menu item is used as the link for the 'Bioinformatics' heading
+            # implemented in custom_theme/nav.html
             - bioinformatics/index.md
             - Bio Databases: bioinformatics/biodatabases.md
             - Busco: bioinformatics/busco.md
