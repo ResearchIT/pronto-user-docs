@@ -39,3 +39,4 @@ singularity exec --nv /opt/rit/singularity/images/ml-gpu/VERSION/ml-gpu.sif pyth
 singularity exec --nv /opt/rit/singularity/images/ml-gpu/VERSION/ml-gpu.sif python3 -m pip freeze
 ```
 
+Update recommended_mlgpu_version in main.py 
