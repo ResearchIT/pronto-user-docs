@@ -30,6 +30,7 @@ GPU RAM and compute capability is defined in main.py (search for gpu_info)
 Use this to gather the information needed for docs/machine_learning/preinstalled_software.md
 
 ```
+singularity exec --nv /opt/rit/singularity/images/ml-gpu/VERSION/ml-gpu.sif nvidia-smi
 singularity exec --nv /opt/rit/singularity/images/ml-gpu/VERSION/ml-gpu.sif python3 --version
 singularity exec --nv /opt/rit/singularity/images/ml-gpu/VERSION/ml-gpu.sif R --version | head -n 1
 singularity exec --nv /opt/rit/singularity/images/ml-gpu/VERSION/ml-gpu.sif python3 -c 'import torch; print(torch.__version__)'

@@ -283,3 +283,6 @@ def define_env(env):
                     pinfo[partition]["max_cores"] = max(pinfo[partition]["max_cores"], hinfo["cores"])
         return json.dumps(pinfo)
                 
+    @env.macro
+    def recommended_mlgpu_version():
+        return "20220928"

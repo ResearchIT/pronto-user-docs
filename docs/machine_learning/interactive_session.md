@@ -14,6 +14,6 @@ When you do this you should consider protecting your session with [tmux](../inte
 Then run the following to start python within the ml-gpu container:
 
 ```
-module load ml-gpu/20220603
+module load ml-gpu/{{ recommended_mlgpu_version() }}
 ml-gpu python3
 ```

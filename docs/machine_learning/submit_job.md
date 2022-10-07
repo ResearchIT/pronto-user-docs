@@ -19,7 +19,7 @@ Below is an example script that runs python code that simply says hello world an
 # under this we just do what we would normally do to run the program, everything above this line is used by slurm to tell it what your job needs for resources
 # let's load the modules we need to do what we're going to do
 
-module load ml-gpu/20220603
+module load ml-gpu/{{ recommended_mlgpu_version() }}
 
 # let's make sure we're where we expect to be in the filesystem tree (my working directory is specified here)
 cd /work/LAS/jones-lab/ml
