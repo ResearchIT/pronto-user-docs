@@ -44,7 +44,7 @@ nav:
         - File Transfers:
             # first menu item is used as the link for the 'File Transfers' heading
             # implemented in custom_theme/nav.html
-            - Overview: file_transfers/index.md
+            - file_transfers/index.md
             - Transfer Methods:
                 # first menu item is used as the link for the 'Transfer Methods' heading
                 # implemented in custom_theme/nav.html
