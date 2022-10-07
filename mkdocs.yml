@@ -36,9 +36,24 @@ nav:
         - Software Modules: spack_modules.md
         - Hardware: hardware.md
         - Picking the Best Resource For Your Job: picking_the_best_resource.md
+        - File Transfers:
+            # first menu item is used as the link for the 'File Transfers' heading
+            # implemented in custom_theme/nav.html
+            - Overview: file_transfers/index.md
+            - Transfer Methods:
+                # first menu item is used as the link for the 'Transfer Methods' heading
+                # implemented in custom_theme/nav.html
+                - file_transfers/transfer_methods.md
+                - SMB: file_transfers/smb.md
+                - Globus: file_transfers/globus.md
+                - Box: file_transfers/rclone.md
+                - scp: file_transfers/scp.md
+                - rsync: file_transfers/rsync.md
+                - robocopy: file_transfers/robocopy.md
+            - Move Your Files Faster: file_transfers/move_your_files_faster.md
     - Popular Uses:
         - Machine Learning / GPU:
-            # first menu item is used as the link for the 'Interactive Computing' heading
+            # first menu item is used as the link for the 'Machine Learning / GPU' heading
             # implemented in custom_theme/nav.html
             - machine_learning/index.md
             - Pre-installed Software: machine_learning/preinstalled_software.md
@@ -57,27 +72,17 @@ nav:
             - screen: interactive_computing/screen.md
             - X Forwarding for Mac and Windows: interactive_computing/x_forwarding.md
             - SSH port forwarding: interactive_computing/ssh_port_forwarding.md
+        - Open OnDemand:
+            # first menu item is used as the link for the 'Open OnDemand' heading
+            # implemented in custom_theme/nav.html
+            - ondemand/index.md
+            - Interactive Desktop: ondemand/interactive_desktop.md
+            - JupyterLab: ondemand/jupyterlab.md
+            - Job Composer: ondemand/job_composer.md
         - Python: python.md
         - R: r.md
         - Conda: conda.md
-    - File Transfers:
-        - Overview: file_transfers/index.md
-        - Transfer Methods:
-            # first menu item is used as the link for the 'Transfer Methods' heading
-            # implemented in custom_theme/nav.html
-            - file_transfers/transfer_methods.md
-            - SMB: file_transfers/smb.md
-            - Globus: file_transfers/globus.md
-            - Box: file_transfers/rclone.md
-            - scp: file_transfers/scp.md
-            - rsync: file_transfers/rsync.md
-            - robocopy: file_transfers/robocopy.md
-        - Move Your Files Faster: file_transfers/move_your_files_faster.md
-    - Open OnDemand:
-        - Overview: ondemand/index.md
-        - Interactive Desktop: ondemand/interactive_desktop.md
-        - JupyterLab: ondemand/jupyterlab.md
-        - Job Composer: ondemand/job_composer.md
+
     - Troubleshooting:
         - Common Issues: troubleshooting/common_issues.md
         - Reporting Issues: troubleshooting/reporting_issues.md
