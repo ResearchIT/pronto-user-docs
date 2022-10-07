@@ -32,6 +32,7 @@ nav:
             - Example Scripts: job_scheduler/example_scripts.md
             - Job Script Generator: job_scheduler/job_script_generator.md
             - Time Slicing: job_scheduler/time_slicing.md
+            - Job Arrays: job_scheduler/job_arrays.md
             - Frequently Asked Questions: job_scheduler/faq.md
         - Software Modules: spack_modules.md
         - Hardware: hardware.md
