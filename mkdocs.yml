@@ -83,6 +83,13 @@ nav:
         - Python: python.md
         - R: r.md
         - Conda: conda.md
+        - Bioinformatics:
+            - bioinformatics/index.md
+            - Bio Databases: bioinformatics/biodatabases.md
+            - Busco: bioinformatics/busco.md
+            - Augustus: bioinformatics/augustus.md
+            - Braker: bioinformatics/braker.md
+            - Blat: bioinformatics/blat.md
 
     - Troubleshooting:
         - Common Issues: troubleshooting/common_issues.md
