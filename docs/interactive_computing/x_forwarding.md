@@ -22,15 +22,15 @@ Navigate to Finder > Applications > Utilities. Scroll down until you find XQuart
 Begin by running the following command a terminal: 
 
 ```
-ssh -X <the rest of your normal ssh invocation here>
+ssh -X <netid>@pronto.las.iastate.edu
 ```
 
-Note that the `-Y` flag can be used instead of `-X`, but skips X11 security extensions, so only use it if `-X` fails. You will be prompted for your [Google Authenticator](https://www.hpc.iastate.edu/guides/condo-2017/access-and-login) code (if on condo or nova) and your password. 
+Replace `<netid>` with your netid. Note that the `-Y` flag can be used instead of `-X`, but skips X11 security extensions, so only use it if `-X` fails. You will be prompted for your password. (If you're connecting to condo or nova you will also be prompted for your[Google Authenticator](https://www.hpc.iastate.edu/guides/condo-2017/access-and-login) code)
 
 Once you have successfully connected, type in the following (modify as needed for your core count and time limit):
 
 ```
-srun --x11 --time=01:00:00 --nodes=1 --cpus-per-task=1 --pty /usr/bin/bash
+srun --x11 --time=01:00:00 --nodes=1 --cpus-per-task=1 --partition=interactive --pty /usr/bin/bash
 ```
 
 This allows us to use one of the nodes in the cluster. After running this command, you should be assigned a node that you can use.
@@ -57,10 +57,10 @@ Open PuTTY
 
 By default, PuTTY should have the port set to 22, and connection type should be set to SSH. If neither of these are set, please configure them. 
 
-In the Host Name box, type the name of the server you are connecting to, we're using Condo as the example here:
+In the Host Name box, type the name of the cluster you are connecting to, we're using Pronto as the example here:
 
 ```
-condo2017.its.iastate.edu
+pronto.las.iastate.edu
 ```
 
 Your PuTTY screen should look like this:
@@ -92,7 +92,7 @@ Keep clicking next and use the default settings. Note that you may not see anyt
 Now in PuTTY, type in (modify as needed for your core count and time limit):
 
 ```
-srun --x11 --time=01:00:00 --nodes=1 --cpus-per-task=1 --pty /usr/bin/bash
+srun --x11 --time=01:00:00 --nodes=1 --cpus-per-task=1 --partition=interactive --pty /usr/bin/bash
 ```
 
 This simply allows us to access one of the cluster's nodes. You may need to wait until you have been assigned a node.
