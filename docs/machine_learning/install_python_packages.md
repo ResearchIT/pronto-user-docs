@@ -48,5 +48,5 @@ PyTorch is already included in the container. If you decide to install a differe
 
 To install this to your virtual environment, you would do the following:
 ```
-ml-gpu /work/LAS/your-lab/mlgpuvenv-{{ recommended_mlgpu_version() }}/bin/pip3 install torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/cu116
+ml-gpu /work/LAS/your-lab/mlgpuvenv-{{ recommended_mlgpu_version() }}/bin/pip3 install --pre torch torchvision torchaudio --extra-index-url https://download.pytorch.org/whl/nightly/cu117
 ```
