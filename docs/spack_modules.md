@@ -102,7 +102,7 @@ Please note that you can use these commands on the **head** node. You should 
 Maybe you're working with R, and need some R packages that you don't see modules for.  You have a couple options:
 
 1.  Email researchit@iastate.edu and request for the package to be installed
-2.  Try to install it yourself in your home directory using CRAN, PIP, CPAN, etc.
+2.  Try to install it yourself in your /work directory using CRAN, PIP, CPAN, etc.
 
 Requesting an install from ResearchIT is always fine, but especially appropriate if there are a lot of dependencies for the package you need, or if you think it will be widely used by other users. 
 
@@ -121,16 +121,13 @@ Please see our guide [How to run R on pronto](r.md) for instructions.
 ```
 $ module load perl
 
-$ cpanm --local-lib /home/<YourNetID>/perl-lib --mirror http://cpan.metacpan.org/ File::Slurp
+$ cpanm --local-lib /work/LAS/<your-lab>/<YourNetID>/perl-lib --mirror http://cpan.metacpan.org/ File::Slurp
 
 --> Working on File::Slurp
 
 Fetching http://cpan.metacpan.org/authors/id/C/CA/CAPOEIRAB/File-Slurp-9999.32.tar.gz ... OK
-
 Configuring File-Slurp-9999.32 ... OK
-
 Building and testing File-Slurp-9999.32 ... OK
-
 Successfully installed File-Slurp-9999.32
 ```
 
@@ -138,9 +135,7 @@ Successfully installed File-Slurp-9999.32
 
 Please see our guide on [properly setting up a conda environment](conda.md).
 
-## Reproducibility & self-managed installs
-
-### Reproducibility with Spack package specs
+## Reproducibility
 
 Beyond providing a more stable and easier to administer software environment, [Spack](https://spack.io) can also help ensure the software environment used for your research is documented and reproducible.
 
