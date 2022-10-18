@@ -188,6 +188,7 @@ The column on the left is the name of the module to load to get these versions o
         <thead>
             <tr>
                 <td></td>
+                <th>CUDA</th>
                 <th>Python</th>
                 <th>R</th>
                 <th>PyTorch</th>
@@ -200,9 +201,10 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20220928
                 </th>
+                <td>11.7</td>
                 <td>3.10.7</td>
                 <td>4.2.1</td>
-                <td>1.13.0.dev20220923+cu117</td>
+                <td>1.13.0.dev20220923</td>
                 <td>2.11.0</td>
                 <td>2.10.0</td>
             </tr>
@@ -210,6 +212,7 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20220603
                 </th>
+                <td>11.6</td>
                 <td>3.9.13</td>
                 <td>4.1.3</td>
                 <td>1.11.0a0+gitbc2c6ed</td>
@@ -220,6 +223,7 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20210901
                 </th>
+                <td>11.0</td>
                 <td>3.8.11</td>
                 <td>4.1.0</td>
                 <td>1.9.0a0+gitd69c22d</td>
@@ -230,6 +234,7 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20210730
                 </th>
+                <td>11.0</td>
                 <td>3.6.8</td>
                 <td>4.0.5</td>
                 <td>1.10.0a0+gitdc1bd6a</td>
@@ -240,6 +245,7 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20210616
                 </th>
+                <td>11.1</td>
                 <td>3.6.8</td>
                 <td>4.0.5</td>
                 <td>1.9.0+cu111</td>
@@ -250,6 +256,7 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20210428
                 </th>
+                <td>11.1</td>
                 <td>3.6.8</td>
                 <td>4.0.4</td>
                 <td>1.8.0+cu111</td>
@@ -260,6 +267,7 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20210319
                 </th>
+                <td>11.1</td>
                 <td>3.6.8</td>
                 <td>4.0.4</td>
                 <td>1.8.0+cu111</td>
@@ -270,6 +278,7 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20210222
                 </th>
+                <td>11.1</td>
                 <td>3.6.8</td>
                 <td>4.0.3</td>
                 <td>1.7.1</td>
@@ -280,6 +289,7 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20210202
                 </th>
+                <td>11.1</td>
                 <td>3.6.8</td>
                 <td>4.0.3</td>
                 <td>1.7.1</td>
@@ -290,6 +300,7 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20200915
                 </th>
+                <td>10.1</td>
                 <td>3.6.8</td>
                 <td>4.0.2</td>
                 <td>1.6.0</td>
@@ -300,6 +311,7 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20200902
                 </th>
+                <td>11.0</td>
                 <td>3.6.8</td>
                 <td>4.0.2</td>
                 <td>1.6.0</td>
@@ -310,7 +322,8 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20200210
                 </th>
-                <td>2.7.5, 3.6.8</td>
+                <td>10.0</td>
+                <td>2.7.5<br/>3.6.8</td>
                 <td>3.6.0</td>
                 <td>1.4.0</td>
                 <td>2.1.0</td>
@@ -320,7 +333,8 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20190715
                 </th>
-                <td>2.7.5, 3.6.8</td>
+                <td>10.1</td>
+                <td>2.7.5<br/>3.6.8</td>
                 <td>3.6.0</td>
                 <td>1.1.0</td>
                 <td>1.14.0</td>
@@ -330,6 +344,7 @@ The column on the left is the name of the module to load to get these versions o
                 <th scope="row">
                    ml-gpu/20190305
                 </th>
+                <td>10.1</td>
                 <td>2.7.5</td>
                 <td>3.5.2</td>
                 <td>1.0.1.post2</td>
