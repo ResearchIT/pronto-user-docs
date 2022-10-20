@@ -20,9 +20,9 @@ Current Features
 
 The Interactive Desktop app provides a graphical user interface that runs as a batch job on pronto. Any module that can be loaded in a normal Pronto batch job can be loaded within the interactive desktop. In addition, the following modules have easy-to-use launcher shortcuts.
 
-*   Matlab
-*   Mathematica
-*   RStudio
+* Matlab
+* Mathematica
+* RStudio
 
 For more information, see this article: [How to use the Interactive Desktop on Open OnDemand](interactive_desktop.md)
 

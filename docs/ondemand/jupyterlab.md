@@ -56,6 +56,8 @@ Installing Additional Python Packages
 
 To install additional Python packages, you can run this within the notebook:
 
-> !python -m pip install Biopython
+```
+!python -m pip install Biopython
+```
 
 The Python kernels are configured to use separate Python virtual environments for each user, and for each Python module. The libraries are stored in the /work directory of the lab group you ran the interactive job with. This is to avoid issues caused by mixing Python packages installed with different compilers.

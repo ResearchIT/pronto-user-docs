@@ -2,9 +2,9 @@
 
 The Interactive Desktop app provides a graphical user interface that runs as a batch job on pronto. Any module that can be loaded in a normal Pronto batch job can be loaded within the interactive desktop. In addition, the following modules have easy-to-use launcher shortcuts.
 
-*   Matlab
-*   Mathematica
-*   RStudio
+* Matlab
+* Mathematica
+* RStudio
 
 Getting Started
 ---------------
@@ -29,7 +29,7 @@ When the job is ready, it will say 'Running'. The Compression and Image Quality 
 
 ![interactive desktop job ready](img/interactive_desktop_ready_2.png)
 
-The desktop looks like this. To launch any of the preconfigured apps, click the icon for it on the dock at the bottom of the screen. 
+The desktop looks like this. To launch any of the pre-configured apps, click the icon for it on the dock at the bottom of the screen. 
 
 ![interactive desktop screen](img/interactive_desktop_screen_1.png)
 
