@@ -97,6 +97,8 @@ nav:
             - Augustus: bioinformatics/augustus.md
             - Braker: bioinformatics/braker.md
             - Blat: bioinformatics/blat.md
+            - mpiBlast: bioinformatics/mpiblast.md
+            - RNA-Seq: bioinformatics/rna_seq.md
 
     - Troubleshooting:
         - Common Issues: troubleshooting/common_issues.md
