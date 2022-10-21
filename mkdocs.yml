@@ -29,6 +29,7 @@ nav:
             - access/index.md
             - Connect to Pronto: access/connect.md
             - How to Generate SSH Keys: access/ssh_keys.md
+            - Advanced Troubleshooting: access/advanced_troubleshooting.md
         - Getting Started: getting_started.md
         - Job Scheduler:
             - job_scheduler/index.md
