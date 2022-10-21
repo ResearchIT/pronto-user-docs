@@ -78,6 +78,7 @@ nav:
             - screen: interactive_computing/screen.md
             - X Forwarding for Mac and Windows: interactive_computing/x_forwarding.md
             - SSH port forwarding: interactive_computing/ssh_port_forwarding.md
+            - Jupyter Notebook: interactive_computing/jupyter.md
         - Open OnDemand:
             # first menu item is used as the link for the 'Open OnDemand' heading
             # implemented in custom_theme/nav.html
