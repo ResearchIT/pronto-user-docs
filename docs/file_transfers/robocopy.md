@@ -1,6 +1,6 @@
 
 # How to Robocopy to Large Scale Storage
-We will discuss how to robocopy (known as "Robust File Copy") files to [Large Scale Storage](https://researchit.las.iastate.edu/large-scale-storage-lss) (LSS).  This allows us to copy all the files from destination to another. Robocopy is only available to Windows users and will not work on Mac OS X or Linux. Please refer to [this guide](rsync.md) if you are not a Windows user.
+We will discuss how to robocopy (known as "Robust File Copy") files to [Large Scale Storage](https://researchit.las.iastate.edu/guides/lss/) (LSS).  This allows us to copy all the files from destination to another. Robocopy is only available to Windows users and will not work on Mac OS X or Linux. Please refer to [this guide](rsync.md) if you are not a Windows user.
 
 Getting Started
 ---------------

@@ -1,6 +1,6 @@
 # How to Remote Sync (rsync) to Large Scale Storage
 
-We will discuss how to Remote Sync to [Large Scale Storage](https://researchit.las.iastate.edu/large-scale-storage-lss) (LSS). Note that this guide is only available to Mac OS X or Linux users. If you are currently using Windows, please refer to [this guide](robocopy.md). 
+We will discuss how to Remote Sync to [Large Scale Storage](https://researchit.las.iastate.edu/guides/lss/) (LSS). Note that this guide is only available to Mac OS X or Linux users. If you are currently using Windows, please refer to [this guide](robocopy.md). 
 
 Begin by opening the terminal. If you're on Mac OS X navigate to Finder < Applications < Utilities < Terminal. On Linux, you can right click the desktop and click "Open Terminal".
 

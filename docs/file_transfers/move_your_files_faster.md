@@ -52,4 +52,4 @@ Your lab member's transfer will be done in closer to 15 minutes
 
 If you have data you need to get to/from another institution, keep the same principles in mind and try to route the transfer over the best path using the fastest network available. 
 
-For example, say you have some data sitting on Pylon storage at Xsede. We recommend using a tool like [Globus](globus.md) to move your final results back to [LSS](https://researchit.las.iastate.edu/large-scale-storage-lss) for long-term storage.  When you initiate your transfer, be sure to pick an endpoint like Condodtn (which has a fast network connection to LSS), rather than routing the globus traffic through your desktop connection to LSS.
+For example, say you have some data sitting on Pylon storage at Xsede. We recommend using a tool like [Globus](globus.md) to move your final results back to [LSS](https://researchit.las.iastate.edu/guides/lss/) for long-term storage.  When you initiate your transfer, be sure to pick an endpoint like Condodtn (which has a fast network connection to LSS), rather than routing the globus traffic through your desktop connection to LSS.
