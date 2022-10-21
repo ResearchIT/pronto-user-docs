@@ -92,6 +92,7 @@ nav:
             # implemented in custom_theme/nav.html
             - bioinformatics/index.md
             - Bio Databases: bioinformatics/biodatabases.md
+            - BLAST: bioinformatics/blast.md
             - Busco: bioinformatics/busco.md
             - Augustus: bioinformatics/augustus.md
             - Braker: bioinformatics/braker.md
