@@ -1,6 +1,6 @@
 # X Forwarding for Mac and Windows
 
-This guide will explain how to configure and use X-servers for Mac and Windows on Pronto, Condo, and Nova:
+This guide will explain how to configure and use X-servers for Mac and Windows on Pronto, and Nova:
 
 * For Mac, use XQuartz
 * For Windows, use PuTTY and VcXsrv
@@ -25,7 +25,7 @@ Begin by running the following command a terminal: 
 ssh -X <netid>@pronto.las.iastate.edu
 ```
 
-Replace `<netid>` with your netid. Note that the `-Y` flag can be used instead of `-X`, but skips X11 security extensions, so only use it if `-X` fails. You will be prompted for your password. (If you're connecting to condo or nova you will also be prompted for your[Google Authenticator](https://www.hpc.iastate.edu/guides/condo-2017/access-and-login) code)
+Replace `<netid>` with your netid. Note that the `-Y` flag can be used instead of `-X`, but skips X11 security extensions, so only use it if `-X` fails. You will be prompted for your password. (If you're connecting to nova you will also be prompted for your[Google Authenticator](https://www.hpc.iastate.edu/guides/nova/access-and-login) code)
 
 Once you have successfully connected, type in the following (modify as needed for your core count and time limit):
 
@@ -81,7 +81,7 @@ This will tell PuTTY to display to VcXsrv's window. 
 
 ![enable_x11_forwarding](img/interactive_computing_enable_x11_forwarding_0.png)
 
-Click open. You will be prompted to login with your NetID, [Google Authenticator](https://www.hpc.iastate.edu/guides/condo-2017/access-and-login) (if relevant for the system) and your password. 
+Click open. You will be prompted to login with your NetID, [Google Authenticator](https://www.hpc.iastate.edu/guides/nova/access-and-login) (if connecting to nova) and your password. 
 
 Now open up VcXsrv (also known as xlaunch) and select a display option. This will simply determine how the program you are trying to run will look on your desktop. In this example, I will choose "Multiple windows".
 

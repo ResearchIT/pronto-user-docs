@@ -34,7 +34,7 @@ or
 #SBATCH --partition=biocrunch
 ```
 
-If your job scales quite well you could consider running on condo or nova as well.
+If your job scales quite well you could consider running on nova as well.
 
 OpenMP Based or Local Thread Jobs
 ---------------------------------
@@ -58,7 +58,7 @@ Add this to your batch submission file:
 #SBATCH --partition=legion
 ```
 
-If you find the legion nodes too slow for your application, then condo or nova would be good local choices.
+If you find the legion nodes too slow for your application, then nova would be good local choices.
 
 RAM-Limited jobs
 ----------------
@@ -91,7 +91,7 @@ or
 
 ### Other options
 
-One of the fat nodes under condo or nova may also work.
+One of the fat nodes under nova may also work.
 
 Disk Bound Jobs
 ---------------

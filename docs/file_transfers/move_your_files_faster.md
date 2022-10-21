@@ -5,7 +5,7 @@ When working with large datasets, you often need to move files around between se
 ## I'm in a hurry
 
 *   Use a server that already has both source & destination mounted
-    *   /work and /lss are mounted on all ResearchIT servers, as well as the cluster data transfer nodes (prontodtn, condodtn, cyencedtn, etc.)
+    *   /work and /lss are mounted on all ResearchIT servers, as well as the cluster data transfer nodes (prontodtn, novadtn, etc.)
     *   Use rsync between the two:
             ```
             $ rsync --progress /work/LAS/jones-lab/myproject /lss/research/jones-lab/
@@ -52,4 +52,4 @@ Your lab member's transfer will be done in closer to 15 minutes
 
 If you have data you need to get to/from another institution, keep the same principles in mind and try to route the transfer over the best path using the fastest network available. 
 
-For example, say you have some data sitting on Pylon storage at Xsede. We recommend using a tool like [Globus](globus.md) to move your final results back to [LSS](https://researchit.las.iastate.edu/guides/lss/) for long-term storage.  When you initiate your transfer, be sure to pick an endpoint like Condodtn (which has a fast network connection to LSS), rather than routing the globus traffic through your desktop connection to LSS.
+For example, say you have some data sitting on Pylon storage at Xsede. We recommend using a tool like [Globus](globus.md) to move your final results back to [LSS](https://researchit.las.iastate.edu/guides/lss/) for long-term storage.  When you initiate your transfer, be sure to pick an endpoint like Nova DTN (which has a fast network connection to LSS), rather than routing the globus traffic through your desktop connection to LSS.

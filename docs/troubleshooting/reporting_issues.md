@@ -16,12 +16,12 @@ The table below outlines who to contact regarding issues:
 | **Having a problem with...** | **Then contact...** |
 | ---------------------------- | ------------------- |
 | Local computer or printer problems | [local / departmental support](https://www.it.iastate.edu/help/unit) |
-| Nova or Condo | [hpc-help@iastate.edu](mailto:hpc-help@iastate.edu) |
+| Nova | [hpc-help@iastate.edu](mailto:hpc-help@iastate.edu) |
 | Pronto (or other LAS research questions) | [researchit@iastate.edu](mailto:researchit@iastate.edu) |
 | Large Scale Storage (LSS) issues | [lss-help@iastate.edu](mailto:lss-help@iastate.edu) |
 
 Other useful links
 ------------------
 
-* HPC guides for Nova/Condo:  [https://www.hpc.iastate.edu/guides](https://www.hpc.iastate.edu/guides)
+* HPC guides for Nova:  [https://www.hpc.iastate.edu/guides](https://www.hpc.iastate.edu/guides)
 * [Troubleshooting Common issues on Pronto](common_issues.md)

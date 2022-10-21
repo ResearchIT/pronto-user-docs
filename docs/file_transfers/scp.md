@@ -85,7 +85,3 @@ scp <YourNetID>@prontodtn.las.iastate.edu:/<YourWorkingDirectory>/<FileName> <Fi
 ```
 
 When finished, navigate on your computer to <FolderName> or <FileName> on your computer to verify that your files have successfully transferred.
-
-### More examples
-
-For more examples, please refer to this [guide](data-transfer-node-condo) (Note that instead of typing in hpc-class.it.iastate.edu, you will need to use **prontodtn.las.iastate.edu**).
