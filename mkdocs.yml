@@ -99,7 +99,14 @@ nav:
             - Blat: bioinformatics/blat.md
             - mpiBlast: bioinformatics/mpiblast.md
             - RNA-Seq: bioinformatics/rna_seq.md
-
+        - Containers:
+            # first menu item is used as the link for the 'Container' heading
+            # implemented in custom_theme/nav.html
+            - containers/index.md
+            - Singularity: containers/singularity.md
+            - Private Singularity Repositories: containers/private_singularity_repositories.md
+            - Use Julia GPU Docker Containers with Singularity: containers/julia_gpu.md
+            
     - Troubleshooting:
         - Common Issues: troubleshooting/common_issues.md
         - Reporting Issues: troubleshooting/reporting_issues.md
