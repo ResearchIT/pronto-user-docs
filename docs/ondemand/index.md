@@ -7,7 +7,7 @@ Getting Started
 
 To access Open OnDemand, you must first have a [Pronto lab group account](https://researchit.las.iastate.edu/get-access).
 
-Then visit: [https://ondemand.las.iastate.edu](https://ondemand.las.iastate.edu)
+Then visit: [https://ondemand.las.iastate.edu](https://ondemand.las.iastate.edu)
 
 You must be on campus or connected to the VPN for this page to be reachable.
 
@@ -24,13 +24,13 @@ The Interactive Desktop app provides a graphical user interface that runs as a b
 * Mathematica
 * RStudio
 
-For more information, see this article: [How to use the Interactive Desktop on Open OnDemand](interactive_desktop.md)
+For more information, see this article: [How to use the Interactive Desktop on Open OnDemand](interactive_desktop.md)
 
 ### JupyterLab
 
-[JupyterLab](https://jupyter.org/) is a web-based interactive development environment. Our JupyterLab currently supports Python and Julia.
+[JupyterLab](https://jupyter.org/) is a web-based interactive development environment. Our JupyterLab currently supports Python and Julia.
 
-For more information, see this article: [How to use JupyterLab on Open OnDemand](jupyterlab.md)
+For more information, see this article: [How to use JupyterLab on Open OnDemand](jupyterlab.md)
 
 ### File Manager
 
@@ -48,4 +48,4 @@ This app shows the jobs currently running on pronto.
 
 The Job Composer app contains templates for launching various types of jobs on pronto.
 
-For more information, see this article: [How to use the Job Composer on Open OnDemand](job_composer.md)
+For more information, see this article: [How to use the Job Composer on Open OnDemand](job_composer.md)

@@ -41,14 +41,14 @@ Poof! You are right back inside your screen session.
 Scrolling in your Screen Session
 --------------------------------
 
-If you try to scroll back in your session, you'll notice it doesn't work.  First, use ctrl+a, escape - you can then scroll in your session. Use the escape key to return back to the command prompt
+If you try to scroll back in your session, you'll notice it doesn't work.  First, use ctrl+a, escape - you can then scroll in your session. Use the escape key to return back to the command prompt
 
 Changing up your Screen configuration
 -------------------------------------
 
 There are quite a few changes that you can make to the screen configuration. The configuration file is /home/<username>/.screenrc
 
-Here is an example .screenrc configuration file similar to the one that I use on a regular basis. Just copy the text and paste it into your favorite editor. 
+Here is an example .screenrc configuration file similar to the one that I use on a regular basis. Just copy the text and paste it into your favorite editor. 
 
 ```
 # example .screenrc
@@ -128,4 +128,4 @@ select 1
 Other Reading
 -------------
 
-Here's a great [tutorial on screen](https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/).
+Here's a great [tutorial on screen](https://www.rackaid.com/blog/linux-screen-tutorial-and-how-to/).

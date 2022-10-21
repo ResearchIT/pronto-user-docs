@@ -8,7 +8,7 @@ Here we have a submission script for a single node job. If you've previously use
 #!/bin/bash
 
 #SBATCH --nodes=1 # request one node
-#SBATCH --cpus-per-task=8  # ask for 8 cpus
+#SBATCH --cpus-per-task=8  # ask for 8 cpus
 #SBATCH --mem=128G # Maximum amount of memory this job will be given, try to estimate this to the best of your ability. This asks for 128 GB of ram.
 #SBATCH --time=2-02:30:02 # ask that the job be allowed to run for 2 days, 2 hours, 30 minutes, and 2 seconds.
 

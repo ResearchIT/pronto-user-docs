@@ -1,6 +1,6 @@
 # Picking the Best Resource For Your Job
 
-On Pronto, servers are divided into partitions based on intended use case. Choosing the correct partition when you submit your job will maximize its performance. If you do not specify a partition when you submit your job, it will run on whatever server happens to be available. This can result in the job taking **5x longer or more**.
+On Pronto, servers are divided into partitions based on intended use case. Choosing the correct partition when you submit your job will maximize its performance. If you do not specify a partition when you submit your job, it will run on whatever server happens to be available. This can result in the job taking **5x longer or more**.
 
 The best way to choose a partition is to do a test run of your job on each partition with a **small** subset of your data.
 
@@ -9,7 +9,7 @@ If that is not possible, this page will help you give you a basic idea of which 
 Singled Threaded Jobs
 ---------------------
 
-If you are running a single threaded job, we recommend that you use one of the speedy nodes. 
+If you are running a single threaded job, we recommend that you use one of the speedy nodes. 
 
 Add this to your batch submission file:
 
@@ -73,11 +73,11 @@ Add this to your batch submission file:
 #SBATCH --partition=bigram
 ```
 
-### Don't need quite that much, but still a lot
+### Don't need quite that much, but still a lot
 
 Either bigram or biocrunch may be appropriate.
 
-Add one of these to your batch submission file:
+Add one of these to your batch submission file:
 
 ```
 #SBATCH --partition=bigram
@@ -130,6 +130,6 @@ srun --time=01:00:00 --nodes=1 --cpus-per-task=8 --partition=interactive --pty /
 I'm Not Sure
 ------------
 
-For a complete list of all the available hardware, please refer to this [link](hardware.md).
+For a complete list of all the available hardware, please refer to this [link](hardware.md).
 
-If you are still not sure the best place to run your job, please contact researchit@iastate.edu and we would be happy to assist you.
+If you are still not sure the best place to run your job, please contact researchit@iastate.edu and we would be happy to assist you.

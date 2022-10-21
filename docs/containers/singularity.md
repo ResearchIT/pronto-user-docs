@@ -14,7 +14,7 @@ If you already have a container defined in Docker, that's fine. Docker container
 
 To convert a docker container to Singularity you need need to use the **_build_** command using the Singularity command line. Usually, you'll want to build the container on your local system using your root permissions. Once built, the container will not need to run as root.
 
-If you need to build a container and do not have local root access on your machine, please contact [researchit@iastate.edu](mailto:researchit@iastate.edu).
+If you need to build a container and do not have local root access on your machine, please contact [researchit@iastate.edu](mailto:researchit@iastate.edu).
 
 The syntax for building a singularity container from a docker image is:
 
@@ -32,7 +32,7 @@ In general, no, you cannot become the root user in a singularity container. The 
 
 The Singularity module automatically maps certain paths from the running system into the container. For example: the path to /work is automatically brought in so you can process your data in /work/LAS/my-lab/... without copying in and out of the container.
 
-Here is a list of other available pre-existing mounts available within the container:
+Here is a list of other available pre-existing mounts available within the container:
 
 * $HOME
 * /tmp
@@ -53,8 +53,8 @@ This command essentially binds the two specified paths into a container.
 
 Specific hardware information about Singularity can be found [here](singularity-0).
 
-You can also share and download various images from Sylabs [here](https://cloud.sylabs.io/home). 
+You can also share and download various images from Sylabs [here](https://cloud.sylabs.io/home). 
 
-Please refer to [this guide](private-singularity-image-repositories) if you are looking for a guide on how to use the cloud repository. 
+Please refer to [this guide](private-singularity-image-repositories) if you are looking for a guide on how to use the cloud repository. 
 
-For a more detailed and complete documentation about Singularity, you can visit this link: [https://sylabs.io/docs/](https://sylabs.io/docs/)
+For a more detailed and complete documentation about Singularity, you can visit this link: [https://sylabs.io/docs/](https://sylabs.io/docs/)

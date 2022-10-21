@@ -1,6 +1,6 @@
 # Globus
 
-First, install Globus Connect Personal on your computer.
+First, install Globus Connect Personal on your computer.
 
 [https://www.globus.org/globus-connect-personal](https://www.globus.org/globus-connect-personal)
 

@@ -42,7 +42,7 @@ To detach (meaning exit the window to come back to later) from the tmux session,
 
 ### Attach (Reattach) To An Existing Session
 
-To re-attach back to a session you've become **detached** from, simply type in:
+To re-attach back to a session you've become **detached** from, simply type in:
 
 ```
 tmux attach
@@ -59,7 +59,7 @@ When done scrolling, you need to return to normal mode. Just press 'q' to exit c
 
 ### Multiple Windows
 
-To create multiple windows, you need at least one tmux session running. You can simply type CTRL + b, let go of both keys and type 'c'. This will open up a new terminal. 
+To create multiple windows, you need at least one tmux session running. You can simply type CTRL + b, let go of both keys and type 'c'. This will open up a new terminal. 
 
 ![tmux2](img/tmux2.png)
 

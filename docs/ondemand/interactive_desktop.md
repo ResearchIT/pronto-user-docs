@@ -29,7 +29,7 @@ When the job is ready, it will say 'Running'. The Compression and Image Quality 
 
 ![interactive desktop job ready](img/interactive_desktop_ready_2.png)
 
-The desktop looks like this. To launch any of the pre-configured apps, click the icon for it on the dock at the bottom of the screen. 
+The desktop looks like this. To launch any of the pre-configured apps, click the icon for it on the dock at the bottom of the screen. 
 
 ![interactive desktop screen](img/interactive_desktop_screen_1.png)
 
@@ -40,7 +40,7 @@ When you are finished, please return to the Open OnDemand job list. Click the 'D
 RStudio
 -------
 
-The RStudio installed in the Interactive Desktop uses the same R modules that are available to batch jobs running on pronto. If you launch RStudio using the icons, a recent version of R will be selected for you. RStudio is configured to use separate `R_LIBS_USER` for each user, and for each R module. The libraries are stored in the /work directory of the lab group you ran the interactive job with. This is to avoid issues caused by mixing R libraries built with different compilers.
+The RStudio installed in the Interactive Desktop uses the same R modules that are available to batch jobs running on pronto. If you launch RStudio using the icons, a recent version of R will be selected for you. RStudio is configured to use separate `R_LIBS_USER` for each user, and for each R module. The libraries are stored in the /work directory of the lab group you ran the interactive job with. This is to avoid issues caused by mixing R libraries built with different compilers.
 
 ### Using a specific R module
 
@@ -56,7 +56,7 @@ Then start RStudio by running:
 ```bash
 rstudio
 ```
-###  Using your own R library
+###  Using your own R library
 
 Open the Terminal app using the icon in the dock. In this terminal, load the R module your R library was created with. For example:
 

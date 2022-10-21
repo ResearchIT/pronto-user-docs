@@ -6,7 +6,7 @@ When reporting an issue you are having, please include **as much detail as possi
 *   Server name(s) that are being used
 *   Location of where you are connecting from (On-campus, VPN, etc.)
 *   Clear screenshots that provide context
-*   Steps to reproduce the problem
+*   Steps to reproduce the problem
 *   Attempted solutions/workarounds
 
 Again, you do not need to provide all of this information, but having these details would be help us identify and resolve the issues you are having.
@@ -23,5 +23,5 @@ The table below outlines who to contact regarding issues:
 Other useful links
 ------------------
 
-* HPC guides for Nova:  [https://www.hpc.iastate.edu/guides](https://www.hpc.iastate.edu/guides)
+* HPC guides for Nova:  [https://www.hpc.iastate.edu/guides](https://www.hpc.iastate.edu/guides)
 * [Troubleshooting Common issues on Pronto](common_issues.md)

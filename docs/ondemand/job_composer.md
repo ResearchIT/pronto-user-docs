@@ -29,6 +29,6 @@ In this new tab, edit the job submission file to request the proper resources an
 
 ![job composer edit job screen](img/job_composer_edit_job.png)
 
-After closing the tab, you will be returned to the previous screen. Click the green box with the white triangle in it to submit your job. Your job status will change from 'Not Submitted' to 'Queued', and then, once the job has started, to 'Running'. At that point, you can click the job output and error files under the 'Folder Contents' heading to view them. The files will open in a new window. To monitor the job progress, reload the window. When your job is finished, the status in the table row for that job will change to 'Completed'. 
+After closing the tab, you will be returned to the previous screen. Click the green box with the white triangle in it to submit your job. Your job status will change from 'Not Submitted' to 'Queued', and then, once the job has started, to 'Running'. At that point, you can click the job output and error files under the 'Folder Contents' heading to view them. The files will open in a new window. To monitor the job progress, reload the window. When your job is finished, the status in the table row for that job will change to 'Completed'. 
 
 ![job composer job complete](img/job_composer_job_complete.png)

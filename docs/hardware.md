@@ -1,6 +1,6 @@
 # Hardware
 
-On Pronto, servers are divided into partitions based on intended use case. 
+On Pronto, servers are divided into partitions based on intended use case. 
 
 To specify a partition when you submit your job, add this to your batch submission script:
 

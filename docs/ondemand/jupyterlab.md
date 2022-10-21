@@ -13,7 +13,7 @@ Click the JupyterLab tile on the main OnDemand dashboard.
 
 Fill out the job submission form to specify what resources you want JupyterLab to have available.
 
-**Note:** If you select the GPU partition, your job will run within the [ml-gpu](../machine_learning/index.md) container. The only version of Python available will be the one installed in that container.
+**Note:** If you select the GPU partition, your job will run within the [ml-gpu](../machine_learning/index.md) container. The only version of Python available will be the one installed in that container.
 
 When you are finished click the 'Launch' button.
 
@@ -60,4 +60,4 @@ To install additional Python packages, you can run this within the notebook:
 !python -m pip install Biopython
 ```
 
-The Python kernels are configured to use separate Python virtual environments for each user, and for each Python module. The libraries are stored in the /work directory of the lab group you ran the interactive job with. This is to avoid issues caused by mixing Python packages installed with different compilers.
+The Python kernels are configured to use separate Python virtual environments for each user, and for each Python module. The libraries are stored in the /work directory of the lab group you ran the interactive job with. This is to avoid issues caused by mixing Python packages installed with different compilers.

@@ -1,4 +1,4 @@
-# Main Slurm Commands
+# Main Slurm Commands
 
 *   **sbatch** - submit a job script.
 *   **srun** - run a command on allocated compute node(s).

@@ -2,23 +2,23 @@
 
 We recommend using [JupyterLab on Open OnDemand.](../ondemand/jupyterlab.md) If that isn't suitable, you can follow this guide.
 
-In this guide we will be discussing how to run Jupyter notebook.  You can learn more about it here: [https://jupyter.org/](https://jupyter.org/)
+In this guide we will be discussing how to run Jupyter notebook.  You can learn more about it here: [https://jupyter.org/](https://jupyter.org/)
 
 ## Prerequisites
 
-If you are on Mac/Linux, you will just need to use the terminal. For Windows, please use powershell. 
+If you are on Mac/Linux, you will just need to use the terminal. For Windows, please use powershell. 
 
-## Connecting to Pronto when using Jupyter
+## Connecting to Pronto when using Jupyter
 
 Using Jupyter requires you to connect to an interactive session on Pronto with port forwarding enabled.
 
-Using the terminal, ssh to pronto using: 
+Using the terminal, ssh to pronto using: 
 
 ```
 ssh <YourNetID>@pronto.las.iastate.edu
 ```
 
-Once you are on pronto, salloc node using: (adjust the time allocated if desired)
+Once you are on pronto, salloc node using: (adjust the time allocated if desired)
 
 ```
 salloc --time=00:10:00 --nodes=1
@@ -33,7 +33,7 @@ Take note of the node you were assigned. In the screenshot below, the node I was
 Open up another terminal and ssh to the assigned node. Here you will need to specify a "-L" flag and port numbers. The last 4 digits will be the port number Jupyter will be listening on, so you may need to change it to your needs. If you choose to omit a port number, Jupyter will pick one for you.
 
 ```
-ssh <YourNetID>@<NodeName>.las.iastate.edu -L <SpecifyPortNumber>:127.0.0.1:<SpecifyPortNumber>
+ssh <YourNetID>@<NodeName>.las.iastate.edu -L <SpecifyPortNumber>:127.0.0.1:<SpecifyPortNumber>
 ```
 
 In my case, I will choose port 9999. My command would look like
@@ -46,7 +46,7 @@ ssh jones@biocrunch.las.iastate.edu -L 9999:127.0.0.1:9999
 
 ## Installing Jupyter Notebook
 
-Follow our guide to [create a virtual environment](../python.md) where jupyter notebook will be installed.
+Follow our guide to [create a virtual environment](../python.md) where jupyter notebook will be installed.
 
 Once you have created and activated the virtual environment, run the following to install Jupyter notebook.
 
@@ -62,7 +62,7 @@ If you need to use any additional python packages with jupyter, you can install 
 
 If you just installed Jupyter notebook as described above, this part is already done.
 
-If you installed Jupyter notebook previously and want to re-use it with the same Python packages as before, you need to [activate the virtual environment](../python.md) you installed it in.
+If you installed Jupyter notebook previously and want to re-use it with the same Python packages as before, you need to [activate the virtual environment](../python.md) you installed it in.
 
 For example:
 
@@ -81,7 +81,7 @@ Run:
 jupyter lab --no-browser --port 9999
 ```
 
-Next, open up a browser, and copy the link that was in the terminal and paste it in the browser.
+Next, open up a browser, and copy the link that was in the terminal and paste it in the browser.
 
 ![jupyter_address](img/jupyter_address.png)
 
@@ -91,7 +91,7 @@ Your browser should look like this:
 
 ## Running Python on Jupyter
 
-You can upload your own python code or other files using the "Upload" button on the left hand side. You also have the option of writing and running python code within the browser itself. To create a new python script, click on the Python icon under the Notebook heading_._ 
+You can upload your own python code or other files using the "Upload" button on the left hand side. You also have the option of writing and running python code within the browser itself. To create a new python script, click on the Python icon under the Notebook heading_._ 
 
 ![jupyter_new_upload](img/jupyterlab-new-notebook.png "jupyter_new_upload")
 
@@ -115,7 +115,7 @@ and try again.
 
 ## Useful links
 
-This is only a brief tutorial on how to get Jupyter running on pronto, but you can find more extensive documentation here: [https://jupyter.org/documentation](https://jupyter.org/documentation)
+This is only a brief tutorial on how to get Jupyter running on pronto, but you can find more extensive documentation here: [https://jupyter.org/documentation](https://jupyter.org/documentation)
 
 Your session may disconnect if you leave it idling for too long. Please refer to [this documentation](http://tljh.jupyter.org/en/latest/topic/idle-culler.html) on how to configure the idle time of your server.
 

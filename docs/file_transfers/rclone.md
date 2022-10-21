@@ -1,8 +1,8 @@
 # How to copy files from /work and /lss to Box using rclone
 
-Rclone is similar to the rsync command, except it is used for syncing files/directories for cloud servers such as Google Drive, Box, etc. If you are looking for a guide on rsync, please refer to [this link](rsync.md).
+Rclone is similar to the rsync command, except it is used for syncing files/directories for cloud servers such as Google Drive, Box, etc. If you are looking for a guide on rsync, please refer to [this link](rsync.md).
 
-Note that rclone also has many other utilities and you can find a complete list of commands/documentation here: [https://rclone.org/docs/](https://rclone.org/docs/)
+Note that rclone also has many other utilities and you can find a complete list of commands/documentation here: [https://rclone.org/docs/](https://rclone.org/docs/)
 
 ## Configuring rclone on prontodtn
 
@@ -153,7 +153,7 @@ Log in and authorize rclone for access
 Waiting for code...
 ```
 
-Copy this URL into the browser on your local computer. You will see a page like the following. 
+Copy this URL into the browser on your local computer. You will see a page like the following. 
 
 ![firefox_box](img/rclone_firefox_box.png)
 
@@ -188,7 +188,7 @@ Log in and authorize rclone for access
 Enter verification code> xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx
 ```
 
-You can now choose to create, edit or delete the remote if you wish. Next, you can see all the remotes you have created and additional options. As you can see in my example below, I have two remotes named remote and remote2. 
+You can now choose to create, edit or delete the remote if you wish. Next, you can see all the remotes you have created and additional options. As you can see in my example below, I have two remotes named remote and remote2. 
 
 ![node_list](img/rclone_node_list.png)
 
@@ -196,7 +196,7 @@ You now have everything configured! If you wish to add another remote, you will 
 
 ## Using RClone to Copy Files
 
-Rclone has many different commands available for use. You can find a complete list of all of rclone's available commands here: [https://rclone.org/commands/](https://rclone.org/commands/)
+Rclone has many different commands available for use. You can find a complete list of all of rclone's available commands here: [https://rclone.org/commands/](https://rclone.org/commands/)
 
 For the purposes of this guide, we will only be discussing how to copy the files from /work or /lss to your Box. Here is the syntax for copying files from the working directory to the cluster
 

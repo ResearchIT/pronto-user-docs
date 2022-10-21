@@ -1,7 +1,7 @@
 # How to run R on pronto
-R is a programming language that is tailored towards Statistical computing. This guide will briefly cover how to run and execute R scripts. For more information, you can find out more here: [https://www.r-project.org/](https://www.r-project.org/)
+R is a programming language that is tailored towards Statistical computing. This guide will briefly cover how to run and execute R scripts. For more information, you can find out more here: [https://www.r-project.org/](https://www.r-project.org/)
 
-If you are looking for ISU's mirror link for browsing packages, you can find it here: [https://mirror.las.iastate.edu/CRAN/](https://mirror.las.iastate.edu/CRAN/)
+If you are looking for ISU's mirror link for browsing packages, you can find it here: [https://mirror.las.iastate.edu/CRAN/](https://mirror.las.iastate.edu/CRAN/)
 
 ## Start Here
 
@@ -13,17 +13,17 @@ Alternatively, you can run RStudio on Pronto using the [Interactive Desktop on O
 
 ## Copying your R scripts to pronto
 
-You will need to be comfortable with using the scp command (Mac/Linux) or WinSCP (Windows) for transferring your R files.  
+You will need to be comfortable with using the scp command (Mac/Linux) or WinSCP (Windows) for transferring your R files.  
 
 Please refer to [this documentation](file_transfers/scp.md) for examples on how to transfer files
 
-Windows users can download WinSCP via Windows Software Center: [https://researchit.las.iastate.edu/how-use-software-center-windows](https://researchit.las.iastate.edu/how-use-software-center-windows)
+Windows users can download WinSCP via Windows Software Center: [https://researchit.las.iastate.edu/how-use-software-center-windows](https://researchit.las.iastate.edu/how-use-software-center-windows)
 
 (or [here](https://winscp.net/eng/index.php) if you are using a personal device)
 
-SCP should be available via terminal on Mac/Linux.
+SCP should be available via terminal on Mac/Linux.
 
-You will need your R script(s) available and ready prior to transferring. (A simple "hello world" script will suffice)
+You will need your R script(s) available and ready prior to transferring. (A simple "hello world" script will suffice)
 
 ## Loading R
 
@@ -73,14 +73,14 @@ module load gcc/10.2.0-zuvaafu
 module load r/4.0.4-py3-4khjixy
 ```
 
-Please note that packages installed using one R module may not work with other R modules.  Please be sure to use the same R module every time you install packages.
+Please note that packages installed using one R module may not work with other R modules.  Please be sure to use the same R module every time you install packages.
 
 
-## Installing packages 
+## Installing packages 
 
-If your R task requires a package, you will need to install them first. 
+If your R task requires a package, you will need to install them first. 
 
-By default, R installs in your **home** directory. Home directories on pronto have a quota of 10GB, so it's a good idea to install packages to your /work directory instead.
+By default, R installs in your **home** directory. Home directories on pronto have a quota of 10GB, so it's a good idea to install packages to your /work directory instead.
 
 To ensure that packages are installed to your /work directory, run the following in your interactive session or batch script before starting R:
 
@@ -89,7 +89,7 @@ export R_LIBS_USER=/work/LAS/your-lab/yournetid/Rlibs
 mkdir -p $R_LIBS_USER
 ```
 
-Replace /work/LAS/your-lab/yournetid/Rlibs with the location you want to install the libraries.
+Replace /work/LAS/your-lab/yournetid/Rlibs with the location you want to install the libraries.
 
 Next, run the R interpreter by running:
 
@@ -97,7 +97,7 @@ Next, run the R interpreter by running:
 R
 ```
 
-Please note that packages installed using one R module may not work with other R modules.  Please be sure to use the same R module every time you install packages.
+Please note that packages installed using one R module may not work with other R modules.  Please be sure to use the same R module every time you install packages.
 
 Once the interpreter is running, the command to install packages is:
 
@@ -105,13 +105,13 @@ Once the interpreter is running, the command to install packages is:
 install.packages('<somepackage>')
 ```
 
-For more detailed and extensive documentation, please visit the following link: [https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages)
+For more detailed and extensive documentation, please visit the following link: [https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages](https://www.rdocumentation.org/packages/utils/versions/3.6.2/topics/install.packages)
 
-**Note:** You may prompted asking if you would like to create a personal library. Type in yes and soon you will be asked which CRAN mirror to use, please use the Iowa (IA) mirror. 
+**Note:** You may prompted asking if you would like to create a personal library. Type in yes and soon you will be asked which CRAN mirror to use, please use the Iowa (IA) mirror. 
 
-The package(s) you have chosen will take some time to install. 
+The package(s) you have chosen will take some time to install. 
 
-If you wish to browse a complete list of available R packages, please visit: [https://mirror.las.iastate.edu/CRAN/](https://mirror.las.iastate.edu/CRAN/)
+If you wish to browse a complete list of available R packages, please visit: [https://mirror.las.iastate.edu/CRAN/](https://mirror.las.iastate.edu/CRAN/)
 
 ### Install packages from GitHub
 
@@ -137,11 +137,11 @@ install.packages("RColorBrewer", lib="/work/LAS/your-lab/yournetid/Rlibs", repos
 
 ## Executing your R job
 
-Now that we have our packages installed, we need to create a slurm job script (i.e. bash script). 
+Now that we have our packages installed, we need to create a slurm job script (i.e. bash script). 
 
-Navigate to your work directory and then use your favorite editor to write your script (i.e. vim/nano).
+Navigate to your work directory and then use your favorite editor to write your script (i.e. vim/nano).
 
-Name it "<FileName>.sh" when finished. 
+Name it "<FileName>.sh" when finished. 
 
 You can use this as a sample template:
 
@@ -162,9 +162,9 @@ cd /work/LAS/<YourLabDirectory>
 Rscript <ScriptName>
 ```
 
-You can read more information about job scripts under the"Single Node Script" section [here](job_scheduler/example_scripts.md). You can also use the [job script generator](job_scheduler/job_script_generator.md).
+You can read more information about job scripts under the"Single Node Script" section [here](job_scheduler/example_scripts.md). You can also use the [job script generator](job_scheduler/job_script_generator.md).
 
-Here, we specify all the modules we want to load (the existing packages) along with our working directory prior to executing our script. You can add additional commands and tailor the script to however you wish.
+Here, we specify all the modules we want to load (the existing packages) along with our working directory prior to executing our script. You can add additional commands and tailor the script to however you wish.
 
 Now run:
 
@@ -212,10 +212,10 @@ You may get an error while trying to install some R packages. This happens espec
 Exit your R session by typing
 
 ```
-quit() 
+quit() 
 ```
 
-Now try searching for a module with a name similar to the error message.
+Now try searching for a module with a name similar to the error message.
 
 ```
 module spider libexample
@@ -233,7 +233,7 @@ Then restart R and try installing your package again.
 
 Some R libraries with complicated requirements are pre-packaged on pronto. These packages are tied to specific R versions.
 
-To see if an R package you need already exists on Pronto you can run: 
+To see if an R package you need already exists on Pronto you can run: 
 
 ```
 $ module purge
@@ -246,17 +246,17 @@ Alternatively, you can run `module spider <package_name>` to search for a specif
 
 Please read the next section for some issues with this solution.
 
-### Pre-packaged modules may not be compatible with each other
+### Pre-packaged modules may not be compatible with each other
 
-Be aware of the modules that you are loading and ensure the versions you are using are compatible. 
+Be aware of the modules that you are loading and ensure the versions you are using are compatible. 
 
 Say if I loaded both of the following modules: "war-formatr/1.5-py2-r3.4..." and "r-plyr/1.8.4-py2-r3.5..."
 
-Note that **both** of these are running py2, but their versions of R are different, which is r3.4 and r3.5. Because of this, you may run into library conflicts and your job may error out.
+Note that **both** of these are running py2, but their versions of R are different, which is r3.4 and r3.5. Because of this, you may run into library conflicts and your job may error out.
 
 The best way to combat this is by keeping the amount of modules used in your job to a minimum and keeping track of the modules you are loading. (A similar issue could happen if the packages contains py2 and py3)
 
-### Avoid using different R modules
+### Avoid using different R modules
 
 Using 'module spider' as discussed above, you may notice there are multiple modules available for some R versions. For example, for R 3.6.3, the follow modules exist:
 
@@ -266,4 +266,4 @@ Using 'module spider' as discussed above, you may notice there are multiple modu
         r/3.6.3-py3-sxv6dw3
 ```
 
-If you use one install.packages to install modules in your home directory using any of these, those packages will be installed into the same folder in your home directory, and will work under that R module. However, if you later load a different R module, those packages you installed might not work when you try to use this with this R module. This happens frequently for packages with compiled C extensions. We recommend you use the load same R module each time you install packages and in all of your scripts.
+If you use one install.packages to install modules in your home directory using any of these, those packages will be installed into the same folder in your home directory, and will work under that R module. However, if you later load a different R module, those packages you installed might not work when you try to use this with this R module. This happens frequently for packages with compiled C extensions. We recommend you use the load same R module each time you install packages and in all of your scripts.

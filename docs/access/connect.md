@@ -2,7 +2,7 @@
 
 ## On Campus
 
-SSH to pronto.las.iastate.edu and log in with your NetID and University password (same as email) as usual.  For example:
+SSH to pronto.las.iastate.edu and log in with your NetID and University password (same as email) as usual.  For example:
 
 ```
 ssh jones@pronto.las.iastate.edu
@@ -24,4 +24,4 @@ you can ssh to pronto from prontodtn
 ssh jones@pronto.las.iastate.edu
 ```
 
-Once you're on pronto, you'll need to use the slurm job scheduler to run a job (either interactively or in batch mode)
+Once you're on pronto, you'll need to use the slurm job scheduler to run a job (either interactively or in batch mode)

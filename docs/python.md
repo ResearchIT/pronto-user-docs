@@ -2,7 +2,7 @@
 
 Python has built-in virtual environments, which contains a particular version of python with additional packages/modules that can be activated/deactivated at will. This guide will cover the basics on how to create an environment and install packages on it.
 
-Create a New Virtual Environment
+Create a New Virtual Environment
 --------------------------------
 
 This should be done from an interactive session on a compute node.
@@ -15,7 +15,7 @@ srun --time=01:00:00 --nodes=1 --cpus-per-task=8 --partition=interactive --pty /
 
 ### Set Up
 
-To setup a python virtual environment, you will need to load your specific version of python. To find a list of available versions, you can run:
+To setup a python virtual environment, you will need to load your specific version of python. To find a list of available versions, you can run:
 
 ```
 module spider python
@@ -24,16 +24,16 @@ module spider python
 Next, I would have to see if there are any prerequesite modules for python.
 
 ```
-module spider <version-of-python-here>
+module spider <version-of-python-here>
 ```
 
 For example:
 
 ```
-module spider python/3.8.8-ucekvff
+module spider python/3.8.8-ucekvff
 ```
 
-The output of this says that the python/3.8.8-ucekvff module requires gcc/10.2.0-zuvaafu . So we must load it first before we can load the python module. 
+The output of this says that the python/3.8.8-ucekvff module requires gcc/10.2.0-zuvaafu . So we must load it first before we can load the python module. 
 
 For example:
 
@@ -42,7 +42,7 @@ module load gcc/10.2.0-zuvaafu
 module load python/3.8.8-ucekvff
 ```
 
-Before proceeding, ensure that you are in your **/work** directory and not your **/home** directory. 
+Before proceeding, ensure that you are in your **/work** directory and not your **/home** directory. 
 
 After running your module, create your virtual environment by typing in:
 
@@ -57,7 +57,7 @@ This will create a directory that contains the environment.
 Activate the environment by running:
 
 ```
-$ source <name-of-environment>/bin/activate
+$ source <name-of-environment>/bin/activate
 ```
 
 Your terminal will now look like this:
@@ -96,7 +96,7 @@ deactivate
 
 (This will **not** disconnect you from pronto/the node you are currently on)
 
-Use a Virtual Environment in a Batch Job
+Use a Virtual Environment in a Batch Job
 ----------------------------------------
 
 ```bash
@@ -114,4 +114,4 @@ More Information
 
 If you plan on creating more environments, please ensure that you are creating them in **/work** instead of **/home**.
 
-For more commands and further documentation, please visit: [https://docs.python.org/3/tutorial/venv.html](https://docs.python.org/3/tutorial/venv.html)
+For more commands and further documentation, please visit: [https://docs.python.org/3/tutorial/venv.html](https://docs.python.org/3/tutorial/venv.html)

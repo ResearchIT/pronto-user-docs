@@ -2,7 +2,7 @@
 
 ## What are SSH keys?
 
-SSH supports a number of methods to authenticate a user. You're probably familiar with password based authentication, where you provide your netid username and password to get in. Public key authentication is a bit different. Instead of a password, you prove your identity using a key that you've previously told the server to trust.
+SSH supports a number of methods to authenticate a user. You're probably familiar with password based authentication, where you provide your netid username and password to get in. Public key authentication is a bit different. Instead of a password, you prove your identity using a key that you've previously told the server to trust.
 
 ## Generating keys
 
@@ -28,7 +28,7 @@ To generate a key with OpenSSH, use ssh-keygen:
 ssh-keygen -t rsa -b 4096
 ```
 
-This will generate a 4096 bit RSA keypair and (by default) put it in the (homedir)/.ssh/id\_rsa location, you can change where it goes at the prompt or specify `-f <location>` in the command line invocation. By default the client will look at .ssh/id\_rsa so if you don't want to have to tell ssh where to find the key you can keep the default location. You'll also be asked to set a password to protect the key if you want. This isn't necessary, but is recommended.
+This will generate a 4096 bit RSA keypair and (by default) put it in the (homedir)/.ssh/id\_rsa location, you can change where it goes at the prompt or specify `-f <location>` in the command line invocation. By default the client will look at .ssh/id\_rsa so if you don't want to have to tell ssh where to find the key you can keep the default location. You'll also be asked to set a password to protect the key if you want. This isn't necessary, but is recommended.
 
 If you want to use ED25519 instead
 
@@ -41,7 +41,7 @@ Using the keys
 
 ### Adding keys to the server
 
-You'll need to get the contents of your public key. For OpenSSH keys this is as easy as copying the contents from the .pub file for the key (if you're using .ssh/id\_rsa this key will be .ssh/id\_rsa.pub) this'll look a lot like:
+You'll need to get the contents of your public key. For OpenSSH keys this is as easy as copying the contents from the .pub file for the key (if you're using .ssh/id\_rsa this key will be .ssh/id\_rsa.pub) this'll look a lot like:
 
 ```
 ssh-rsa <a bunch of characters here>
@@ -81,7 +81,7 @@ Usually the agent is already running, so you can just do:
 ssh-add path/to/key/file/here
 ```
 
-which will add the key to the agent. If you password protected the key, you'll need to enter the password to add the key to the agent. Once you've done this you'll be able to use scp, sftp, and ssh without being prompted for the key password.
+which will add the key to the agent. If you password protected the key, you'll need to enter the password to add the key to the agent. Once you've done this you'll be able to use scp, sftp, and ssh without being prompted for the key password.
 
 You may need to manually start the ssh-agent. How to do this differs based on your environment. For BSD/Linux from bash:
 

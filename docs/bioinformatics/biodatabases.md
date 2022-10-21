@@ -2,7 +2,7 @@
 
 [Xuefeng](https://researchit.las.iastate.edu/people/xuefeng-zhao) from our ResearchIT team has compiled several commonly used BioDatabases so users can reference them without the need to download their own copy.
 
-The shared BioDatabases on pronto, and nova are located at:
+The shared BioDatabases on pronto, and nova are located at:
 
 ```
 /work/LAS/BioDatabase

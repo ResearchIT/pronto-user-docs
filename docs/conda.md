@@ -6,7 +6,7 @@ For pytorch or other machine learning / GPU uses, you should use the [Machine Le
 
 For other Python uses, the recommended way to install additional Python packages is with a [Python Virtual Environment](python.md). 
 
-For other software, we have many [Spack based software modules](spack_modules.md) installed. If you need software that we don't available as a module, but that is already [available as a Spack package](https://spack.readthedocs.io/en/latest/package_list.html), see the [Self Managed Spack Installs](spack_modules.md) section of our guide.
+For other software, we have many [Spack based software modules](spack_modules.md) installed. If you need software that we don't available as a module, but that is already [available as a Spack package](https://spack.readthedocs.io/en/latest/package_list.html), see the [Self Managed Spack Installs](spack_modules.md) section of our guide.
 
 ## Start Here
 
@@ -32,15 +32,15 @@ pkgs_dirs:
 
 ## How to set up a conda environment
 
-To setup a conda environment, you will first need to connect to Pronto. Next, allocate a **compute** node and be sure you are placed on it (via salloc/srun). If you are not familiar with salloc or srun, please refer to [this guide](job_scheduler/index.md) first. Below is a sample command you could run:
+To setup a conda environment, you will first need to connect to Pronto. Next, allocate a **compute** node and be sure you are placed on it (via salloc/srun). If you are not familiar with salloc or srun, please refer to [this guide](job_scheduler/index.md) first. Below is a sample command you could run:
 
 ```
 srun --time=01:00:00 --nodes=1 --cpus-per-task=1 --pty /usr/bin/bash
 ```
 
-Wait until you have been placed on a **compute** node.
+Wait until you have been placed on a **compute** node.
 
- Now, you will need will need to pick a version of conda that suits your needs. To get a list of available packages, run the command:
+ Now, you will need will need to pick a version of conda that suits your needs. To get a list of available packages, run the command:
 
 ```
 module spider conda
@@ -50,7 +50,7 @@ This will list the available modules for conda. (The available modules may be su
 
 ![Conda_Modules](img/conda_0.png "Conda")
 
-Once you have looked through the list of modules, take note of the package name next to the version name. 
+Once you have looked through the list of modules, take note of the package name next to the version name. 
 
 ![picking_a_module](img/conda2_0.png "conda2")
 
@@ -69,7 +69,7 @@ module load miniconda3/4.3.30-qdauveb
 Now, create your conda environment by running:
 
 ```
-conda create --name <DesiredName> 
+conda create --name <DesiredName> 
 ```
 
 You will be prompted with a list of additional packages (if you specified any) that will be installed. Type y and hit enter. Wait a few minutes for the package to install. Once they are done installing, run:
@@ -84,7 +84,7 @@ To verify that you have successfully activated the environment, your terminal sh
 (NameOfEnvironment) [YourNetID@node ~] $
 ```
 
-A useful cheatsheet for conda can be found here: [https://docs.conda.io/projects/conda/en/4.6.0/\_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
+A useful cheatsheet for conda can be found here: [https://docs.conda.io/projects/conda/en/4.6.0/\_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf](https://docs.conda.io/projects/conda/en/4.6.0/_downloads/52a95608c49671267e40c689e0bc00ca/conda-cheatsheet.pdf)
 
 ## Moving your .conda directory
 

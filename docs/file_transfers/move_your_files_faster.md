@@ -1,6 +1,6 @@
 # Move your Files Faster
 
-When working with large datasets, you often need to move files around between servers, storage systems, or between institutions.  Below, we describe common problems people run into when moving data around and we give some recommendations on how to move your data faster.
+When working with large datasets, you often need to move files around between servers, storage systems, or between institutions.  Below, we describe common problems people run into when moving data around and we give some recommendations on how to move your data faster.
 
 ## I'm in a hurry
 
@@ -36,7 +36,7 @@ The path the data takes during the transfer is now:
 Speedy===10Gbps===>Leaving Durham---1Gbps--->Your Building...0.5Gbps...>Your laptop on WIFI...>Your Building...>Durham..>LSS
 ```
 
-Once you bottleneck the transfer going across your computer, it won't go any faster than the slowest point in the chain.  This transfer may take roughly 5 hours (if it doesn't timeout).
+Once you bottleneck the transfer going across your computer, it won't go any faster than the slowest point in the chain.  This transfer may take roughly 5 hours (if it doesn't timeout).
 
 Your labmate instead, logs into speedy, notices that both /work and /lss are already mounted and uses rsync to copy their 1TB file between the two.
 
@@ -50,6 +50,6 @@ Your lab member's transfer will be done in closer to 15 minutes
 
 ### Transfers to/from another institution
 
-If you have data you need to get to/from another institution, keep the same principles in mind and try to route the transfer over the best path using the fastest network available. 
+If you have data you need to get to/from another institution, keep the same principles in mind and try to route the transfer over the best path using the fastest network available. 
 
-For example, say you have some data sitting on Pylon storage at Xsede. We recommend using a tool like [Globus](globus.md) to move your final results back to [LSS](https://researchit.las.iastate.edu/guides/lss/) for long-term storage.  When you initiate your transfer, be sure to pick an endpoint like Nova DTN (which has a fast network connection to LSS), rather than routing the globus traffic through your desktop connection to LSS.
+For example, say you have some data sitting on Pylon storage at Xsede. We recommend using a tool like [Globus](globus.md) to move your final results back to [LSS](https://researchit.las.iastate.edu/guides/lss/) for long-term storage.  When you initiate your transfer, be sure to pick an endpoint like Nova DTN (which has a fast network connection to LSS), rather than routing the globus traffic through your desktop connection to LSS.

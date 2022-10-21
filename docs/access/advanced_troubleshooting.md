@@ -54,7 +54,7 @@ To make this change persist between reboots, perform the following steps:
 Open /etc/sysctl.conf in your favorite editor. If the file is non-existent a new, blank file will be created.
 
 ```
-sudo nano /etc/sysctl.conf
+sudo nano /etc/sysctl.conf
 ```
 
 At the end of the file, add the following line:
@@ -71,7 +71,7 @@ At any time you can verify the state of this setting with:
 sysctl net.ipv6.conf.all.use_tempaddr
 ```
 
-which should return: `net.ipv6.conf.all.use_tempaddr = 0`
+which should return: `net.ipv6.conf.all.use_tempaddr = 0`
 
 ### macOS
 
@@ -86,7 +86,7 @@ To make this change persist between reboots, perform the following steps:
 Open /etc/sysctl.conf in your favorite editor. If the file is non-existent a new, blank file will be created.
 
 ```
-sudo nano /etc/sysctl.conf
+sudo nano /etc/sysctl.conf
 ```
 
 At the end of the file, add the following line:
