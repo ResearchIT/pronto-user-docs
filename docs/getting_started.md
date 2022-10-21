@@ -23,7 +23,7 @@ Pronto has plenty of different compute nodes available for your needs.
 
 Each compute node has different specifications and is suitable for different workloads.
 
-Please see this guide for [how to pick the best compute node to run your job on](picking_the_best_resource.md). **This is important. Please read it.** 
+Please see this guide for [how to pick the best compute node to run your job on](efficient_use_of_resources.md). **This is important. Please read it.** 
 
 ## Logging in and using Pronto
 

@@ -41,7 +41,7 @@ nav:
             - Frequently Asked Questions: job_scheduler/faq.md
         - Software Modules: spack_modules.md
         - Hardware: hardware.md
-        - Picking the Best Resource For Your Job: picking_the_best_resource.md
+        - Efficient Use of Resources: efficient_use_of_resources.md
         - File Transfers:
             # first menu item is used as the link for the 'File Transfers' heading
             # implemented in custom_theme/nav.html
