@@ -69,6 +69,7 @@ nav:
             - Install Additional Python Packages: machine_learning/install_python_packages.md
             - Upgrade Existing Python Packages: machine_learning/upgrade_python_packages.md
             - Create an Empty Virtual Environment: machine_learning/create_empty_virtualenv.md
+            - NVIDIA Nsight: machine_learning/nvidia_nsight.md
             - Common Issues: machine_learning/common_issues.md
         - Interactive Computing:
             # first menu item is used as the link for the 'Interactive Computing' heading
