@@ -24,7 +24,7 @@ Once you are on pronto, salloc node using: (adjust the time allocated if desire
 salloc --time=00:10:00 --nodes=1
 ```
 
-If you are not familiar with allocating nodes or want to specify other configurations, please refer to [this guide](slurm-basics).
+If you are not familiar with allocating nodes or want to specify other configurations, please refer to [this guide](../job_scheduler/index.md).
 
 Take note of the node you were assigned. In the screenshot below, the node I was assigned was "biocrunch".
 
