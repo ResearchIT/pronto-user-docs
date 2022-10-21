@@ -135,6 +135,80 @@ Successfully installed File-Slurp-9999.32
 
 Please see our guide on [properly setting up a conda environment](conda.md).
 
+## Compatibility
+
+When running software on Pronto, you will most likely encounter a few issues loading modules. This will most likely be a compatability issue.
+
+### Examples
+
+Suppose I run the following:
+
+```
+$ module load python/3.7.6-y2hnyr4
+```
+
+The command works as expected. What if we try and run and older version of python in the same session using:
+
+```
+$ module load python/2.7.15-h2cedbf
+```
+
+We run into this error:
+
+```
+**Lmod has detected the following error:**  These module(s) exist but cannot be loaded as requested:
+
+"libiconv/1.15-vlje6ju"
+
+   Try: "module spider libiconv/1.15-vlje6ju" to see how to load the module(s).
+```
+
+In this scenario, we're tyring to load a certain version of python 2.7 after loading python 3. If we want to run python 2.7, we can simply just run:
+
+```
+$ module purge
+
+$ module load  python/2.7.15-h2cedbf
+```
+
+The "module purge" will clear all the module that we have currently loaded.
+
+Let's say we have python 2.7 loaded, and we load python 3.7. What happens now?
+
+```
+$ module load python/3.7.6-y2hnyr4
+```
+
+We get the following message:
+
+```
+The following have been reloaded with a version change:
+
+  1) bzip2/1.0.8-fslu4ek => bzip2/1.0.8-etzfbao          9) ncurses/6.0-3ncf3bb => ncurses/6.0-ws245kv
+
+  2) expat/2.2.5-7wtpegy => expat/2.2.9-ihwvsxo         10) openssl/1.1.1c-otnl3ib => openssl/1.1.1f-dljuelf
+
+  3) gdbm/1.14.1-7zby6of => gdbm/1.18.1-xr242f2         11) python/2.7.15-h2cedbf => python/3.7.6-y2hnyr4
+
+  4) gettext/0.19.8.1-eruqa52 => gettext/0.20.1-x6e33jv 12) readline/7.0-jushdjv => readline/8.0-maed2yl
+
+  5) libbsd/0.9.1-li3rs5m => libbsd/0.10.0-wgsg6tq      13) sqlite/3.28.0-2l6wl2y => sqlite/3.30.1-ydsrzlu
+
+  6) libffi/3.2.1-4s3dshk => libffi/3.2.1-sacvu6i       14) tar/1.31-wiqmehf => tar/1.32-gem5z6s
+
+  7) libiconv/1.15-vlje6ju => libiconv/1.16-xcmzb6a     15) xz/5.2.4-rh7gav6 => xz/5.2.5-evgwz4v
+
+  8) libxml2/2.9.9-hionxpg => libxml2/2.9.9-oqe2ao3     16) zlib/1.2.11-vhzh5cf => zlib/1.2.11-zolwez4
+```
+
+This is simply upgrading all the dependencies python 2.7 uses for the new module you just loaded (which is python 3).
+
+### A few side notes
+
+* If you get a bunch of warnings about version changes after loading modules, you may be in an incompatible state. 
+* The more modules that Lmod reports (in the error/warning messages), the more likely you'll be incompatible for the job you're working on.
+* Incompatible libraries may still work to start a job, but they may error out at some point.
+
 ## Reproducibility
 
 Beyond providing a more stable and easier to administer software environment, [Spack](https://spack.io) can also help ensure the software environment used for your research is documented and reproducible.
