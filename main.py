@@ -20,7 +20,7 @@ base_gpu_info = {
     'rtx_6000':{'ram':'24GB','cc':'sm_75'},
     'gtx_1080_ti':{'ram':'11GB','cc':'sm_61'},
 }
-        
+
 def parse_features(input):
     return [feature for feature in input.split(",")]
 
@@ -57,10 +57,20 @@ def parse_slurm_conf_line(partition_info, line):
         info[key] = value
     partition_info[info['PartitionName']] = info
 
+def parse_host_procs(host_processors_info, line):
+    info = {}
+    line = line.strip()
+    hostname, processor = line.split("\t")
+    processor = processor.replace(" CPU ", " ")
+    processor = processor.replace("(R)", "")
+    processor = processor.replace("(TM)", "")
+    processor = processor.replace(" 32-Core Processor", "")
+    host_processors_info[hostname] = processor
+
 def get_gpu_info(server_info):
-    
+
     gpu_info = copy.deepcopy(base_gpu_info)
-    
+
     for gpu_type in gpu_info:
         gpu_info[gpu_type]["quantity"] = 0
         gpu_info[gpu_type]["nodelist"] = []
@@ -74,9 +84,9 @@ def get_gpu_info(server_info):
         for gpu_type, gpu_quantity in hinfo["gpus"].items():
             gpu_info[gpu_type]["quantity"] += gpu_quantity
             gpu_info[gpu_type]["nodelist"].append(hostname.split(".")[0])
-            
+
     return gpu_info
-    
+
 def define_env(env):
 
     "Hook function"
@@ -92,6 +102,11 @@ def define_env(env):
         for line in input_file:
             parse_slurm_conf_line(partition_info, line)
 
+    host_processors_info = {}
+    with open(os.path.dirname(os.path.realpath(__file__)) + '/data/procs.txt', 'r') as input_file:
+        for line in input_file:
+            parse_host_procs(host_processors_info, line)
+
     @env.macro
     def partition_hardware_table(partition):
 
@@ -104,7 +119,8 @@ def define_env(env):
         <thead>
         <tr>
             <th>Server Name</th>
-            <th>CPU Cores</th>
+            <th>CPU Model</th>
+            <th># Cores</th>
             <th>RAM</th>
             <th>Features</th>
         </tr>
@@ -123,10 +139,15 @@ def define_env(env):
             else:
                 cpu_feature = ""
 
+            cpu_model = ""
+            if hostname in host_processors_info:
+                cpu_model = host_processors_info[hostname]
+
             if partition in hinfo["partitions"]:
                 table += f"""
                 <tr>
                 <td>{hostname}</td>
+                <td>{cpu_model}</td>
                 <td>{hinfo["cores"]}</td>
                 <td>{hinfo["memory"]} GB</td>
                 <td>{cpu_feature}</td>
@@ -136,21 +157,21 @@ def define_env(env):
         table += "</table>".strip()
 
         return table
-        
+
     @env.macro
     def partition_info_section(partition):
         pinfo = partition_info[partition]
-        
+
         max_time_list = pinfo['MaxTime'].split('-')
         if len(max_time_list) > 1:
             max_time = max_time_list[0] + " days"
         else:
             t = datetime.datetime.strptime(max_time_list[0],"%H:%M:%S")
             max_time = f"{t.hour} hours"
-        
+
         timeslicing = "enabled" if "FORCE" in pinfo['OverSubscribe'] else "disabled"
-        
-        
+
+
         info_section = f"""
         Jobs on this partition have a max runtime of {max_time}, and time slicing is {timeslicing}.
         """.strip()
@@ -170,9 +191,9 @@ def define_env(env):
         <thead>
         <tr>
             <th>Server Name</th>
+            <th>GPUs</th>
             <th>CPU Cores</th>
             <th>RAM</th>
-            <th>GPUs</th>
             <th>Features</th>
         </tr>
         </thead>
@@ -201,9 +222,9 @@ def define_env(env):
                 table += f"""
                 <tr>
                 <td>{hostname}</td>
+                <td>{gpus}</td>
                 <td>{hinfo["cores"]}</td>
                 <td>{hinfo["memory"]} GB</td>
-                <td>{gpus}</td>
                 <td>{features}</td>
                 </tr>
                 """.strip()
@@ -216,7 +237,7 @@ def define_env(env):
     def gpu_types_table():
 
         gpu_info = get_gpu_info(server_info)
-        
+
         table = """
         <table class="docutils">
         """.strip()
@@ -253,18 +274,18 @@ def define_env(env):
 
     @env.macro
     def job_script_generator_acceptable_gpus_names():
-        
+
         gpu_info = get_gpu_info(server_info)
-        
+
         acceptable_names = [x for x in gpu_info if gpu_info[x]["quantity"] > 0]
-        
+
         return json.dumps(acceptable_names)
-        
+
     @env.macro
     def job_script_generator_acceptable_gpus_info():
-        
+
         gpu_info = get_gpu_info(server_info)
-        
+
         return json.dumps(gpu_info)
 
     @env.macro
@@ -282,7 +303,7 @@ def define_env(env):
                     pinfo[partition]["max_ram"] = max(pinfo[partition]["max_ram"], hinfo["memory"])
                     pinfo[partition]["max_cores"] = max(pinfo[partition]["max_cores"], hinfo["cores"])
         return json.dumps(pinfo)
-                
+
     @env.macro
     def recommended_mlgpu_version():
         return "20220928"
