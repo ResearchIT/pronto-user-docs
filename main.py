@@ -65,6 +65,7 @@ def parse_host_procs(host_processors_info, line):
     processor = processor.replace("(R)", "")
     processor = processor.replace("(TM)", "")
     processor = processor.replace(" 32-Core Processor", "")
+    processor = processor.split(" @ ")[0]
     host_processors_info[hostname] = processor
 
 def get_gpu_info(server_info):
@@ -120,7 +121,7 @@ def define_env(env):
         <tr>
             <th>Server Name</th>
             <th>CPU Model</th>
-            <th># Cores</th>
+            <th>CPU Cores</th>
             <th>RAM</th>
             <th>Features</th>
         </tr>
