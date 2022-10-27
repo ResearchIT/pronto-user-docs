@@ -23,6 +23,7 @@ theme:
     highlightjs: false
     custom_dir: custom_theme
 nav:
+    - ResearchIT Home Page: https://researchit.las.iastate.edu/
     - Pronto Cluster:
         - Overview: index.md
         - Access:
@@ -109,7 +110,7 @@ nav:
             - Singularity: containers/singularity.md
             - Private Singularity Repositories: containers/private_singularity_repositories.md
             - Use Julia GPU Docker Containers with Singularity: containers/julia_gpu.md
-            
+
     - Troubleshooting:
         - Common Issues: troubleshooting/common_issues.md
         - Reporting Issues: troubleshooting/reporting_issues.md
