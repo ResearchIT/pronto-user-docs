@@ -13,6 +13,7 @@ base_gpu_info = {
     'a100_3g.20gb':{'ram':'20GB','cc':'sm_80'},
     'a100-pcie':{'ram':'40GB','cc':'sm_80'},
     'a100-sxm4-80gb':{'ram':'80GB','cc':'sm_80'},
+    'v100-fhhl-16G':{'ram':'16GB','cc':'sm_70'},
     'v100-pcie-16G':{'ram':'16GB','cc':'sm_70'},
     'v100-pcie-32G':{'ram':'32GB','cc':'sm_70'},
     'v100-sxm2-32G':{'ram':'32GB','cc':'sm_70'},
