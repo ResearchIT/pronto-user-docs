@@ -3,6 +3,7 @@ import os
 import datetime
 import json
 import copy
+import math
 
 # this file is run by the mkdocs macros plugin
 
@@ -37,12 +38,17 @@ def parse_gres(input):
 
 def parse_sinfo_line(server_info, line):
     hostname, partition, sockets, cores_per_socket, threads_per_core, ram_in_mb, features, gres = line.strip().split("|")
+    
+    # memory reserved for system use
+    # no way to get this from sinfo
+    # presently 10240 for all nodes
+    mem_spec_limit = 10240 
 
     if hostname not in server_info:
         server_info[hostname] = {
             "partitions":[],
             "cores": int(sockets) * int(cores_per_socket) * int(threads_per_core),
-            "memory": round(int(ram_in_mb) / 1024),
+            "memory": math.floor((int(ram_in_mb) - int(mem_spec_limit)) / 1024),
             "features": parse_features(features),
             "gpus": parse_gres(gres),
         }
