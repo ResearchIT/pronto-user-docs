@@ -22,6 +22,19 @@ interactive is intended for interactive terminal sessions.
 
 {{ partition_hardware_table('interactive') }}
 
+## gpu-interactive
+
+gpu is intended for interactive jobs that need a gpu.
+
+When submitting jobs to this partition, you also need to add this to your batch script:
+
+```
+#SBATCH --partition=gpu-interactive
+#SBATCH --gres=gpu:1
+```
+
+{{ gpu_partition_hardware_table('gpu-interactive') }}
+
 ## biocrunch
 
 biocrunch is intended for jobs that do multithreaded computation.
@@ -44,7 +57,7 @@ bigram is intended for jobs that cannot be parallelized and require a large amou
 
 gpu is intended for jobs that need a gpu.
 
-When submitting jobs to the gpu partition, you also need to add this to your batch script:
+When submitting jobs to this partition, you also need to add this to your batch script:
 
 ```
 #SBATCH --partition=gpu
@@ -54,7 +67,7 @@ When submitting jobs to the gpu partition, you also need to add this to your bat
 If you want a specific type of GPU, see the instructions under [GPU types](#gpu-types) instead.
 
 ### Servers
-{{ gpu_partition_hardware_table() }}
+{{ gpu_partition_hardware_table('gpu') }}
 
 ### GPU Types
 

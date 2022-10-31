@@ -38,11 +38,11 @@ def parse_gres(input):
 
 def parse_sinfo_line(server_info, line):
     hostname, partition, sockets, cores_per_socket, threads_per_core, ram_in_mb, features, gres = line.strip().split("|")
-    
+
     # memory reserved for system use
     # no way to get this from sinfo
     # presently 10240 for all nodes
-    mem_spec_limit = 10240 
+    mem_spec_limit = 10240
 
     if hostname not in server_info:
         server_info[hostname] = {
@@ -188,7 +188,7 @@ def define_env(env):
 
 
     @env.macro
-    def gpu_partition_hardware_table():
+    def gpu_partition_hardware_table(partition):
 
         table = """
         <table class="docutils">
@@ -226,7 +226,7 @@ def define_env(env):
 
             features = "<br />".join([cpu_feature, gpu_features])
 
-            if 'gpu' in hinfo["partitions"]:
+            if partition in hinfo["partitions"]:
                 table += f"""
                 <tr>
                 <td>{hostname}</td>
