@@ -16,16 +16,24 @@ python3 -m http.server --directory site
 
 Openshift will automatically build this when pushed for production.
 
-## hardware update
+## update scenarios
+
+### hardware update
 
 Use this to generate a new sinfo dump and save to data/sinfo.txt
 ```
 sinfo --noheader -o '%n|%P|%X|%Y|%Z|%m|%f|%G' | sort
 ```
 
-GPU RAM and compute capability is defined in main.py (search for gpu_info)
+If adding a new GPU node, update GPU RAM and compute capability in main.py (search for base\_gpu\_info)
 
-## ml-gpu update
+Manually add processor information to data/procs.txt
+
+### partition update
+
+Copy the partition-related lines from slurm.conf into data/slurm.conf
+
+### ml-gpu update
 
 Use this to gather the information needed for docs/machine_learning/preinstalled_software.md
 
