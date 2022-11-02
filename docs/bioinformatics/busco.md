@@ -131,6 +131,9 @@ We will be using pronto's data transfer node below:
 prontodtn.las.iastate.edu
 ```
 
+!!! note
+    Prontodtn is currently having connection troubles with LSS. Until we work out a solution, please use `biocrunch.las.iastate.edu` for data transfers to and from LSS.
+
 ## Transferring to the cluster on Windows
 
 You need to use Filezilla or WinSCP to upload your local files to the data transfer node. WinSCP is available in the Software center. Otherwise the download links are provided below:

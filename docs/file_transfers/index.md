@@ -6,6 +6,9 @@ All file transfers to/from the pronto `/work` directory must be done through the
 prontodtn.las.iastate.edu
 ```
 
+!!! note
+    Prontodtn is currently having connection troubles with LSS. Until we work out a solution, please use `biocrunch.las.iastate.edu` for data transfers to and from LSS.
+
 You will need to be on campus or connected to the VPN.
 
 This diagram shows the larger capacity network connections on prontodtn, which explains why we require files to be transferred through prontodtn rather than pronto:

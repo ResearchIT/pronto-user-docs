@@ -131,6 +131,9 @@ The FQDN (IP Address) you will be using will be:
 prontodtn.las.iastate.edu
 ```
 
+!!! note
+    Prontodtn is currently having connection troubles with LSS. Until we work out a solution, please use `biocrunch.las.iastate.edu` for data transfers to and from LSS.
+
 Login with your NetID and password.
 
 To use scp, you will first need to ssh to prontodtn.las.iastate.edu. You may be prompted for your password twice. You should enter it both times to ensure that you get a Kerberos ticket. If you are not prompted for it a second time, run
