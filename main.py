@@ -26,6 +26,25 @@ base_gpu_info = {
 def parse_features(input):
     return [feature for feature in input.split(",")]
 
+def format_features(features):
+
+    displayed_features = []
+    # keep the highest
+    if "AVX512" in features:
+        displayed_features.append("AVX512")
+    elif "AVX2" in features:
+        displayed_features.append("AVX2")
+    elif "AVX" in features:
+        displayed_features.append("AVX")
+        
+    if "NVLINK" in features:
+        displayed_features.append("NVLINK")
+
+    if "EL9" in features:
+        displayed_features.append("EL9")
+        
+    return "<br />".join(displayed_features)
+                
 def parse_gres(input):
     gres = {}
     if input != "(null)":
@@ -138,14 +157,7 @@ def define_env(env):
         for hostname in server_info:
             hinfo = server_info[hostname]
 
-            if "AVX512" in hinfo["features"]:
-                cpu_feature = "AVX512"
-            elif "AVX2" in hinfo["features"]:
-                cpu_feature = "AVX2"
-            elif "AVX" in hinfo["features"]:
-                cpu_feature = "AVX"
-            else:
-                cpu_feature = ""
+            features = format_features(hinfo["features"])
 
             cpu_model = ""
             if hostname in host_processors_info:
@@ -158,7 +170,7 @@ def define_env(env):
                 <td>{cpu_model}</td>
                 <td>{hinfo["cores"]}</td>
                 <td>{hinfo["memory"]} GB</td>
-                <td>{cpu_feature}</td>
+                <td>{features}</td>
                 </tr>
                 """.strip()
 
@@ -211,20 +223,7 @@ def define_env(env):
             hinfo = server_info[hostname]
             gpus = "<br />".join([f"{gpu_type} x {gpu_quantity}" for gpu_type, gpu_quantity in hinfo["gpus"].items()])
 
-            if "AVX512" in hinfo["features"]:
-                cpu_feature = "AVX512"
-            elif "AVX2" in hinfo["features"]:
-                cpu_feature = "AVX2"
-            elif "AVX" in hinfo["features"]:
-                cpu_feature = "AVX"
-            else:
-                cpu_feature = ""
-
-            gpu_features = ""
-            if "NVLINK" in hinfo["features"]:
-                gpu_features += "NVLINK"
-
-            features = "<br />".join([cpu_feature, gpu_features])
+            features = format_features(hinfo["features"])
 
             if partition in hinfo["partitions"]:
                 table += f"""

@@ -5,6 +5,7 @@ amp-4.las.iastate.edu	AMD EPYC 7543 32-Core Processor
 amp-5.las.iastate.edu	AMD EPYC 7513 32-Core Processor
 amp-6.las.iastate.edu	AMD EPYC 7513 32-Core Processor
 amp-7.las.iastate.edu	AMD EPYC 7513 32-Core Processor
+amp-8.las.iastate.edu	AMD EPYC 7513 32-Core Processor
 bigram.las.iastate.edu	Intel(R) Xeon(R) CPU E7-4860 v2 @ 2.60GHz
 bigram2.las.iastate.edu	Intel(R) Xeon(R) Gold 6152 CPU @ 2.10GHz
 biocrunch.las.iastate.edu	Intel(R) Xeon(R) CPU E5-4650 v2 @ 2.40GHz
