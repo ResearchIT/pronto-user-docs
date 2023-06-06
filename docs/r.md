@@ -29,11 +29,10 @@ You will need your R script(s) available and ready prior to transferring. (A sim
 
 ### Recommended modules
 
-This R module generally works well:
+This default R module generally works well:
 
 ```
-module load gcc/10.2.0-zuvaafu
-module load r/4.0.4-py3-4khjixy
+module load r
 ```
 
 If this doesn't meet your needs, you could try the one of the others.
@@ -46,18 +45,24 @@ To see what versions of R are available, run:
 module spider r
 ```
 
+For older versions of R, loading an older module tree might bee necessary:
+
+```
+module use /opt/rit/el9/20221216/modules/lmod/linux-rhel9-x86_64/Core/
+```
+
 ### Load an R module
 
 If I wanted to load this version of R:
 
 ```
-r/3.6.3-py3-sxv6dw3
+r/4.2.2-py310-ly4mhww
 ```
 
 I would run:
 
 ```
-module load r/3.6.3-py3-sxv6dw3
+module load r/4.2.2-py310-ly4mhww
 ```
 
 Some versions may result in an error like the following:
