@@ -137,7 +137,7 @@ Please see our guide on [properly setting up a conda environment](conda.md).
 
 ## Compatibility
 
-When running software on Pronto, you will most likely encounter a few issues loading modules. This will most likely be a compatability issue.
+When running software on Pronto, you will most likely encounter a few issues loading modules. This will most likely be a compatibility issue.
 
 ### Examples
 
@@ -163,7 +163,7 @@ We run into this error:
    Try: "module spider libiconv/1.15-vlje6ju" to see how to load the module(s).
 ```
 
-In this scenario, we're tyring to load a certain version of python 2.7 after loading python 3. If we want to run python 2.7, we can simply just run:
+In this scenario, we're trying to load a certain version of python 2.7 after loading python 3. If we want to run python 2.7, we can simply just run:
 
 ```
 $ module purge
