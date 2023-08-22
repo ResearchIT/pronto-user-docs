@@ -313,4 +313,4 @@ def define_env(env):
 
     @env.macro
     def recommended_mlgpu_version():
-        return "20220928"
+        return "20230427"
