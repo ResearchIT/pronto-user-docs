@@ -18,9 +18,6 @@ When you open up the application, you should be prompted with login credentials.
 prontodtn.las.iastate.edu
 ```
 
-!!! note
-    Prontodtn is currently having connection troubles with LSS. Until we work out a solution, please use `biocrunch.las.iastate.edu` for data transfers to and from LSS.
-
 Keep the port number the same and login with your NetID and password. 
 
 ![login_pronto](img/screen_shot_2020-05-19_at_9.13.54_am.png)

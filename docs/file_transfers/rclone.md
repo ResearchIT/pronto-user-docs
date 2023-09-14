@@ -12,9 +12,6 @@ Open up a terminal session and connect to prontodtn.
 ssh yournetid@prontodtn.las.iastate.edu
 ```
 
-!!! note
-    Prontodtn is currently having connection troubles with LSS. Until we work out a solution, please use `biocrunch.las.iastate.edu` for data transfers to and from LSS. After connecting, run `module load rclone`.
-
 You will need to first create a config file to link your box account. Navigate to your working directory (i.e. /work or /lss), and use the command:
 
 ```
