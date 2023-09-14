@@ -32,7 +32,6 @@ biocrunch8.las.iastate.edu|biocrunch|4|22|2|1546523|AVX,AVX2,AVX512,SCRATCH|(nul
 biocrunch8.las.iastate.edu|whatever*|4|22|2|1546523|AVX,AVX2,AVX512,SCRATCH|(null)
 biocrunch9.las.iastate.edu|biocrunch|4|24|2|1546504|AVX,AVX2,AVX512,SCRATCH|(null)
 biocrunch9.las.iastate.edu|whatever*|4|24|2|1546504|AVX,AVX2,AVX512,SCRATCH|(null)
-biocrunch.las.iastate.edu|interactive|4|10|2|773774|AVX|(null)
 crysis.las.iastate.edu|gpu|2|8|2|191466|AVX,AVX2,AVX512,SCRATCH,EL9|gpu:gtx_1080_ti:5(S:0),gpu:v100-fhhl-16G:3(S:0),gpu:v100-pcie-16G:1(S:0)
 crysis.las.iastate.edu|gpu-interactive|2|8|2|191466|AVX,AVX2,AVX512,SCRATCH,EL9|gpu:gtx_1080_ti:5(S:0),gpu:v100-fhhl-16G:3(S:0),gpu:v100-pcie-16G:1(S:0)
 frost-1.las.iastate.edu|cryoem|2|8|2|772427|AVX,AVX2,AVX512,NVLINK,SCRATCH|gpu:v100-sxm2-32G:4(S:0,2)
