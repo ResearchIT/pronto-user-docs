@@ -42,7 +42,7 @@ After supplying your password, klist should show a new ticket that won't expire 
 
 Assuming your network connection is stable, the most likely cause of this error is feature of IPv6 called the 'Privacy Extension' (RFC 4941). The privacy extension results in your computer getting a temporary address that changes after some fixed time interval. Whenever the address changes, you will get disconnected from your SSH session.
 
-You can work around this issue by either [disabling IPv6 Privacy](how-disable-ipv6-privacy-mode) (recommended) or [forcing IPv4 connections](how-force-ipv4-connections).
+You can work around this issue by either [disabling IPv6 Privacy](../access/advanced_troubleshooting.md#disable-ipv6-privacy-mode) (recommended) or [forcing IPv4 connections](../access/advanced_troubleshooting.md#force-ipv4-connections).
 
 ## I get an error 'No space left on device' while trying to copy files.
 
