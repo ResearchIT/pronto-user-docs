@@ -1,4 +1,6 @@
 # Machine Learning / GPU Container
+As of July 2024, we discourage use of this container. Instead, please consider using a [python virtual environment](../python.md).
+
 ResearchIT maintains a machine learning container (ml-gpu) that contains the CUDA drivers and has many [machine learning frameworks available](preinstalled_software.md).
 
 The [singularity](../containers/singularity.md) recipe that builds this container can be found [here](https://github.com/researchit/singularity-ml).
